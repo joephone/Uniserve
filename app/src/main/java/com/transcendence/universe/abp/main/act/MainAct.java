@@ -1,9 +1,11 @@
-package universe.joephone.com.universe;
+package com.transcendence.universe.abp.main.act;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+import com.transcendence.universe.R;
+
+public class MainAct extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
