@@ -13,7 +13,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".abp.main.act.MainAct">
+        <activity android:name=".abp.index.act.IndexAct">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,6 +28,47 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
+        <activity
+            android:name=".abp.main.act.MainAct"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+
+        <!-- index -->
+        <activity
+            android:name=".abp.index.act.UIIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <activity
+            android:name=".abp.index.act.WidgetIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <activity
+            android:name=".abp.index.act.EditIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <activity
+            android:name=".abp.index.act.LayoutIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <activity
+            android:name=".abp.index.act.RelativeLayoutIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+
+        <!-- end index -->
+
+        <!-- Edit -->
+
+        <!-- end Edit -->
+
+        <!-- Relative -->
+        <activity
+            android:name=".abp.ui.Layout.Relative.act.SearchBarAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <!-- end Relative -->
 
     </application>
 
