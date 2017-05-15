@@ -35,7 +35,8 @@ public class UIIndexAct extends Activity implements IndexAdapter.IndexEvent {
         setContentView(R.layout.index);
         ButterKnife.bind(this);
 
-        sourceList.add("Widget");
+        sourceList.add("Widgets");
+        sourceList.add("Layout");
 
         mActivity = this;
 
@@ -57,6 +58,7 @@ public class UIIndexAct extends Activity implements IndexAdapter.IndexEvent {
                 intent = new Intent(mActivity,WidgetIndexAct.class);
                 break;
             case 1:
+                intent = new Intent(mActivity,LayoutIndexAct.class);
                 break;
             case 2:
                 break;

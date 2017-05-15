@@ -7,6 +7,7 @@
     <color name="white50">#80FFFFFF</color>
 
     <color name="public_bg">#F8F8F8</color>
+    <color name="public_orange">#FF7A17</color>
     <color name="themeColor">#30B644</color>
 
     <!-- 分割线 -->

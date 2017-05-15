@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "universe.joephone.com.universe"
+        applicationId "com.transcendence.universe"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
@@ -28,6 +28,9 @@ android {
                             'src/main/res',
                             'src/main/res/layout',
                             'src/main/res/layout_main',
+                            'src/main/res/layout_ui',
+                            'src/main/res/layout_ui/layout',
+                            'src/main/res/layout_ui/relative',
                     ]
         }
     }

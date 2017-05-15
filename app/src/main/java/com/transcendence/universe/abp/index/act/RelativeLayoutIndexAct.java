@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
+import com.transcendence.universe.abp.ui.Layout.Relative.act.SearchBarAct;
 import com.transcendence.universe.util.Loger;
 
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class RelativeLayoutIndexAct extends Activity implements IndexAdapter.Ind
         setContentView(R.layout.index);
         ButterKnife.bind(this);
 
-        sourceList.add("EditText");
+        sourceList.add("IOS风格 搜索");
         mActivity = this;
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -53,7 +54,7 @@ public class RelativeLayoutIndexAct extends Activity implements IndexAdapter.Ind
         Intent intent = new Intent();
         switch (position){
             case 0:
-                intent = new Intent(mActivity,RelativeLayoutIndexAct.class);
+                intent = new Intent(mActivity,SearchBarAct.class);
                 break;
             case 1:
                 break;

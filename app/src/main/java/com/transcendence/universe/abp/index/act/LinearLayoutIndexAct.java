@@ -19,7 +19,7 @@ import butterknife.ButterKnife;
 /**
  * Created by joephone on 2017/5/12.
  */
-public class LayoutIndexAct extends Activity implements IndexAdapter.IndexEvent {
+public class LinearLayoutIndexAct extends Activity implements IndexAdapter.IndexEvent {
 
     @Bind(R.id.mRecyclerView)
     RecyclerView mRecyclerView;
@@ -35,8 +35,7 @@ public class LayoutIndexAct extends Activity implements IndexAdapter.IndexEvent 
         setContentView(R.layout.index);
         ButterKnife.bind(this);
 
-        sourceList.add("LinearLayout");
-        sourceList.add("RelativeLayout");
+        sourceList.add("EditText");
         mActivity = this;
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -57,7 +56,6 @@ public class LayoutIndexAct extends Activity implements IndexAdapter.IndexEvent 
                 intent = new Intent(mActivity,LinearLayoutIndexAct.class);
                 break;
             case 1:
-                intent = new Intent(mActivity,RelativeLayoutIndexAct.class);
                 break;
             case 2:
                 break;
