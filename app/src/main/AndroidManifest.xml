@@ -45,6 +45,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
         <activity
+            android:name=".abp.index.act.TextIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <activity
             android:name=".abp.index.act.EditIndexAct"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
@@ -56,12 +60,27 @@
             android:name=".abp.index.act.RelativeLayoutIndexAct"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
+        <activity
+            android:name=".abp.index.act.ClassicIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
 
         <!-- end index -->
+
+
+        <!-- Textview -->
+        <activity
+            android:name=".abp.ui.widget.textview.act.RippleEffectAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <!-- end Text -->
 
         <!-- Edit -->
 
         <!-- end Edit -->
+
+
+
 
         <!-- Relative -->
         <activity
@@ -69,6 +88,14 @@
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
         <!-- end Relative -->
+
+        <!-- classic -->
+        <activity
+            android:name=".abp.classic.hongyang.act.HongyangMainAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <!-- end classic -->
+
 
     </application>
 

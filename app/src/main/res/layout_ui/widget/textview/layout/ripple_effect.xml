@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.transcendence.universe.abp.ui.widget.textview.view.RippleEffectView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="告诉你点我就有效果"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:textSize="23sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:RippleEffectSpreadSpeed="5"
+        app:RippleEffectWaterRippleColor="@color/hyaline"
+        app:RippleEffectBackgroundColor="@color/hyaline"/>
+</LinearLayout>

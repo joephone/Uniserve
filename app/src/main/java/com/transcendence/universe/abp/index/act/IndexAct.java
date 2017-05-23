@@ -79,7 +79,7 @@ public class IndexAct extends Activity implements IndexAdapter.IndexEvent {
                 intent = new Intent(mActivity,UIIndexAct.class);
                 break;
             case 6:
-                intent = new Intent(mActivity,UIIndexAct.class);
+                intent = new Intent(mActivity,ClassicIndexAct.class);
                 break;
         }
         startActivity(intent);
