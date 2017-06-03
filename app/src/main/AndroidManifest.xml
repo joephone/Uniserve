@@ -77,6 +77,12 @@
 
         <!-- Edit -->
 
+        <activity
+            android:name=".abp.ui.widget.edittext.act.InputEditAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle"
+            android:windowSoftInputMode="adjustPan"/>
+
         <!-- end Edit -->
 
 
@@ -93,7 +99,30 @@
         <activity
             android:name=".abp.classic.hongyang.act.HongyangMainAct"
             android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".abp.classic.yanzhengjie.act.YanZhengJieMainAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".abp.classic.yanzhengjie.menu.MenuHorizontalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".abp.classic.weiganloopview.act.WeiganMainAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".abp.classic.weiganloopview.act.DialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".abp.classic.weiganloopview.act.ScrollViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+
         <!-- end classic -->
 
 

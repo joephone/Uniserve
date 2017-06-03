@@ -37,6 +37,8 @@ android {
                             'src/main/res/layout_classic',
                             'src/main/res/layout_classic/trinea',
                             'src/main/res/layout_classic/hongyang',
+                            'src/main/res/layout_classic/weiganloopview',
+                            'src/main/res/layout_classic/wheelview',
                     ]
         }
     }
@@ -56,6 +58,5 @@ dependencies {
     compile 'com.facebook.rebound:rebound:0.3.8'
     //第三方recyclerview
     compile 'com.android.support:recyclerview-v7:23.2.0'
-
 
 }

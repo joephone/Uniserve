@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
+import com.transcendence.universe.abp.ui.widget.edittext.act.InputEditAct;
 import com.transcendence.universe.util.Loger;
 
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class EditIndexAct extends Activity implements IndexAdapter.IndexEvent {
         setContentView(R.layout.index);
         ButterKnife.bind(this);
 
-        sourceList.add("EditText");
+        sourceList.add("简析Android软键盘弹出时窗口上移的问题");
         mActivity = this;
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -53,7 +54,7 @@ public class EditIndexAct extends Activity implements IndexAdapter.IndexEvent {
         Intent intent = new Intent();
         switch (position){
             case 0:
-                intent = new Intent(mActivity,EditIndexAct.class);
+                intent = new Intent(mActivity,InputEditAct.class);
                 break;
             case 1:
                 break;
