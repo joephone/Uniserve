@@ -19,6 +19,11 @@
     <color name="selector_liner_color">#c6c6c6</color>
     <color name="selector_chat_bg">#d9d9d9</color>
 
+
+    <color name="c1">#6633B5E5</color>
+    <color name="c2">#33333333</color>
+    <color name="c3">#6633B5E5</color>
+
     <!-- step view -->
     <color name="red50">#fde0dc</color>
     <color name="red100">#f9bdbb</color>
@@ -275,4 +280,13 @@
     <color name="bluegrey700">#455a64</color>
     <color name="bluegrey800">#37474f</color>
     <color name="bluegrey900">#263238</color>
+
+
+    <color name="black_80">#80000000</color>
+    <color name="black_70">#70000000</color>
+    <color name="black_50">#50000000</color>
+    <color name="black_40">#40000000</color>
+    <color name="black_30">#30000000</color>
+    <color name="black_10">#10000000</color>
+    <color name="black_0">#00000000</color>
 </resources>

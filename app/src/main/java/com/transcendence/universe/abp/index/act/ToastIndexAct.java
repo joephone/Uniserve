@@ -7,8 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
-import com.transcendence.universe.abp.classic.hongyang.act.HongyangMainAct;
-import com.transcendence.universe.abp.classic.weiganloopview.act.WeiganMainAct;
+import com.transcendence.universe.abp.classic.toast.act.BToastMainAct;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.util.Loger;
 
@@ -21,7 +20,7 @@ import butterknife.ButterKnife;
 /**
  * Created by joephone on 2017/5/12.
  */
-public class ClassicIndexAct extends Activity implements IndexAdapter.IndexEvent {
+public class ToastIndexAct extends Activity implements IndexAdapter.IndexEvent {
 
     @Bind(R.id.mRecyclerView)
     RecyclerView mRecyclerView;
@@ -31,15 +30,14 @@ public class ClassicIndexAct extends Activity implements IndexAdapter.IndexEvent
     private IndexAdapter adapter;
     private List<String> sourceList = new ArrayList<>();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.index);
         ButterKnife.bind(this);
 
-        sourceList.add("鸿洋自定义View");
-        sourceList.add("伟根loopView");
-        sourceList.add("Toast");
+        sourceList.add("BToast");
 
         mActivity = this;
 
@@ -58,21 +56,9 @@ public class ClassicIndexAct extends Activity implements IndexAdapter.IndexEvent
         Intent intent = new Intent();
         switch (position){
             case 0:
-                intent = new Intent(mActivity,HongyangMainAct.class);
+                intent = new Intent(mActivity,BToastMainAct.class);
                 break;
             case 1:
-                intent = new Intent(mActivity,WeiganMainAct.class);
-                break;
-            case 2:
-                intent = new Intent(mActivity,ToastIndexAct.class);
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
                 break;
         }
         startActivity(intent);

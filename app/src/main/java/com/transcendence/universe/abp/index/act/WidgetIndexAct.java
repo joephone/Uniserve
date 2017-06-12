@@ -37,6 +37,7 @@ public class WidgetIndexAct extends Activity implements IndexAdapter.IndexEvent 
 
         sourceList.add("TextView");
         sourceList.add("EditText");
+        sourceList.add("ListView");
         mActivity = this;
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -60,6 +61,7 @@ public class WidgetIndexAct extends Activity implements IndexAdapter.IndexEvent 
                 intent = new Intent(mActivity,EditIndexAct.class);
                 break;
             case 2:
+                intent = new Intent(mActivity,ListIndexAct.class);
                 break;
             case 3:
                 break;

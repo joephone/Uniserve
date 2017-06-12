@@ -1,11 +1,7 @@
 package com.transcendence.universe.service;
 
-import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
 
 
 public class MyApplicaton extends Application {
@@ -35,7 +31,7 @@ public class MyApplicaton extends Application {
 //        Fresco.initialize(getApplicationContext(), config);
     }
 
-    public static void logOut(boolean showAct) {
+    public void logOut(boolean showAct) {
         //用户退出
 //        CounectServiceSocket.getInstance().closeSocket();
 //        AppCache.getInstance().cleralogin();

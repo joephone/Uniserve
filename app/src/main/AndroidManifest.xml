@@ -53,6 +53,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
         <activity
+            android:name=".abp.index.act.ListIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <activity
             android:name=".abp.index.act.LayoutIndexAct"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
@@ -64,8 +68,24 @@
             android:name=".abp.index.act.ClassicIndexAct"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
+        <activity
+            android:name=".abp.index.act.ToastIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <activity
+            android:name=".abp.index.act.BaseIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
 
         <!-- end index -->
+
+        <!-- base  -->
+        <activity
+            android:name=".abp.base.act.LifeCycleAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <!-- end base -->
+
 
 
         <!-- Textview -->
@@ -85,6 +105,20 @@
 
         <!-- end Edit -->
 
+        <!-- List -->
+
+        <activity
+            android:name=".abp.ui.widget.listview.act.MulListMainAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".abp.ui.widget.listview.act.MultAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <!-- end List -->
 
 
 
@@ -101,15 +135,6 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".abp.classic.yanzhengjie.act.YanZhengJieMainAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".abp.classic.yanzhengjie.menu.MenuHorizontalActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
-
-        <activity
             android:name=".abp.classic.weiganloopview.act.WeiganMainAct"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
@@ -122,7 +147,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
 
-
+        <activity
+            android:name=".abp.classic.toast.act.BToastMainAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
         <!-- end classic -->
 
 

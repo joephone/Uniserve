@@ -7,9 +7,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
-import com.transcendence.universe.abp.classic.hongyang.act.HongyangMainAct;
-import com.transcendence.universe.abp.classic.weiganloopview.act.WeiganMainAct;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
+import com.transcendence.universe.abp.ui.widget.listview.act.MulListMainAct;
 import com.transcendence.universe.util.Loger;
 
 import java.util.ArrayList;
@@ -21,7 +20,7 @@ import butterknife.ButterKnife;
 /**
  * Created by joephone on 2017/5/12.
  */
-public class ClassicIndexAct extends Activity implements IndexAdapter.IndexEvent {
+public class ListIndexAct extends Activity implements IndexAdapter.IndexEvent {
 
     @Bind(R.id.mRecyclerView)
     RecyclerView mRecyclerView;
@@ -37,10 +36,7 @@ public class ClassicIndexAct extends Activity implements IndexAdapter.IndexEvent
         setContentView(R.layout.index);
         ButterKnife.bind(this);
 
-        sourceList.add("鸿洋自定义View");
-        sourceList.add("伟根loopView");
-        sourceList.add("Toast");
-
+        sourceList.add("多选 MultList");
         mActivity = this;
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -58,13 +54,11 @@ public class ClassicIndexAct extends Activity implements IndexAdapter.IndexEvent
         Intent intent = new Intent();
         switch (position){
             case 0:
-                intent = new Intent(mActivity,HongyangMainAct.class);
+                intent = new Intent(mActivity,MulListMainAct.class);
                 break;
             case 1:
-                intent = new Intent(mActivity,WeiganMainAct.class);
                 break;
             case 2:
-                intent = new Intent(mActivity,ToastIndexAct.class);
                 break;
             case 3:
                 break;
