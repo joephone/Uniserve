@@ -38,6 +38,8 @@ public class HttpTextView extends TextView {
     LinkedList<UrlInfo> mUrlInfos;
     int flag=Spanned.SPAN_POINT_MARK;
 
+    private HttpTextViewEvent event;
+
     private boolean needToRegionUrl = true;//是否开启识别URL，默认开启
 
     public HttpTextView(Context context) {
@@ -168,22 +170,26 @@ public class HttpTextView extends TextView {
     }
 
     class URLClick extends ClickableSpan {
-        private String text;
+        private String url;
 
-        public URLClick(String text) {
-            this.text = text;
+        public URLClick(String url) {
+            this.url = url;
         }
 
         @Override
         public void onClick(View widget) {
-            Toast.makeText(widget.getContext(),text,Toast.LENGTH_SHORT).show();
+            Toast.makeText(widget.getContext(),url,Toast.LENGTH_SHORT).show();
         }
 
         @Override
         public void updateDrawState(TextPaint ds) {
             super.updateDrawState(ds);
-            ds.setColor(0xff517fae);
+//            ds.setColor(0xff517fae);
             ds.setUnderlineText(false);
         }
+    }
+
+    interface HttpTextViewEvent{
+        void click();
     }
 }

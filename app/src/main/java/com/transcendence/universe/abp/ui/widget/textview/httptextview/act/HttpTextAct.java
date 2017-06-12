@@ -26,6 +26,6 @@ public class HttpTextAct extends Activity {
                 "\n"+"下载渔获：https://www.catches.com/download/catches";
         txTest.setUrlText(test);
 
-
+//        txTest.setO
     }
 }
