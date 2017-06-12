@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.abp.ui.widget.textview.act.RippleEffectAct;
+import com.transcendence.universe.abp.ui.widget.textview.httptextview.act.HttpTextAct;
 import com.transcendence.universe.util.Loger;
 import com.transcendence.universe.util.StringUtils;
 
@@ -38,6 +39,7 @@ public class TextIndexAct extends Activity implements IndexAdapter.IndexEvent {
         ButterKnife.bind(this);
 
         sourceList.add(StringUtils.getString(R.string.rippleEffect));
+        sourceList.add("自动识别TextView中的链接,并点击打开链接");
         mActivity = this;
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -58,6 +60,7 @@ public class TextIndexAct extends Activity implements IndexAdapter.IndexEvent {
                 intent = new Intent(mActivity,RippleEffectAct.class);
                 break;
             case 1:
+                intent = new Intent(mActivity,HttpTextAct.class);
                 break;
             case 2:
                 break;

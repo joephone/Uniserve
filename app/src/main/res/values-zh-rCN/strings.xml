@@ -26,4 +26,10 @@
     <string name="circlemenudescribe">鸿洋的圆形菜单</string>
     <string name="mycirclemenu">我的圆形菜单</string>
     <string name="mycirclemenudescribe">我的圆形菜单</string>
+
+
+    <string name="catches_msg">新版本取消了全球潮汐独立账号密码登录功能，原会员账号已同步至渔获。请下载最新版本的渔获以获取原付费服务及钓点数据。现使用“渔获”账号登录，即可免费享用查看7天内潮汐数据、云同步和天气更新提醒等服务；
+    下载渔获：https://www.catches.com/download/catches</string>
+
+
 </resources>

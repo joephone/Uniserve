@@ -93,6 +93,11 @@
             android:name=".abp.ui.widget.textview.act.RippleEffectAct"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
+
+        <activity
+            android:name=".abp.ui.widget.textview.httptextview.act.HttpTextAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
         <!-- end Text -->
 
         <!-- Edit -->

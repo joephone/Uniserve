@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/public_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.transcendence.universe.abp.ui.widget.textview.httptextview.view.HttpTextView
+        android:id="@+id/tx_test"
+        android:text="这里会展示哟"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:textSize="@dimen/size_15"
+        android:textColor="@color/black2"
+        />
+</LinearLayout>
