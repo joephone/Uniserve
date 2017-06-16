@@ -37,6 +37,26 @@
 
         <!-- index -->
         <activity
+            android:name=".abp.index.act.AnimIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <activity
+            android:name=".abp.index.act.AnimSimpleIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <activity
+            android:name=".abp.index.act.BaseIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <activity
+            android:name=".abp.index.act.ClassicIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <activity
+            android:name=".abp.index.act.EditIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <activity
             android:name=".abp.index.act.UIIndexAct"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
@@ -46,10 +66,6 @@
             android:theme="@style/NoTitle" />
         <activity
             android:name=".abp.index.act.TextIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
-        <activity
-            android:name=".abp.index.act.EditIndexAct"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
         <activity
@@ -65,17 +81,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
         <activity
-            android:name=".abp.index.act.ClassicIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
-        <activity
             android:name=".abp.index.act.ToastIndexAct"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
-        <activity
-            android:name=".abp.index.act.BaseIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+
 
         <!-- end index -->
 
