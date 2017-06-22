@@ -13,10 +13,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".abp.index.act.IndexAct">
+        <activity
+            android:name=".abp.main.advancedpagerslidingtabstrip.WeiboTabActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -34,6 +34,32 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
+        <activity
+            android:name=".abp.index.act.IndexAct"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+
+
+        <activity
+            android:name=".abp.main.advancedpagerslidingtabstrip.APSMainAct"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".abp.main.advancedpagerslidingtabstrip.NormalTabActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".abp.main.advancedpagerslidingtabstrip.IconTabActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".abp.main.advancedpagerslidingtabstrip.CustomTabActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".abp.main.advancedpagerslidingtabstrip.ViewTabActivity"
+            android:label="@string/app_name" />
+        <!--<activity-->
+            <!--android:name=".abp.main.advancedpagerslidingtabstrip.WeiboTabActivity"-->
+            <!--android:label="@string/app_name" />-->
 
         <!-- index -->
         <activity
@@ -84,7 +110,18 @@
             android:name=".abp.index.act.ToastIndexAct"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
-
+        <activity
+            android:name=".abp.index.act.RecyclerIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <activity
+            android:name=".abp.index.act.CustomIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <activity
+            android:name=".abp.index.act.FragmentIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
 
         <!-- end index -->
 
@@ -102,11 +139,15 @@
             android:name=".abp.ui.widget.textview.act.RippleEffectAct"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
-
         <activity
             android:name=".abp.ui.widget.textview.httptextview.act.HttpTextAct"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
+        <activity
+            android:name=".abp.ui.widget.textview.act.CareerShowMoreAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+
         <!-- end Text -->
 
         <!-- Edit -->
@@ -131,10 +172,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle"
             android:windowSoftInputMode="adjustPan"/>
-
         <!-- end List -->
-
-
 
         <!-- Relative -->
         <activity
@@ -142,6 +180,38 @@
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
         <!-- end Relative -->
+
+        <!--  recycler -->
+        <activity
+            android:name=".abp.ui.widget.recycler.act.FlyRefreshMainAct"
+            android:screenOrientation="portrait"/>
+        <!-- end recycler -->
+
+
+        <!--  custom view -->
+
+        <activity
+            android:name=".abp.ui.customview.arcLayout.act.ArcLayoutMainAct"
+            android:label="@string/app_name"
+            />
+        <activity
+            android:name=".abp.ui.customview.arcLayout.act.DemoActivity"
+            android:label="@string/app_name"
+            />
+        <activity
+            android:name=".abp.ui.customview.arcLayout.act.DemoFreeAngleActivity"
+            android:label="@string/app_name"
+            />
+        <activity
+            android:name=".abp.ui.customview.arcLayout.act.DemoLikeTumblrActivity"
+            android:label="@string/app_name"
+            />
+        <activity
+            android:name=".abp.ui.customview.arcLayout.act.DemoLikePathActivity"
+            android:label="@string/app_name"
+            />
+        <!-- end custom view -->
+
 
         <!-- classic -->
         <activity

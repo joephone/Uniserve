@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- fly refresh -->
+    <declare-styleable name="PullHeaderLayout">
+        <attr name="phl_header_height" format="dimension" />
+        <attr name="phl_header_expand_height" format="dimension" />
+        <attr name="phl_header_shrink_height" format="dimension" />
+        <attr name="phl_header" format="reference" />
+        <attr name="phl_content" format="reference" />
+        <attr name="phl_action" format="reference" />
+    </declare-styleable>
+
+
+    <!-- arc -->
+    <attr name="arc_origin">
+        <!-- Value same as the android:gravity -->
+        <flag name="top" value="0x30"/>
+        <flag name="bottom" value="0x50"/>
+        <flag name="left" value="0x03"/>
+        <flag name="right" value="0x05"/>
+        <flag name="center_vertical" value="0x10"/>
+        <flag name="center_horizontal" value="0x01"/>
+        <flag name="center" value="0x11"/>
+        <flag name="start" value="0x00800003"/>
+        <flag name="end" value="0x00800005"/>
+    </attr>
+
+    <declare-styleable name="arc_ArcLayout">
+        <attr name="arc_origin"/>
+        <attr name="arc_color" format="color"/>
+        <attr name="arc_radius" format="dimension"/>
+        <attr name="arc_axisRadius" format="dimension"/>
+        <attr name="arc_freeAngle" format="boolean"/>
+        <attr name="arc_reverseAngle" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="arc_ArcLayout_Layout">
+        <attr name="arc_origin"/>
+        <attr name="arc_angle" format="float"/>
+    </declare-styleable>
+
+
+    <!--apsts-->
+    <declare-styleable name="AdvancedPagerSlidingTabStrip">
+        <attr name="apTabIndicatorColor" format="color"/>
+        <attr name="apTabUnderlineColor" format="color"/>
+        <attr name="apTabDividerColor" format="color"/>
+        <attr name="apTabTextSelectColor" format="color"/>
+        <attr name="apTabIndicatorHeight" format="dimension"/>
+        <attr name="apTabUnderlineHeight" format="dimension"/>
+        <attr name="apTabDividerPadding" format="dimension"/>
+        <attr name="apTabPaddingLeftRight" format="dimension"/>
+        <attr name="apTabPaddingTopBottom" format="dimension"/>
+        <attr name="apTabScrollOffset" format="dimension"/>
+        <attr name="apTabBackground" format="reference"/>
+        <attr name="apTabShouldExpand" format="boolean"/>
+        <attr name="apTabTextAllCaps" format="boolean"/>
+        <attr name="apTabDrawMode" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="text" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

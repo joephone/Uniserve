@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="@dimen/dp_230"
+        tools:text="三文鱼三文鱼三文鱼三文鱼三文鱼三文鱼三文鱼三文鱼三文鱼三文鱼三文鱼三文鱼三文鱼三文鱼三文鱼三文鱼三文鱼"
+        android:textColor="#FAFAFA"
+        android:textSize="@dimen/size_13"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/dp_10"
+        android:ellipsize="end"/>
+
+
+
+    <ImageView
+        android:id="@+id/hide_show"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_5"
+        android:src="@drawable/ic_career_down"
+        android:visibility="gone"
+        android:padding="0dp"
+        />
+</LinearLayout>

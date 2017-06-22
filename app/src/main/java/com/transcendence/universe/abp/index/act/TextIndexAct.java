@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
+import com.transcendence.universe.abp.ui.widget.textview.act.CareerShowMoreAct;
 import com.transcendence.universe.abp.ui.widget.textview.act.RippleEffectAct;
 import com.transcendence.universe.abp.ui.widget.textview.httptextview.act.HttpTextAct;
 import com.transcendence.universe.util.Loger;
@@ -40,6 +41,7 @@ public class TextIndexAct extends Activity implements IndexAdapter.IndexEvent {
 
         sourceList.add(StringUtils.getString(R.string.rippleEffect));
         sourceList.add("自动识别TextView中的链接,并点击打开链接");
+        sourceList.add("ShowMoreText");
         mActivity = this;
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -63,6 +65,7 @@ public class TextIndexAct extends Activity implements IndexAdapter.IndexEvent {
                 intent = new Intent(mActivity,HttpTextAct.class);
                 break;
             case 2:
+                intent = new Intent(mActivity,CareerShowMoreAct.class);
                 break;
             case 3:
                 break;

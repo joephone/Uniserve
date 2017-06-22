@@ -37,6 +37,8 @@ public class UIIndexAct extends Activity implements IndexAdapter.IndexEvent {
 
         sourceList.add("Widgets");
         sourceList.add("Layout");
+        sourceList.add("Custom View");
+        sourceList.add("Fragment");
 
         mActivity = this;
 
@@ -61,8 +63,10 @@ public class UIIndexAct extends Activity implements IndexAdapter.IndexEvent {
                 intent = new Intent(mActivity,LayoutIndexAct.class);
                 break;
             case 2:
+                intent = new Intent(mActivity,CustomIndexAct.class);
                 break;
             case 3:
+                intent = new Intent(mActivity,FragmentIndexAct.class);
                 break;
             case 4:
                 break;

@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.classic.toast.act.BToastMainAct;
-import com.transcendence.universe.abp.index.adapter.IndexAdapter;
+import com.transcendence.universe.abp.ui.anim.adapter.AnimAdapter;
 import com.transcendence.universe.util.Loger;
 
 import java.util.ArrayList;
@@ -20,14 +20,14 @@ import butterknife.ButterKnife;
 /**
  * Created by joephone on 2017/6/16.
  */
-public class AnimSimpleIndexAct extends Activity implements IndexAdapter.IndexEvent {
+public class AnimSimpleIndexAct extends Activity implements AnimAdapter.AnimEvent {
 
     @Bind(R.id.mRecyclerView)
     RecyclerView mRecyclerView;
 
     private String tag = this.getClass().getName();
     private Activity mActivity;
-    private IndexAdapter adapter;
+    private AnimAdapter adapter;
     private List<String> sourceList = new ArrayList<>();
 
 
@@ -37,7 +37,7 @@ public class AnimSimpleIndexAct extends Activity implements IndexAdapter.IndexEv
         setContentView(R.layout.index);
         ButterKnife.bind(this);
 
-        sourceList.add("BToast");
+        sourceList.add("alpha");
 
         mActivity = this;
 
@@ -45,7 +45,7 @@ public class AnimSimpleIndexAct extends Activity implements IndexAdapter.IndexEv
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(layoutManager);
 
-        adapter = new IndexAdapter(this,sourceList);
+        adapter = new AnimAdapter(this,sourceList);
         mRecyclerView.setAdapter(adapter);
         adapter.setEvent(this);
     }

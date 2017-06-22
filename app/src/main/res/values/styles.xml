@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -38,5 +38,106 @@
         <item name="android:padding">20dp</item>
         <item name="android:layout_margin">10dp</item>
         <item name="android:onClick">click</item>
+    </style>
+
+
+    <style name="career_down_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxWidth">@dimen/dp_230</item>
+        <item name="android:textColor">@color/black2</item>
+        <item name="android:textSize">@dimen/size_13</item>
+        <item name="android:paddingTop">@dimen/dp_5</item>
+        <item name="android:paddingBottom">@dimen/dp_5</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="career_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginTop">@dimen/dp_10</item>
+    </style>
+
+    <style name="Item_Small">
+        <item name="android:layout_width">@dimen/item_circle_size_small</item>
+        <item name="android:layout_height">@dimen/item_circle_size_small</item>
+        <item name="android:textSize">@dimen/item_font_size_small</item>
+    </style>
+
+    <style name="Item_Medium">
+        <item name="android:layout_width">@dimen/item_circle_size_medium</item>
+        <item name="android:layout_height">@dimen/item_circle_size_medium</item>
+        <item name="android:textSize">@dimen/item_font_size_medium</item>
+    </style>
+
+    <style name="Item_Large">
+        <item name="android:layout_width">@dimen/item_circle_size_large</item>
+        <item name="android:layout_height">@dimen/item_circle_size_large</item>
+        <item name="android:textSize">@dimen/item_font_size_large</item>
+    </style>
+
+    <style name="Item_Tumblr">
+        <item name="android:layout_width">@dimen/item_circle_size_tumblr</item>
+        <item name="android:layout_height">@dimen/item_circle_size_tumblr</item>
+        <item name="android:textSize">@dimen/item_font_size_tumblr</item>
+        <item name="android:textColor">@color/tumblr_primary</item>
+    </style>
+
+    <style name="Item_Path">
+        <item name="android:layout_width">@dimen/item_circle_size_path</item>
+        <item name="android:layout_height">@dimen/item_circle_size_path</item>
+        <item name="android:textSize">@dimen/item_font_size_path</item>
+        <item name="android:background">@drawable/path_white_oval</item>
+    </style>
+
+    <!--pager tab-->
+    <style name="CustomTabPageIndicator.Text" parent="android:TextAppearance.Medium">
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="pagertab_style">
+        <item name="android:background">@drawable/tab_bg_normal</item>
+        <item name="apTabBackground">@drawable/tab_bg_transparent</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAppearance">@style/CustomTabPageIndicator.Text</item>
+        <item name="android:textColor">@drawable/tab_color_select</item>
+        <item name="apTabIndicatorColor">@color/home_bar_text_push</item>
+        <item name="apTabUnderlineColor">#1A000000</item>
+        <item name="apTabDividerColor">#00000000</item>
+        <item name="apTabShouldExpand">false</item>
+        <item name="apTabPaddingLeftRight">8dp</item>
+        <item name="apTabDrawMode">text</item>
+        <item name="apTabTextSelectColor">@color/home_bar_text_push</item>
+    </style>
+
+    <style name="pagertab_icon_style">
+        <item name="android:background">@drawable/tab_bg_normal</item>
+        <item name="apTabBackground">@drawable/tab_bg_normal</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@drawable/tab_color_select</item>
+        <item name="android:textAppearance">@style/CustomTabPageIndicator.Text</item>
+        <item name="apTabIndicatorColor">@color/home_bar_text_push</item>
+        <item name="apTabUnderlineColor">#1A000000</item>
+        <item name="apTabDividerColor">#00000000</item>
+        <item name="apTabShouldExpand">false</item>
+        <item name="apTabPaddingLeftRight">8dp</item>
+        <item name="apTabPaddingTopBottom">6dp</item>
+        <item name="apTabTextSelectColor">@color/home_bar_text_push</item>
+    </style>
+
+    <style name="weibo_icon_style">
+        <item name="android:background">@drawable/weibo_tab_bg_normal</item>
+        <item name="apTabBackground">@drawable/weibo_tab_bg_normal</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@drawable/tab_color_select</item>
+        <item name="android:textAppearance">@style/CustomTabPageIndicator.Text</item>
+        <item name="apTabIndicatorColor">@color/home_bar_text_push</item>
+        <item name="apTabUnderlineColor">#1A000000</item>
+        <item name="apTabDividerColor">#00000000</item>
+        <item name="apTabShouldExpand">false</item>
+        <item name="apTabPaddingLeftRight">8dp</item>
+        <item name="apTabPaddingTopBottom">6dp</item>
+        <item name="apTabTextSelectColor">@color/home_bar_text_push</item>
     </style>
 </resources>

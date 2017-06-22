@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/public_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_second" />
+
+    <LinearLayout
+        style="@style/career_layout">
+
+        <com.transcendence.universe.abp.ui.widget.textview.view.CareerShowMoreTextView
+            android:id="@+id/tvShow"
+            style="@style/career_down_style"
+            tools:text="鱼长度达10000公里，可以绕地球3圈" />
+
+    </LinearLayout>
+
+</LinearLayout>
