@@ -48,7 +48,7 @@ public class WeiboTabActivity extends ActionBarActivity implements ViewPager.OnP
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_weibo_tab);
+        setContentView(R.layout.aps_weibo_tab);
         findViews();
         init();
     }
@@ -79,6 +79,9 @@ public class WeiboTabActivity extends ActionBarActivity implements ViewPager.OnP
         mAPSTS.setOnPageChangeListener(this);
         mVP.setCurrentItem(VIEW_FIRST);
         mAPSTS.showDot(VIEW_FIRST, "99+");
+        mAPSTS.showDot(VIEW_SECOND, "99");
+        mAPSTS.showDot(VIEW_THIRD, "99+");
+        mAPSTS.showDot(VIEW_FOURTH, "99+");
     }
 
     @Override

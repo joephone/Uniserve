@@ -8,13 +8,14 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
+        android:name=".abp.main.act.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".abp.main.advancedpagerslidingtabstrip.WeiboTabActivity">
+            android:name=".abp.main.act.WelcomeAct">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -57,9 +58,9 @@
         <activity
             android:name=".abp.main.advancedpagerslidingtabstrip.ViewTabActivity"
             android:label="@string/app_name" />
-        <!--<activity-->
-            <!--android:name=".abp.main.advancedpagerslidingtabstrip.WeiboTabActivity"-->
-            <!--android:label="@string/app_name" />-->
+        <activity
+            android:name=".abp.main.advancedpagerslidingtabstrip.WeiboTabActivity"
+            android:label="@string/app_name" />
 
         <!-- index -->
         <activity
@@ -176,7 +177,7 @@
 
         <!-- Relative -->
         <activity
-            android:name=".abp.ui.Layout.Relative.act.SearchBarAct"
+            android:name=".abp.ui.Layout.relative.act.SearchBarAct"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
         <!-- end Relative -->

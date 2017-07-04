@@ -5,7 +5,7 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <com.transcendence.universe.abp.ui.Layout.Relative.view.SearchBrLayout
+    <com.transcendence.universe.abp.ui.Layout.relative.view.SearchBarLayout
         android:id="@+id/searchBarlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

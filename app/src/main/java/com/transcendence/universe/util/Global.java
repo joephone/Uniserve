@@ -9,6 +9,8 @@ import com.transcendence.universe.service.MyApplicaton;
  */
 public class Global {
 
+    public static final int WELCOME_TIME = 5000;
+
     public static final String DB_NAME = "catches_db";
     public static final String FISHDB_NAME = "fish_db";
     public static final String FISHDB_DIR = "fish/" ;

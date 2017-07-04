@@ -43,7 +43,7 @@ public class ViewTabActivity  extends ActionBarActivity implements ViewPager.OnP
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_icon_tab);
+        setContentView(R.layout.aps_icon_tab);
         findViews();
         init();
     }

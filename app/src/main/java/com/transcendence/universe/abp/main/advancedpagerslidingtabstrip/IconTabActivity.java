@@ -38,7 +38,7 @@ public class IconTabActivity extends ActionBarActivity implements ViewPager.OnPa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_icon_tab);
+        setContentView(R.layout.aps_icon_tab);
         findViews();
         init();
     }

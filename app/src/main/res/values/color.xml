@@ -14,6 +14,10 @@
     <color name="title_box_pressed">#171f1f</color>
     <color name="wx_title_bg">#22292c</color>
 
+    <!-- sinasportprogress -->
+    <color name="bg_left_progress">#DD2F1C</color>
+    <color name="bg_right_progress">#1D69E1</color>
+
     <!-- #F8F8F8 303030-->
     <color name="public_bg">#F8F8F8</color>
     <color name="public_orange">#FF7A17</color>

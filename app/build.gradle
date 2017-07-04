@@ -18,8 +18,6 @@ android {
         }
     }
 
-
-
     sourceSets {
         main {
             java.srcDirs = ['src/main/java', 'src/main/java-gen']
@@ -29,6 +27,7 @@ android {
                             'src/main/res/layout',
                             'src/main/res/layout_main',
                             'src/main/res/layout_base',
+                            'src/main/res/layout_thirdparty',
                             'src/main/res/layout_ui',
                             'src/main/res/layout_ui/layout',
                             'src/main/res/layout_ui/widget',
@@ -44,9 +43,18 @@ android {
                             'src/main/res/layout_classic/hongyang',
                             'src/main/res/layout_classic/weiganloopview',
                             'src/main/res/layout_classic/wheelview',
+                            'src/main/res/layout_classic/sinaprogress',
                     ]
         }
     }
+
+
+    allprojects {
+        repositories {
+            maven { url "https://jitpack.io" }
+        }
+    }
+
 }
 
 dependencies {
@@ -60,7 +68,7 @@ dependencies {
     //注解开发
     compile 'com.jakewharton:butterknife:7.0.0'
 
-    compile 'com.facebook.fresco:fresco:0.9.0+'
+
     compile 'com.facebook.fresco:imagepipeline-okhttp:0.9.0+'
     compile 'com.facebook.rebound:rebound:0.3.8'
     //第三方recyclerview
@@ -73,5 +81,12 @@ dependencies {
     compile 'homhomlin.lib:frescoimageview:1.2.0'
     compile 'com.facebook.fresco:fresco:0.9.0'
     compile 'com.facebook.fresco:imagepipeline-okhttp:0.9.0'
+
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.18'
+
+    // 其他依赖
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    // 支持 GIF 动图，需要添加
+    compile 'com.facebook.fresco:animated-gif:0.12.0'
 
 }
