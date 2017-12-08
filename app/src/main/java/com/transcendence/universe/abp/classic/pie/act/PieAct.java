@@ -33,8 +33,8 @@ public class PieAct extends ActionBarActivity {
         list.add(new PieView.Data("新闻动态", R.drawable.card_info_six, R.drawable.card_info_six));
         list.add(new PieView.Data("企业风采", R.drawable.card_info_one, R.drawable.card_info_one));
         list.add(new PieView.Data("公司简介", R.drawable.card_info_three, R.drawable.card_info_three));
-//        list.add(new PieView.Data("第六块", R.mipmap.icon_normal,R.mipmap.icon_select));
-//        list.add(new PieView.Data("第七块", R.mipmap.icon_normal,R.mipmap.icon_select));
+//        list.add(new PieView.Data("第六块", R.drawable.card_info_three,R.drawable.card_info_three));
+//        list.add(new PieView.Data("第七块", R.drawable.card_info_three,R.drawable.card_info_three));
 //        list.add(new PieView.Data("第八块", R.mipmap.icon_normal,R.mipmap.icon_select));
         pv.setList(list);
         pv.setOnItemSelectListener(new PieView.OnItemSelectListener() {

@@ -22,13 +22,15 @@ import java.util.List;
 
 /**
  * Created by cmc on 2015/12/3.
+ * //00%=FF（不透明）    5%=F2    10%=E5    15%=D8    20%=CC    25%=BF    30%=B2    35%=A5    40%=99    45%=8c    50%=7F
+ //55%=72    60%=66    65%=59    70%=4c    75%=3F    80%=33    85%=21    90%=19    95%=0c    100%=00（全透明）
  */
 public class PieView extends View {
-    private int normalColor = Color.rgb(240,240,240);
-    private int selectColor = Color.GREEN;
-    private int normalTextColor = Color.GRAY;
+    private int normalColor = 0x7f000000;
+    private int selectColor = 0x7f000000;
+    private int normalTextColor = Color.WHITE;
     private int selectTextColor = Color.WHITE;
-    private int circleColor = Color.WHITE;
+    private int circleColor = Color.BLACK;
     private Paint arcPaint;
     private Paint textPaint;
     private int selectPosition = 1;
@@ -110,7 +112,7 @@ public class PieView extends View {
         textPaint = new Paint();
         textPaint.setAntiAlias(true);
         textPaint.setTextAlign(Paint.Align.CENTER);
-        textPaint.setTextSize(28);
+        textPaint.setTextSize(32);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)

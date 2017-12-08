@@ -6,19 +6,66 @@
     android:layout_height="match_parent"
     android:background="@drawable/card_model_four_bg">
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_100"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="柳絮"
+            android:textStyle="bold"
+            android:textSize="@dimen/size_18"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="产品经理"
+            android:textSize="@dimen/size_12"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="武汉梦之旅途有限责任公司"
+            android:textSize="@dimen/size_12"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/ivQr"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_50"
+        android:src="@drawable/card_model_two_qr" />
+
     <com.transcendence.universe.abp.classic.pie.view.PieView
         android:id="@+id/pv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_300"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/dp_20"
-        pieview:circle_color="@color/black"
-        pieview:normal_color="@color/half_trans"
-        pieview:normal_text_color="@color/black"
+        android:layout_marginBottom="@dimen/dp_70"
+
          />
 
     <!-- pieview:select_color="#0000ff"
         pieview:select_text_color="#ffffff"
+        pieview:circle_color="@color/black"
+        pieview:normal_color="@color/half_trans"
+        pieview:normal_text_color="@color/black"
      -->
 </RelativeLayout>
