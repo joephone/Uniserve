@@ -8,6 +8,7 @@ import android.os.CountDownTimer;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.transcendence.universe.R;
+import com.transcendence.universe.abp.main.advancedpagerslidingtabstrip.WeiboTabActivity;
 import com.transcendence.universe.abpPublicModule.imagesfresco.DisplayImage;
 
 import butterknife.Bind;
@@ -52,7 +53,7 @@ public class StartAct extends Activity {
 
         @Override
         public void onFinish() {
-            Intent intent = new Intent(StartAct.this,MainAct.class);
+            Intent intent = new Intent(StartAct.this,WeiboTabActivity.class);
             startActivity(intent);
             finish();
         }

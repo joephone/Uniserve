@@ -15,14 +15,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".abp.main.act.WelcomeAct">
+            android:name=".abp.main.act.SplashAct">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-
+        <!-- 启动另一套方案 -->
+        <activity
+            android:name=".abp.main.act.WelcomeAct"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
         <activity
             android:name=".abp.main.act.StartAct"
             android:hardwareAccelerated="true"
