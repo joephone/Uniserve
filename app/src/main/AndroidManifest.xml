@@ -10,10 +10,10 @@
     <application
         android:name=".abp.main.act.MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/universe_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/NoTitle">
         <activity
             android:name=".abp.main.act.SplashAct">
             <intent-filter>
@@ -35,6 +35,7 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
+        <!-- 主页 暂未使用的 -->
         <activity
             android:name=".abp.main.act.MainAct"
             android:hardwareAccelerated="true"
@@ -50,37 +51,31 @@
 
 
         <activity
-            android:name=".abp.main.advancedpagerslidingtabstrip.APSMainAct"
-            android:label="@string/app_name" />
+            android:name=".abp.main.advancedpagerslidingtabstrip.APSMainAct" />
         <activity
-            android:name=".abp.main.advancedpagerslidingtabstrip.NormalTabActivity"
-            android:label="@string/app_name" />
+            android:name=".abp.main.advancedpagerslidingtabstrip.NormalTabActivity"/>
         <activity
-            android:name=".abp.main.advancedpagerslidingtabstrip.IconTabActivity"
-            android:label="@string/app_name" />
+            android:name=".abp.main.advancedpagerslidingtabstrip.IconTabActivity"/>
         <activity
-            android:name=".abp.main.advancedpagerslidingtabstrip.CustomTabActivity"
-            android:label="@string/app_name" />
+            android:name=".abp.main.advancedpagerslidingtabstrip.CustomTabActivity" />
         <activity
-            android:name=".abp.main.advancedpagerslidingtabstrip.ViewTabActivity"
-            android:label="@string/app_name" />
+            android:name=".abp.main.advancedpagerslidingtabstrip.ViewTabActivity"/>
         <activity
             android:name=".abp.main.advancedpagerslidingtabstrip.WeiboTabActivity"
-            android:label="@string/app_name" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
 
         <!-- index -->
         <activity
             android:name=".abp.index.act.AnimIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".abp.index.act.AnimSimpleIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".abp.index.act.BaseIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait" />
+
         <activity
             android:name=".abp.index.act.ClassicIndexAct"
             android:screenOrientation="portrait"
@@ -115,20 +110,16 @@
             android:theme="@style/NoTitle" />
         <activity
             android:name=".abp.index.act.ToastIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".abp.index.act.RecyclerIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".abp.index.act.CustomIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".abp.index.act.FragmentIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait" />
 
         <!-- end index -->
 
@@ -242,6 +233,12 @@
             android:name=".abp.classic.toast.act.BToastMainAct"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+                <!-- pie -->
+        <activity
+            android:name=".abp.classic.pie.act.PieAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
         <!-- end classic -->
 
 

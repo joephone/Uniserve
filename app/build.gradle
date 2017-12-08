@@ -44,6 +44,7 @@ android {
                             'src/main/res/layout_classic/weiganloopview',
                             'src/main/res/layout_classic/wheelview',
                             'src/main/res/layout_classic/sinaprogress',
+                            'src/main/res/layout_classic/pie',
                     ]
         }
     }

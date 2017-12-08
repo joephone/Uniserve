@@ -1,0 +1,24 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pieview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/card_model_four_bg">
+
+    <com.transcendence.universe.abp.classic.pie.view.PieView
+        android:id="@+id/pv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_20"
+        pieview:circle_color="@color/black"
+        pieview:normal_color="@color/half_trans"
+        pieview:normal_text_color="@color/black"
+         />
+
+    <!-- pieview:select_color="#0000ff"
+        pieview:select_text_color="#ffffff"
+     -->
+</RelativeLayout>

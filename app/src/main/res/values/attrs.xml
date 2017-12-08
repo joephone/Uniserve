@@ -53,4 +53,13 @@
         <attr name="progress_anim_duration" format="integer"/>
         <attr name="progress_height" format="dimension"/>
     </declare-styleable>
+
+    <!-- pieView -->
+    <declare-styleable name="pieView">
+        <attr name="select_color" format="color"/>
+        <attr name="normal_color" format="color"/>
+        <attr name="normal_text_color" format="color"/>
+        <attr name="select_text_color" format="color"/>
+        <attr name="circle_color" format="color"/>
+    </declare-styleable>
 </resources>
