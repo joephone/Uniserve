@@ -238,6 +238,11 @@
             android:name=".abp.classic.pie.act.PieAct"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".abp.classic.pie.act.CircleMenuAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
 
         <!-- end classic -->
 

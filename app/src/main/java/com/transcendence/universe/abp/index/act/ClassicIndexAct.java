@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.classic.hongyang.act.HongyangMainAct;
+import com.transcendence.universe.abp.classic.pie.act.CircleMenuAct;
 import com.transcendence.universe.abp.classic.pie.act.PieAct;
 import com.transcendence.universe.abp.classic.weiganloopview.act.WeiganMainAct;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
@@ -42,6 +43,7 @@ public class ClassicIndexAct extends Activity implements IndexAdapter.IndexEvent
         sourceList.add("伟根loopView");
         sourceList.add("Toast");
         sourceList.add("Pie View");
+        sourceList.add("CircleMenu");
 
         mActivity = this;
 
@@ -72,6 +74,7 @@ public class ClassicIndexAct extends Activity implements IndexAdapter.IndexEvent
                 intent = new Intent(mActivity,PieAct.class);
                 break;
             case 4:
+                intent = new Intent(mActivity,CircleMenuAct.class);
                 break;
             case 5:
                 break;

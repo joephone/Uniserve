@@ -23,9 +23,10 @@ import java.util.List;
 /**
  * Created by cmc on 2015/12/3.
  * //00%=FF（不透明）    5%=F2    10%=E5    15%=D8    20%=CC    25%=BF    30%=B2    35%=A5    40%=99    45%=8c    50%=7F
- //55%=72    60%=66    65%=59    70%=4c    75%=3F    80%=33    85%=21    90%=19    95%=0c    100%=00（全透明）
+ * //55%=72    60%=66    65%=59    70%=4c    75%=3F    80%=33    85%=21    90%=19    95%=0c    100%=00（全透明）
  */
 public class PieView extends View {
+    private String TAG = this.getClass().getName();
     private int normalColor = 0x7f000000;
     private int selectColor = 0x7f000000;
     private int normalTextColor = Color.WHITE;
@@ -34,6 +35,7 @@ public class PieView extends View {
     private Paint arcPaint;
     private Paint textPaint;
     private int selectPosition = 1;
+    private int startAngle;
     private PointF circle;
     private List<Data> list;
     private OnItemSelectListener onItemSelectListener;
@@ -52,6 +54,7 @@ public class PieView extends View {
 
     /**
      * 设置饼图数据、显示文字，图片
+     *
      * @param list
      */
     public void setList(List<Data> list) {
@@ -124,19 +127,24 @@ public class PieView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         //确定中心点
-        circle = new PointF(getWidth()/2f,getHeight()/2f);
+        circle = new PointF(getWidth() / 2f, getHeight() / 2f);
+        Log.i(TAG, "circle:" + circle);
+        Log.i(TAG, "getWidth:" + getWidth());
+        Log.i(TAG, "getHeight:" + getHeight());
         //确定圆半径 取高和宽小的一部分作为直径
-        float min = getHeight()>getWidth()?getWidth():getHeight();
+        float min = getHeight() > getWidth() ? getWidth() : getHeight();
+        Log.i(TAG, "min:" + min);
         //减20作为拉开间距
-        float arcRadio = min/2f-20;
+        float arcRadio = min / 2f - 20;
+        Log.i(TAG, "半径arcRadio:" + arcRadio);
         //圆的外接矩形
-        RectF rect = new RectF(circle.x-arcRadio,circle.y-arcRadio,circle.x+arcRadio,circle.y+arcRadio);
-        if(list!=null&&list.size()>0) {
+        RectF rect = new RectF(circle.x - arcRadio, circle.y - arcRadio, circle.x + arcRadio, circle.y + arcRadio);
+        if (list != null && list.size() > 0) {
             for (int i = 0; i < list.size(); i++) {
                 String title = "";
                 int bitmapReId = R.mipmap.ic_launcher;
                 Data date = list.get(i);
-                if (date.name != null){
+                if (date.name != null) {
                     title = date.name;
                 }
 
@@ -144,14 +152,15 @@ public class PieView extends View {
                 if (i == selectPosition) {
                     textPaint.setColor(selectTextColor);
                     arcPaint.setColor(selectColor);
-                    if (date.selectDrawbleId != 0){
+                    if (date.selectDrawbleId != 0) {
                         bitmapReId = date.selectDrawbleId;
                     }
 
                 } else {
                     arcPaint.setColor(normalColor);
                     textPaint.setColor(normalTextColor);
-                    if (date.drawableID != 0){
+
+                    if (date.drawableID != 0) {
                         bitmapReId = date.drawableID;
                     }
 
@@ -159,11 +168,11 @@ public class PieView extends View {
                 //按角度移动画布，确定间隙
                 canvas.save();
                 //按角度移动画布，
-                canvas.translate((float) (Math.sin((180/list.size() + 360/list.size() * i) * Math.PI / 180) * 10), -(float) (10 * Math.cos((180/list.size() + 360/list.size() * i) * Math.PI / 180)));
-                canvas.drawArc(rect, 270 + 360/list.size() * i, 360/list.size(), true, arcPaint);
+                canvas.translate((float) (Math.sin((180 / list.size() + 360 / list.size() * i) * Math.PI / 180) * 10), -(float) (10 * Math.cos((180 / list.size() + 360 / list.size() * i) * Math.PI / 180)));
+                canvas.drawArc(rect, 270 + 360 / list.size() * i, 360 / list.size(), true, arcPaint);
                 canvas.restore();
                 canvas.save();
-                canvas.translate((float) (Math.sin((180/list.size() + 360/list.size() * i) * Math.PI / 180) * arcRadio / 1.5), -(float) (arcRadio / 1.5 * Math.cos((180/list.size() + 360/list.size() * i) * Math.PI / 180)));
+                canvas.translate((float) (Math.sin((180 / list.size() + 360 / list.size() * i) * Math.PI / 180) * arcRadio / 1.5), -(float) (arcRadio / 1.5 * Math.cos((180 / list.size() + 360 / list.size() * i) * Math.PI / 180)));
                 Bitmap bit = BitmapFactory.decodeResource(getResources(), bitmapReId);
                 canvas.drawBitmap(bit, circle.x - bit.getWidth() / 2, circle.y - bit.getHeight(), arcPaint);
                 canvas.drawText(title, circle.x, circle.y + 28, textPaint);
@@ -177,6 +186,7 @@ public class PieView extends View {
 
     /**
      * 百度查到别人写的一个方法，在我多个饼图中都有使用这个方法，确认无误
+     *
      * @param radiusX 圆心
      * @param radiusY 圆心
      * @param x1      触摸点
@@ -196,21 +206,17 @@ public class PieView extends View {
 
         if (differentX > 0.0F) {
             // 0~90
-            if (differentY > 0.0F){
+            if (differentY > 0.0F) {
                 a = 6.283185307179586D - Math.asin(t);
-            }
-
-            else{
+            } else {
                 // 270~360
                 a = -Math.asin(t);
             }
 
-        } else if (differentY > 0.0F){
+        } else if (differentY > 0.0F) {
             // 90~180
             a = 3.141592653589793D + Math.asin(t);
-        }
-
-        else {
+        } else {
             // 180~270
             a = 3.141592653589793D + Math.asin(t);
         }
@@ -224,13 +230,13 @@ public class PieView extends View {
         float cx = circle.x;
         float cy = circle.y;
         float r = getHeight();
-        float r1 = (float) ((getHeight()/2f-20)/2.5);
-        switch (event.getAction()){
+        float r1 = (float) ((getHeight() / 2f - 20) / 2.5);
+        switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 if ((x - cx) * (x - cx) + (y - cy) * (y - cy) - r * r <= 0.0F && (x - cx) * (x - cx) + (y - cy) * (y - cy) - r1 * r1 >= 0.0F) {
-                    selectPosition = getSelectPosition(getTouchedPointAngle(cx,cy,x,y));
-                    if(onItemSelectListener!=null){
-                        onItemSelectListener.selectPosition(selectPosition,this);
+                    selectPosition = getSelectPosition(getTouchedPointAngle(cx, cy, x, y));
+                    if (onItemSelectListener != null) {
+                        onItemSelectListener.selectPosition(selectPosition, this);
                     }
                     invalidate();
                 }
@@ -240,15 +246,15 @@ public class PieView extends View {
     }
 
     private int getSelectPosition(float touchedPointAngle) {
-        Log.i("TAG",touchedPointAngle+"");
+        Log.i("TAG", touchedPointAngle + "");
         //当为4块及以下时，第一块的范围为270-360+所以加上一下代码
-        if(list.size()<=4){
-            if(touchedPointAngle>270||touchedPointAngle<=(270+360/list.size())%360){
+        if (list.size() <= 4) {
+            if (touchedPointAngle > 270 || touchedPointAngle <= (270 + 360 / list.size()) % 360) {
                 return 0;
             }
         }
-        for(int i = 0;i<list.size();i++){
-            if(touchedPointAngle>(270+i*360/list.size())%360&&touchedPointAngle<=(270+(i+1)*360/list.size())%360){
+        for (int i = 0; i < list.size(); i++) {
+            if (touchedPointAngle > (270 + i * 360 / list.size()) % 360 && touchedPointAngle <= (270 + (i + 1) * 360 / list.size()) % 360) {
                 return i;
             }
         }
@@ -269,7 +275,8 @@ public class PieView extends View {
         public int drawableID;
         public int selectDrawbleId;
     }
-    public interface OnItemSelectListener{
+
+    public interface OnItemSelectListener {
         void selectPosition(int position, PieView pieView);
     }
 }

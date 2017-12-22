@@ -27,15 +27,16 @@ public class PieAct extends ActionBarActivity {
         ButterKnife.bind(this);
 
         List<PieView.Data> list = new ArrayList<>();
-        list.add(new PieView.Data("自驾游", R.drawable.card_info_two, R.drawable.card_info_two));
+        list.add(new PieView.Data("自驾游", R.drawable.card_info_three, R.drawable.card_info_three));
         list.add(new PieView.Data("城市合伙人", R.drawable.card_info_four, R.drawable.card_info_four));
         list.add(new PieView.Data("核心业务", R.drawable.card_info_five, R.drawable.card_info_five));
         list.add(new PieView.Data("新闻动态", R.drawable.card_info_six, R.drawable.card_info_six));
-        list.add(new PieView.Data("企业风采", R.drawable.card_info_one, R.drawable.card_info_one));
-        list.add(new PieView.Data("公司简介", R.drawable.card_info_three, R.drawable.card_info_three));
+        list.add(new PieView.Data("企业风采", R.drawable.card_info_two, R.drawable.card_info_two));
+        list.add(new PieView.Data("公司简介", R.drawable.card_info_one, R.drawable.card_info_one));
 //        list.add(new PieView.Data("第六块", R.drawable.card_info_three,R.drawable.card_info_three));
 //        list.add(new PieView.Data("第七块", R.drawable.card_info_three,R.drawable.card_info_three));
-//        list.add(new PieView.Data("第八块", R.mipmap.icon_normal,R.mipmap.icon_select));
+//        list.add(new PieView.Data("第八块", R.drawable.card_info_three,R.drawable.card_info_three));
+
         pv.setList(list);
         pv.setOnItemSelectListener(new PieView.OnItemSelectListener() {
             @Override
