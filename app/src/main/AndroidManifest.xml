@@ -7,6 +7,10 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <application
         android:name=".abp.main.act.MyApplication"
         android:allowBackup="true"
@@ -89,6 +93,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
         <activity
+            android:name=".abp.index.act.HardWareIndexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle" />
+        <activity
             android:name=".abp.index.act.WidgetIndexAct"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
@@ -119,6 +127,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".abp.index.act.FragmentIndexAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".abp.index.act.CameraIndexAct"
             android:screenOrientation="portrait" />
 
         <!-- end index -->
@@ -190,26 +201,43 @@
 
         <activity
             android:name=".abp.ui.customview.arcLayout.act.ArcLayoutMainAct"
-            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle"
             />
         <activity
             android:name=".abp.ui.customview.arcLayout.act.DemoActivity"
-            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle"
             />
         <activity
             android:name=".abp.ui.customview.arcLayout.act.DemoFreeAngleActivity"
-            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle"
             />
         <activity
             android:name=".abp.ui.customview.arcLayout.act.DemoLikeTumblrActivity"
-            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle"
             />
         <activity
             android:name=".abp.ui.customview.arcLayout.act.DemoLikePathActivity"
-            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitle"
             />
         <!-- end custom view -->
 
+
+        <!--  hareware camera -->
+        <activity
+            android:name=".abp.hardware.camera.permiss.act.CameraPermissAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".abp.hardware.camera.wxdemo.act.CameraWxDemoAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!--  end hareware camera -->
 
         <!-- classic -->
         <activity
@@ -245,6 +273,17 @@
 
 
         <!-- end classic -->
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.transcendence.universe.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
 
     </application>

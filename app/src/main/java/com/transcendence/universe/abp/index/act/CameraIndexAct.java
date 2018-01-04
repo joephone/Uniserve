@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
+import com.transcendence.universe.abp.hardware.camera.permiss.act.CameraPermissAct;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.util.Loger;
 
@@ -19,7 +20,7 @@ import butterknife.ButterKnife;
 /**
  * Created by joephone on 2017/5/12.
  */
-public class IndexAct extends Activity implements IndexAdapter.IndexEvent {
+public class CameraIndexAct extends Activity implements IndexAdapter.IndexEvent {
 
     @Bind(R.id.mRecyclerView)
     RecyclerView mRecyclerView;
@@ -29,21 +30,14 @@ public class IndexAct extends Activity implements IndexAdapter.IndexEvent {
     private IndexAdapter adapter;
     private List<String> sourceList = new ArrayList<>();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.index);
         ButterKnife.bind(this);
 
-        sourceList.add("基础知识");
-        sourceList.add("UI");
-        sourceList.add("通信");
-        sourceList.add("手机功能-硬件");
-        sourceList.add("数据持久化");
-        sourceList.add("安全");
-        sourceList.add("第三方扩展");
-        sourceList.add("其他");
+        sourceList.add("CameraPermiss");
+
 
         mActivity = this;
 
@@ -62,25 +56,22 @@ public class IndexAct extends Activity implements IndexAdapter.IndexEvent {
         Intent intent = new Intent();
         switch (position){
             case 0:
-                intent = new Intent(mActivity,BaseIndexAct.class);
+                intent = new Intent(mActivity,CameraPermissAct.class);
                 break;
             case 1:
-                intent = new Intent(mActivity,UIIndexAct.class);
+
                 break;
             case 2:
-                intent = new Intent(mActivity,UIIndexAct.class);
+
                 break;
             case 3:
-                intent = new Intent(mActivity,HardWareIndexAct.class);
+
                 break;
             case 4:
-                intent = new Intent(mActivity,UIIndexAct.class);
                 break;
             case 5:
-                intent = new Intent(mActivity,UIIndexAct.class);
                 break;
             case 6:
-                intent = new Intent(mActivity,ClassicIndexAct.class);
                 break;
         }
         startActivity(intent);
