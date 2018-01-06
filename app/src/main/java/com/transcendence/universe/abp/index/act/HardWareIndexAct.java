@@ -36,6 +36,7 @@ public class HardWareIndexAct extends Activity implements IndexAdapter.IndexEven
         ButterKnife.bind(this);
 
         sourceList.add("Camera");
+        sourceList.add("清除缓存");
 
         mActivity = this;
 

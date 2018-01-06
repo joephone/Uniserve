@@ -82,6 +82,9 @@ public class IndexAct extends Activity implements IndexAdapter.IndexEvent {
             case 6:
                 intent = new Intent(mActivity,ClassicIndexAct.class);
                 break;
+            case 7:
+                intent = new Intent(mActivity,ClassicIndexAct.class);
+                break;
         }
         startActivity(intent);
     }

@@ -45,6 +45,7 @@ public class ClassicIndexAct extends Activity implements IndexAdapter.IndexEvent
         sourceList.add("Pie View");
         sourceList.add("CircleMenu");
 
+
         mActivity = this;
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
