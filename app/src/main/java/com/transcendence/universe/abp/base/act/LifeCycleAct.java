@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.util.Loger;
+import com.umeng.analytics.MobclickAgent;
 
 /**
  * Created by joephone on 2017/6/12.
@@ -34,6 +35,7 @@ public class LifeCycleAct extends Activity {
     protected void onResume() {
         super.onResume();
         Loger.i(tag,"onResume");
+        MobclickAgent.onResume(this);
     }
 
 
@@ -41,6 +43,7 @@ public class LifeCycleAct extends Activity {
     protected void onPause() {
         super.onPause();
         Loger.i(tag,"onPause");
+        MobclickAgent.onResume(this);
     }
 
     @Override
@@ -54,4 +57,6 @@ public class LifeCycleAct extends Activity {
         super.onDestroy();
         Loger.i(tag,"onDestroy");
     }
+
+
 }

@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.transcendence.universe.R;
+import com.umeng.analytics.MobclickAgent;
 
 public class ArcLayoutMainAct extends ActionBarActivity implements AbsListView.OnItemClickListener {
 
@@ -63,4 +64,12 @@ public class ArcLayoutMainAct extends ActionBarActivity implements AbsListView.O
         startActivity(intent);
     }
 
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
 }

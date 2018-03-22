@@ -16,88 +16,98 @@ import android.widget.Toast;
 
 import com.ogaclejapan.arclayout.ArcLayout;
 import com.transcendence.universe.R;
+import com.umeng.analytics.MobclickAgent;
 
 public class DemoFreeAngleActivity extends ActionBarActivity implements View.OnClickListener {
 
-  private static final String KEY_DEMO = "demo";
-  Toast toast = null;
-  ArcLayout arcLayout;
+    private static final String KEY_DEMO = "demo";
+    Toast toast = null;
+    ArcLayout arcLayout;
 
-  public static void startActivity(Context context, Demo demo) {
-    Intent intent = new Intent(context, DemoFreeAngleActivity.class);
-    intent.putExtra(KEY_DEMO, demo.name());
-    context.startActivity(intent);
-  }
-
-  private static Demo getDemo(Intent intent) {
-    return Demo.valueOf(intent.getStringExtra(KEY_DEMO));
-  }
-
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-
-    Demo demo = getDemo(getIntent());
-
-    setContentView(demo.layoutResId);
-    arcLayout = (ArcLayout) findViewById(R.id.arc_layout);
-    arcLayout.setArc(demo.arc);
-
-    for (int i = 0, size = arcLayout.getChildCount(); i < size; i++) {
-      arcLayout.getChildAt(i).setOnClickListener(this);
+    public static void startActivity(Context context, Demo demo) {
+        Intent intent = new Intent(context, DemoFreeAngleActivity.class);
+        intent.putExtra(KEY_DEMO, demo.name());
+        context.startActivity(intent);
     }
 
-    TextView note = (TextView) findViewById(R.id.note_text);
-    note.setText(Html.fromHtml(getString(demo.noteResId)));
-    FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) note.getLayoutParams();
-    switch (demo.arc) {
-      case TOP:
-      case TOP_LEFT:
-      case TOP_RIGHT:
-        lp.gravity = Gravity.BOTTOM;
-        break;
-      case BOTTOM:
-      case BOTTOM_LEFT:
-      case BOTTOM_RIGHT:
-        lp.gravity = Gravity.TOP;
-        break;
-      default:
-        lp.gravity = Gravity.TOP;
+    private static Demo getDemo(Intent intent) {
+        return Demo.valueOf(intent.getStringExtra(KEY_DEMO));
     }
 
-    ActionBar bar = getSupportActionBar();
-    bar.setTitle(demo.titleResId);
-    bar.setDisplayHomeAsUpEnabled(true);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-  }
+        Demo demo = getDemo(getIntent());
 
-  @Override
-  public boolean onOptionsItemSelected(MenuItem item) {
-    switch (item.getItemId()) {
-      case android.R.id.home:
-        finish();
-        break;
-      default:
-        return super.onOptionsItemSelected(item);
+        setContentView(demo.layoutResId);
+        arcLayout = (ArcLayout) findViewById(R.id.arc_layout);
+        arcLayout.setArc(demo.arc);
+
+        for (int i = 0, size = arcLayout.getChildCount(); i < size; i++) {
+            arcLayout.getChildAt(i).setOnClickListener(this);
+        }
+
+        TextView note = (TextView) findViewById(R.id.note_text);
+        note.setText(Html.fromHtml(getString(demo.noteResId)));
+        FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) note.getLayoutParams();
+        switch (demo.arc) {
+            case TOP:
+            case TOP_LEFT:
+            case TOP_RIGHT:
+                lp.gravity = Gravity.BOTTOM;
+                break;
+            case BOTTOM:
+            case BOTTOM_LEFT:
+            case BOTTOM_RIGHT:
+                lp.gravity = Gravity.TOP;
+                break;
+            default:
+                lp.gravity = Gravity.TOP;
+        }
+
+        ActionBar bar = getSupportActionBar();
+        bar.setTitle(demo.titleResId);
+        bar.setDisplayHomeAsUpEnabled(true);
+
     }
-    return true;
-  }
 
-  @Override
-  public void onClick(View v) {
-    if (v instanceof Button) {
-      showToast((Button) v);
-    }
-  }
-
-  private void showToast(Button btn) {
-    if (toast != null) {
-      toast.cancel();
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return true;
     }
 
-    String text = "Clicked: " + btn.getText();
-    toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
-    toast.show();
+    @Override
+    public void onClick(View v) {
+        if (v instanceof Button) {
+            showToast((Button) v);
+        }
+    }
 
-  }
+    private void showToast(Button btn) {
+        if (toast != null) {
+            toast.cancel();
+        }
+
+        String text = "Clicked: " + btn.getText();
+        toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
+        toast.show();
+
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
 }

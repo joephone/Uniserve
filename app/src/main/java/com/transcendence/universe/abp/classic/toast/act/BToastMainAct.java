@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.classic.toast.view.BToast;
+import com.umeng.analytics.MobclickAgent;
 
 public class BToastMainAct extends AppCompatActivity {
 
@@ -42,6 +43,15 @@ public class BToastMainAct extends AppCompatActivity {
                 BToast.showText(this, "简单提示 错误图标 长~ ", Toast.LENGTH_LONG, false);
                 break;
         }
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
 }

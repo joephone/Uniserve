@@ -19,6 +19,7 @@ import android.widget.Button;
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.hardware.camera.permiss.util.PhotoUtils;
 import com.transcendence.universe.abp.hardware.camera.permiss.util.ToastUtils;
+import com.umeng.analytics.MobclickAgent;
 
 import java.io.File;
 
@@ -202,5 +203,12 @@ public class CameraPermissAct extends AppCompatActivity implements View.OnClickL
         return state.equals(Environment.MEDIA_MOUNTED);
     }
 
-
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
 }

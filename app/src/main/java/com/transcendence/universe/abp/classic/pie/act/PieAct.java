@@ -6,6 +6,7 @@ import android.widget.Toast;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.classic.pie.view.PieView;
+import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,5 +47,14 @@ public class PieAct extends ActionBarActivity {
                 }
             }
         });
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }
