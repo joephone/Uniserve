@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.main.advancedpagerslidingtabstrip.WeiboTabActivity;
 import com.transcendence.universe.util.Global;
+import com.umeng.analytics.MobclickAgent;
 
 public class WelcomeAct extends AppCompatActivity {
 
@@ -23,5 +24,14 @@ public class WelcomeAct extends AppCompatActivity {
                 finish();
             }
         }, Global.WELCOME_TIME);
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

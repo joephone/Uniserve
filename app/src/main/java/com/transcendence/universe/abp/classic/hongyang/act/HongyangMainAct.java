@@ -14,6 +14,7 @@ import android.widget.ListView;
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.classic.hongyang.view.FeatureView;
 import com.transcendence.universe.abp.ui.widget.textview.act.RippleEffectAct;
+import com.umeng.analytics.MobclickAgent;
 
 public class HongyangMainAct extends ListActivity {
 
@@ -96,5 +97,14 @@ public class HongyangMainAct extends ListActivity {
         DemoDetails demo = (DemoDetails) getListAdapter().getItem(position);
         startActivity(new Intent(this.getApplicationContext(),
                 demo.activityClass));
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

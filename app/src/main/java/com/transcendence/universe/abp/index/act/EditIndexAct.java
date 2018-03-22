@@ -10,6 +10,7 @@ import com.transcendence.universe.R;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.abp.ui.widget.edittext.act.InputEditAct;
 import com.transcendence.universe.util.Loger;
+import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,5 +71,14 @@ public class EditIndexAct extends Activity implements IndexAdapter.IndexEvent {
                 break;
         }
         startActivity(intent);
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

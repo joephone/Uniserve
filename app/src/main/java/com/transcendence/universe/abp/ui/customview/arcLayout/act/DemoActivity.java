@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.ogaclejapan.arclayout.ArcLayout;
 import com.transcendence.universe.R;
+import com.umeng.analytics.MobclickAgent;
 
 public class DemoActivity extends ActionBarActivity implements View.OnClickListener {
 
@@ -109,5 +110,14 @@ public class DemoActivity extends ActionBarActivity implements View.OnClickListe
         toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
         toast.show();
 
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

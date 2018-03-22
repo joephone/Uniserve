@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Universe.iml" filepath="$PROJECT_DIR$/Universe.iml" />
+      <module fileurl="file://F:\GitHub\Universe\Universe.iml" filepath="F:\GitHub\Universe\Universe.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://F:\GitHub\Universe\app\app.iml" filepath="F:\GitHub\Universe\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://F:\GitHub\Universe\library\library.iml" filepath="F:\GitHub\Universe\library\library.iml" />
     </modules>
   </component>
 </project>

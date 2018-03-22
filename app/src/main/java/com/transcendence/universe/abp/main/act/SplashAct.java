@@ -16,6 +16,7 @@ import android.widget.ImageView;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.main.advancedpagerslidingtabstrip.WeiboTabActivity;
+import com.umeng.analytics.MobclickAgent;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -173,5 +174,13 @@ public class SplashAct extends BaseActivity {
         }
     }
 
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
 
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
 }

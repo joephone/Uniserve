@@ -13,6 +13,7 @@ import com.transcendence.universe.abp.ui.widget.textview.act.RippleEffectAct;
 import com.transcendence.universe.abp.ui.widget.textview.httptextview.act.HttpTextAct;
 import com.transcendence.universe.util.Loger;
 import com.transcendence.universe.util.StringUtils;
+import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,5 +78,14 @@ public class TextIndexAct extends Activity implements IndexAdapter.IndexEvent {
                 break;
         }
         startActivity(intent);
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

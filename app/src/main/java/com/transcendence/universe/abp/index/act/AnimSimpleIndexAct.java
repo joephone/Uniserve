@@ -10,6 +10,7 @@ import com.transcendence.universe.R;
 import com.transcendence.universe.abp.classic.toast.act.BToastMainAct;
 import com.transcendence.universe.abp.ui.anim.adapter.AnimAdapter;
 import com.transcendence.universe.util.Loger;
+import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,5 +63,14 @@ public class AnimSimpleIndexAct extends Activity implements AnimAdapter.AnimEven
                 break;
         }
         startActivity(intent);
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

@@ -10,6 +10,7 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.main.advancedpagerslidingtabstrip.WeiboTabActivity;
 import com.transcendence.universe.abpPublicModule.imagesfresco.DisplayImage;
+import com.umeng.analytics.MobclickAgent;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -59,4 +60,12 @@ public class StartAct extends Activity {
         }
     }
 
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
 }
