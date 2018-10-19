@@ -23,6 +23,7 @@
 
     <!--主色调红色-->
     <color name="main_red">#269943</color>
+    <color name="bg_main">#f5f5f5</color>
 
     <!-- sinasportprogress -->
     <color name="bg_left_progress">#DD2F1C</color>
@@ -32,6 +33,7 @@
     <color name="public_bg">#F8F8F8</color>
     <color name="public_orange">#FF7A17</color>
     <color name="themeColor">#30B644</color>
+    <color name="main_color">#269943</color>
 
     <!-- 分割线 -->
     <color name="line">#dfdfdf</color>

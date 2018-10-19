@@ -10,10 +10,10 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-
-import com.transcendence.universe.util.StatusBarUtil;
+import com.transcendence.universe.utils.StatusBarUtil;
 
 import butterknife.ButterKnife;
 
@@ -22,21 +22,18 @@ import butterknife.ButterKnife;
  * E-Mail Address：joephonechen@gmail.com
  */
 
-public class BaseActivity extends AppCompatActivity {
+public class BaseActivity extends Activity {
 
 
     @Override
     public void setContentView(@LayoutRes int layoutResID) {
         super.setContentView(layoutResID);
         ButterKnife.bind(this);
-//        SystemBarHelper.immersiveStatusBar(this);
-//        StatusBarUtil.setColor(this, getResources().getColor(R.color.transtion),0);
+
         //设置6.0以后沉浸状体栏的问题
         setBar();
         StatusBarUtil.setTransparentForWindow(this);
-
     }
-
 
     /**
      * 设置沉浸状态栏的方法,需要在setContentView()之后调用
@@ -98,6 +95,11 @@ public class BaseActivity extends AppCompatActivity {
 //        activityStack.remove(this);
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
     public void gotoActivity(Class<? extends Activity> targetActivity, boolean isFinish) {
         Intent intent = new Intent(BaseActivity.this, targetActivity);
         startActivity(intent);
@@ -105,5 +107,8 @@ public class BaseActivity extends AppCompatActivity {
             finish();
         }
     }
+
+
+
 
 }

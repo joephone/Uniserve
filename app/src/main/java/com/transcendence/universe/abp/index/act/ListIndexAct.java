@@ -10,7 +10,7 @@ import com.transcendence.universe.R;
 import com.transcendence.universe.abp.main.act.BaseActivity;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.abp.ui.widget.listview.act.MulListMainAct;
-import com.transcendence.universe.util.Loger;
+import com.transcendence.universe.utils.Loger;
 
 import java.util.ArrayList;
 import java.util.List;

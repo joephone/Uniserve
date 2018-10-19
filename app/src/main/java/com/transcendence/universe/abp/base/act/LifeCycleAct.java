@@ -4,13 +4,14 @@ import android.os.Bundle;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.main.act.BaseActivity;
-import com.transcendence.universe.util.Loger;
+import com.transcendence.universe.abp.main.act.TitleBarActivity;
+import com.transcendence.universe.utils.Loger;
 import com.umeng.analytics.MobclickAgent;
 
 /**
  * Created by joephone on 2017/6/12.
  */
-public class LifeCycleAct extends BaseActivity {
+public class LifeCycleAct extends TitleBarActivity {
 
     private String tag = this.getClass().getName();
 

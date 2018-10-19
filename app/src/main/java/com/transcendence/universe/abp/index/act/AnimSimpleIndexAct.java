@@ -9,7 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.classic.toast.act.BToastMainAct;
 import com.transcendence.universe.abp.ui.anim.adapter.AnimAdapter;
-import com.transcendence.universe.util.Loger;
+import com.transcendence.universe.utils.Loger;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;

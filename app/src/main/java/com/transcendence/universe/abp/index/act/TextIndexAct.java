@@ -11,8 +11,8 @@ import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.abp.ui.widget.textview.act.CareerShowMoreAct;
 import com.transcendence.universe.abp.ui.widget.textview.act.RippleEffectAct;
 import com.transcendence.universe.abp.ui.widget.textview.httptextview.act.HttpTextAct;
-import com.transcendence.universe.util.Loger;
-import com.transcendence.universe.util.StringUtils;
+import com.transcendence.universe.utils.Loger;
+import com.transcendence.universe.utils.StringUtils;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;

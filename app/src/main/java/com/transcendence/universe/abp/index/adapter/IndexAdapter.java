@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.transcendence.universe.R;
-import com.transcendence.universe.util.Loger;
-import com.transcendence.universe.util.StringUtils;
+import com.transcendence.universe.utils.Loger;
+import com.transcendence.universe.utils.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;

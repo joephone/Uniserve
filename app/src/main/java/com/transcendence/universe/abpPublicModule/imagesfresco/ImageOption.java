@@ -10,8 +10,8 @@ import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 import com.transcendence.universe.R;
-import com.transcendence.universe.util.Loger;
-import com.transcendence.universe.util.StringUtils;
+import com.transcendence.universe.utils.Loger;
+import com.transcendence.universe.utils.StringUtils;
 
 
 /**

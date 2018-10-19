@@ -1,13 +1,9 @@
 package com.transcendence.universe.abpPublicModule.imagesfresco;
 
-import android.content.Context;
 import android.util.Log;
 
 
-import com.transcendence.universe.util.StringUtils;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import com.transcendence.universe.utils.StringUtils;
 
 
 public class DisPlayImageOption {

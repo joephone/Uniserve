@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.transcendence.universe.R;
-import com.transcendence.universe.util.Loger;
+import com.transcendence.universe.utils.Loger;
 
 import java.util.ArrayList;
 import java.util.List;

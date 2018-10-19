@@ -22,8 +22,8 @@ import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
 import com.transcendence.universe.R;
-import com.transcendence.universe.util.Logs;
-import com.transcendence.universe.util.system.DensityUtils;
+import com.transcendence.universe.utils.Logs;
+import com.transcendence.universe.utils.system.DensityUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;

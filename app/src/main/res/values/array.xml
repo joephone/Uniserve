@@ -71,4 +71,25 @@
         <item>words</item>
 
     </string-array>
+
+
+    <string-array name="battery_status">
+        <item ></item>
+        <item >未知状态</item>
+        <item >充电状态</item>
+        <item >放电状态</item>
+        <item >未充电</item>
+        <item >电量充满状态</item>
+    </string-array>
+
+    <string-array name="battery_health">
+        <item ></item>
+        <item >未知错误</item>
+        <item >状态良好</item>
+        <item >电池温度过高</item>
+        <item >电量过低</item>
+        <item >电池电压过高</item>
+        <item >检测失败</item>
+        <item >电池温度过低</item>
+    </string-array>
 </resources>

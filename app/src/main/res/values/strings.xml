@@ -38,4 +38,28 @@
     <string name="note_advanced_tumblr">Try pressing the button</string>
     <string name="note_advanced_path">Try pressing the button</string>
 
+
+
+    <string name="battery_tabWidget_catch">电池监控</string>
+    <string name="battery_tabWidget_fix">电池维护</string>
+    <string name="bat_current">当前电量：</string>
+    <string name="bat_state">电池状态：</string>
+    <string name="bat_temp">电池温度：</string>
+    <string name="bat_v">电池电压：</string>
+    <string name="bat_use_state">电池使用状况：</string>
+    <string name="quick_charge_wait">1、快速充电等待中</string>
+    <string name="quick_charge_run">1、快速充电进行中</string>
+    <string name="quick_charge_over">1、快速充电已完成</string>
+    <string name="recycle_charge_wait">2、循环充电等待中</string>
+    <string name="recycle_charge_run">2、循环充电进行中</string>
+    <string name="recycle_charge_over">2、循环充电已完成</string>
+    <string name="keep_charge_wait">3、涓流充电等待中</string>
+    <string name="keep_charge_run">3、涓流充电进行中</string>
+    <string name="keep_charge_over">3、涓流充电已完成</string>
+    <string name="info_title">健康小巴士：</string>
+    <string name="info_view">电量低于10%时打开电池维护，为您进行健康充电，建议每月进行一次健康充电，保养电池。</string>
+    <string name="info_quick"> 快速充电阶段：使用恒流进行快速充电，快速将电池充到 80%，建议继续进行，将手机电池充满。</string>
+    <string name="info_recycle">循环充电阶段：电量即将充满的状态。</string>
+    <string name="info_keep">涓流充电：保持充电状态。</string>
+
 </resources>

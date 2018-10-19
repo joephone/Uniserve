@@ -10,8 +10,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.transcendence.universe.util.Logs;
-import com.transcendence.universe.util.system.DensityUtils;
+import com.transcendence.universe.utils.Logs;
+import com.transcendence.universe.utils.system.DensityUtils;
 
 /**
  * 描述：

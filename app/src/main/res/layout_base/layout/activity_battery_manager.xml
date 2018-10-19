@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/public_bg"
+    android:orientation="vertical" >
+    
+	<LinearLayout
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal">
+	    <ImageView
+	        android:id="@+id/bat_img" 
+	        android:layout_width="match_parent"
+    		android:layout_height="match_parent"
+    		android:layout_weight="1"
+    	    android:layout_marginTop="15dp"
+    		android:src="@drawable/bt80"/>
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+    		android:layout_height="match_parent"
+    		android:layout_weight="1"
+    		android:layout_marginTop="15dp"
+    		android:orientation="vertical">
+	        <TextView
+	            android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+    			android:textSize="@dimen/battery_txt"
+    			android:text="@string/bat_current"/>
+	        <TextView
+	            android:id="@+id/bat_cur" 
+	            android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+    			android:layout_margin="10dp"
+    			android:textColor="#00ff00"
+    			android:layout_gravity="center_vertical"
+    			android:textSize="@dimen/battery_show_txt"
+    			android:text="当前电量"/>
+	    </LinearLayout>
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="10dp"
+    	android:orientation="horizontal">
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+    		android:layout_height="match_parent"
+    		android:textSize="@dimen/battery_txt"
+    		android:gravity="center_vertical"
+    		android:text="@string/bat_state"/>
+	    <TextView
+	        android:id="@+id/bat_state" 
+	        android:layout_width="wrap_content"
+    		android:layout_height="match_parent"
+    		android:layout_weight="1"
+    		android:textColor="#00ff00"
+    		android:textSize="@dimen/battery_item_txt"
+    		android:gravity="center_vertical"
+    		android:text="充电状态"/>
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="10dp"
+    	android:orientation="horizontal">
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+    		android:layout_height="match_parent"
+    		android:textSize="@dimen/battery_txt"
+    		android:gravity="center_vertical"
+    		android:text="@string/bat_temp"/>
+	    <TextView
+	        android:id="@+id/bat_temperature" 
+	        android:layout_width="wrap_content"
+    		android:layout_height="match_parent"
+    		android:layout_weight="1"
+    		android:textSize="@dimen/battery_item_txt"
+    		android:textColor="#ff0000"
+    		android:gravity="center_vertical"
+    		android:text="电池温度"/>
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="10dp"
+    	android:orientation="horizontal">
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+    		android:layout_height="match_parent"
+    		android:textSize="@dimen/battery_txt"
+    		android:gravity="center_vertical"
+    		android:text="@string/bat_v"/>
+	    <TextView
+	        android:id="@+id/bat_v" 
+	        android:layout_width="wrap_content"
+    		android:layout_height="match_parent"
+    		android:layout_weight="1"
+    		android:textColor="#00ff00"
+    		android:textSize="@dimen/battery_item_txt"
+    		android:gravity="center_vertical"
+    		android:text="电池电压"/>
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="10dp"
+    	android:orientation="horizontal">
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+    		android:layout_height="match_parent"
+    		android:textSize="@dimen/battery_txt"
+    		android:gravity="center_vertical"
+    		android:text="@string/bat_use_state"/>
+	    <TextView
+	        android:id="@+id/bat_use_state" 
+	        android:layout_width="wrap_content"
+    		android:layout_height="match_parent"
+    		android:layout_weight="1"
+    		android:textColor="#00ff00"
+    		android:gravity="center_vertical"
+    		android:textSize="@dimen/battery_item_txt"
+    		android:text="电池使用状况"/>
+	</LinearLayout>
+
+</LinearLayout>

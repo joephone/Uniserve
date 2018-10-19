@@ -22,7 +22,7 @@
         android:icon="@drawable/universe_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/NoTitle">
+        android:theme="@style/AppTheme">
         <activity
             android:name=".abp.main.act.SplashAct">
             <intent-filter>
@@ -145,8 +145,10 @@
         <!-- base  -->
         <activity
             android:name=".abp.base.act.LifeCycleAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".abp.base.battery.act.BatteryActivity"
+            android:screenOrientation="portrait" />
         <!-- end base -->
 
 
@@ -178,7 +180,6 @@
         <!-- end Edit -->
 
         <!-- List -->
-
         <activity
             android:name=".abp.ui.widget.listview.act.MulListMainAct"
             android:screenOrientation="portrait"

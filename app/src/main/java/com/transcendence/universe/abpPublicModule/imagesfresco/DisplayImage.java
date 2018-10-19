@@ -9,13 +9,10 @@ import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.os.Environment;
-import android.util.Log;
 
 import com.facebook.binaryresource.FileBinaryResource;
 import com.facebook.cache.common.SimpleCacheKey;
 import com.facebook.drawee.backends.pipeline.Fresco;
-import com.facebook.drawee.drawable.ScalingUtils;
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
 import com.facebook.drawee.generic.RoundingParams;
@@ -26,14 +23,11 @@ import com.facebook.imagepipeline.request.ImageRequest;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
 import com.transcendence.universe.R;
 import com.transcendence.universe.service.MyApplicaton;
-import com.transcendence.universe.util.Loger;
-import com.transcendence.universe.util.StringUtils;
-import com.transcendence.universe.util.Utility;
+import com.transcendence.universe.utils.Loger;
+import com.transcendence.universe.utils.StringUtils;
+import com.transcendence.universe.utils.Utility;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 /**
  * Created by liuf on 16/4/4.

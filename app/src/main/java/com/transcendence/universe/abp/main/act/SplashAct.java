@@ -30,7 +30,7 @@ import butterknife.ButterKnife;
  * 作者:joephone
  */
 
-public class SplashAct extends Activity {
+public class SplashAct extends BaseActivity {
 
     @Bind(R.id.ivStart)
     ImageView ivStart;
@@ -53,6 +53,7 @@ public class SplashAct extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.splash);
         ButterKnife.bind(this);
 

@@ -9,7 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.hardware.camera.permiss.act.CameraPermissAct;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
-import com.transcendence.universe.util.Loger;
+import com.transcendence.universe.utils.Loger;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;

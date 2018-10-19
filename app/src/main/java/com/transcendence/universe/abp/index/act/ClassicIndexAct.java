@@ -12,7 +12,7 @@ import com.transcendence.universe.abp.classic.pie.act.CircleMenuAct;
 import com.transcendence.universe.abp.classic.pie.act.PieAct;
 import com.transcendence.universe.abp.classic.weiganloopview.act.WeiganMainAct;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
-import com.transcendence.universe.util.Loger;
+import com.transcendence.universe.utils.Loger;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
