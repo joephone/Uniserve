@@ -113,4 +113,13 @@ public final class DensityUtils {
         }
         return statusHeight;
     }
+
+
+    public static double change(double a){
+        return a * Math.PI  / 180;
+    }
+
+    public static double changeAngle(double a){
+        return a * 180 / Math.PI;
+    }
 }

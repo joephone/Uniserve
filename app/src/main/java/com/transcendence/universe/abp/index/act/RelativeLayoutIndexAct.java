@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
-import com.transcendence.universe.abp.ui.Layout.relative.act.SearchBarAct;
+import com.transcendence.universe.abp.ui.layout.relative.act.SearchBarAct;
 import com.transcendence.universe.util.Loger;
 import com.umeng.analytics.MobclickAgent;
 

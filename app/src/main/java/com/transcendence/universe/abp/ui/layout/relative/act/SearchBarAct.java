@@ -1,4 +1,4 @@
-package com.transcendence.universe.abp.ui.Layout.relative.act;
+package com.transcendence.universe.abp.ui.layout.relative.act;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.transcendence.universe.R;
-import com.transcendence.universe.abp.ui.Layout.relative.view.SearchBarLayout;
+import com.transcendence.universe.abp.ui.layout.relative.view.SearchBarLayout;
 
 import java.util.ArrayList;
 import java.util.List;

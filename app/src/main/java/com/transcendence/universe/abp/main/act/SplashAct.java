@@ -3,11 +3,14 @@ package com.transcendence.universe.abp.main.act;
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -27,7 +30,7 @@ import butterknife.ButterKnife;
  * 作者:joephone
  */
 
-public class SplashAct extends BaseActivity {
+public class SplashAct extends Activity {
 
     @Bind(R.id.ivStart)
     ImageView ivStart;
@@ -38,8 +41,17 @@ public class SplashAct extends BaseActivity {
     private Handler handler = new Handler();
     private AnimatorSet set;
 
+    //    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.account_token_invalid);
+//        ButterKnife.bind(this);
+//        setTitle("下线通知");
+//        init();
+//    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
         ButterKnife.bind(this);

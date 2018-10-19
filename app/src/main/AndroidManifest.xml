@@ -136,6 +136,9 @@
         <activity
             android:name=".abp.index.act.CameraIndexAct"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".abp.index.act.LuckyIndexAct"
+            android:screenOrientation="portrait" />
 
         <!-- end index -->
 
@@ -188,12 +191,16 @@
             android:windowSoftInputMode="adjustPan"/>
         <!-- end List -->
 
-        <!-- Relative -->
+        <!-- relative -->
         <activity
-            android:name=".abp.ui.Layout.relative.act.SearchBarAct"
+            android:name=".abp.ui.layout.relative.act.SearchBarAct"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
-        <!-- end Relative -->
+        <activity
+            android:name=".abp.ui.layout.relative.act.LuckyPanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- end relative -->
 
         <!--  recycler -->
         <activity

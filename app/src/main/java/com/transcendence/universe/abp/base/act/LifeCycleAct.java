@@ -1,16 +1,16 @@
 package com.transcendence.universe.abp.base.act;
 
-import android.app.Activity;
 import android.os.Bundle;
 
 import com.transcendence.universe.R;
+import com.transcendence.universe.abp.main.act.BaseActivity;
 import com.transcendence.universe.util.Loger;
 import com.umeng.analytics.MobclickAgent;
 
 /**
  * Created by joephone on 2017/6/12.
  */
-public class LifeCycleAct extends Activity {
+public class LifeCycleAct extends BaseActivity {
 
     private String tag = this.getClass().getName();
 

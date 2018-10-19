@@ -1,4 +1,4 @@
-package com.transcendence.universe.abp.ui.Layout.relative.view;
+package com.transcendence.universe.abp.ui.layout.relative.view;
 
 
 import android.content.Context;

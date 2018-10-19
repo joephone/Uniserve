@@ -101,4 +101,12 @@
             <enum name="circle" value="1"/>
         </attr>
     </declare-styleable>
+
+    <!--    rotatepan-->
+    <declare-styleable name="luckpan">
+        <attr name="pannum"  format="integer"/>
+        <attr name="names" format="reference"/>
+        <attr name="icons"  format="reference"/>
+    </declare-styleable>
+    <!--   end  rotatepan-->
 </resources>

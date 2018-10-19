@@ -2,4 +2,14 @@
 <resources>
   <item name="arc_layout" type="id"/>
   <item name="note_text" type="id"/>
+
+  <item type="id" name="statusbarutil_fake_status_bar_view" />
+  <item type="id" name="statusbarutil_translucent_view" />
+
+  <!-- rotate pan-->
+  <item type="id" name="shan_id"/>
+  <item type="id" name="yun_id"/>
+  <item type="id" name="node_id" />
+  <item type="id" name="rotate_pan"/>
+  <!-- end rotate pan-->
 </resources>

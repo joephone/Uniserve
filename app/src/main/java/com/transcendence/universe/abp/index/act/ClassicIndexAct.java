@@ -45,7 +45,7 @@ public class ClassicIndexAct extends Activity implements IndexAdapter.IndexEvent
         sourceList.add("Toast");
         sourceList.add("Pie View");
         sourceList.add("CircleMenu");
-
+        sourceList.add("幸运抽奖");
 
         mActivity = this;
 
@@ -79,6 +79,7 @@ public class ClassicIndexAct extends Activity implements IndexAdapter.IndexEvent
                 intent = new Intent(mActivity,CircleMenuAct.class);
                 break;
             case 5:
+                intent = new Intent(mActivity,LuckyIndexAct.class);
                 break;
             case 6:
                 break;

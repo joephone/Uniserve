@@ -46,4 +46,29 @@
         <item>拖拽Item + 侧滑删除Item，非滑动出现删除Menu，Grid形式比较特殊，不支持侧滑删除。</item>
         <item>指定某个Item不能被侧滑删除或者拖拽，或者扩展Grid形式可以被滑动删除Item。</item>
     </string-array>
+
+
+    <string-array name="names">
+        <item>action</item>
+        <item>adventure</item>
+        <item>combat</item>
+        <item>moba</item>
+        <item>other</item>
+        <item>role</item>
+        <item>sports</item>
+        <item>words</item>
+
+    </string-array>
+
+    <string-array name="icons">
+        <item>action</item>
+        <item>adventure</item>
+        <item>combat</item>
+        <item>moba</item>
+        <item>other</item>
+        <item>role</item>
+        <item>sports</item>
+        <item>words</item>
+
+    </string-array>
 </resources>

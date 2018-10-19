@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
+import com.transcendence.universe.abp.main.act.BaseActivity;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.abp.ui.widget.listview.act.MulListMainAct;
 import com.transcendence.universe.util.Loger;
@@ -20,7 +21,7 @@ import butterknife.ButterKnife;
 /**
  * Created by joephone on 2017/5/12.
  */
-public class ListIndexAct extends Activity implements IndexAdapter.IndexEvent {
+public class ListIndexAct extends BaseActivity implements IndexAdapter.IndexEvent {
 
     @Bind(R.id.mRecyclerView)
     RecyclerView mRecyclerView;
