@@ -36,43 +36,23 @@
             android:name=".abp.main.act.WelcomeAct"
             android:hardwareAccelerated="true"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".abp.main.act.StartAct"
             android:hardwareAccelerated="true"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait" />
         <!-- 主页 暂未使用的 -->
         <activity
             android:name=".abp.main.act.MainAct"
             android:hardwareAccelerated="true"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".abp.index.act.IndexAct"
             android:hardwareAccelerated="true"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
-
-
-        <activity
-            android:name=".abp.main.advancedpagerslidingtabstrip.APSMainAct" />
-        <activity
-            android:name=".abp.main.advancedpagerslidingtabstrip.NormalTabActivity"/>
-        <activity
-            android:name=".abp.main.advancedpagerslidingtabstrip.IconTabActivity"/>
-        <activity
-            android:name=".abp.main.advancedpagerslidingtabstrip.CustomTabActivity" />
-        <activity
-            android:name=".abp.main.advancedpagerslidingtabstrip.ViewTabActivity"/>
-        <activity
-            android:name=".abp.main.advancedpagerslidingtabstrip.WeiboTabActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:screenOrientation="portrait" />
 
         <!-- index -->
         <activity
@@ -87,40 +67,32 @@
 
         <activity
             android:name=".abp.index.act.ClassicIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".abp.index.act.EditIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".abp.index.act.UIIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".abp.index.act.HardWareIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".abp.index.act.WidgetIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".abp.index.act.TextIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".abp.index.act.ListIndexAct"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitle" />
         <activity
             android:name=".abp.index.act.LayoutIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".abp.index.act.RelativeLayoutIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".abp.index.act.ToastIndexAct"
             android:screenOrientation="portrait" />
@@ -129,9 +101,6 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".abp.index.act.CustomIndexAct"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".abp.index.act.FragmentIndexAct"
             android:screenOrientation="portrait" />
         <activity
             android:name=".abp.index.act.CameraIndexAct"
@@ -148,6 +117,12 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".abp.base.battery.act.BatteryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".abp.base.battery.act.BatteryManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".abp.base.battery.act.BatteryFixActivity"
             android:screenOrientation="portrait" />
         <!-- end base -->
 
@@ -174,7 +149,6 @@
         <activity
             android:name=".abp.ui.widget.edittext.act.InputEditAct"
             android:screenOrientation="portrait"
-            android:theme="@style/NoTitle"
             android:windowSoftInputMode="adjustPan"/>
 
         <!-- end Edit -->
@@ -183,24 +157,20 @@
         <activity
             android:name=".abp.ui.widget.listview.act.MulListMainAct"
             android:screenOrientation="portrait"
-            android:theme="@style/NoTitle"
             android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".abp.ui.widget.listview.act.MultAct"
             android:screenOrientation="portrait"
-            android:theme="@style/NoTitle"
             android:windowSoftInputMode="adjustPan"/>
         <!-- end List -->
 
         <!-- relative -->
         <activity
             android:name=".abp.ui.layout.relative.act.SearchBarAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".abp.ui.layout.relative.act.LuckyPanActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:screenOrientation="portrait" />
         <!-- end relative -->
 
         <!--  recycler -->
@@ -215,74 +185,55 @@
         <activity
             android:name=".abp.ui.customview.arcLayout.act.ArcLayoutMainAct"
             android:screenOrientation="portrait"
-            android:theme="@style/NoTitle"
             />
         <activity
             android:name=".abp.ui.customview.arcLayout.act.DemoActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/NoTitle"
             />
         <activity
             android:name=".abp.ui.customview.arcLayout.act.DemoFreeAngleActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/NoTitle"
             />
         <activity
             android:name=".abp.ui.customview.arcLayout.act.DemoLikeTumblrActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/NoTitle"
             />
         <activity
             android:name=".abp.ui.customview.arcLayout.act.DemoLikePathActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/NoTitle"
             />
         <!-- end custom view -->
-
 
         <!--  hareware camera -->
         <activity
             android:name=".abp.hardware.camera.permiss.act.CameraPermissAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".abp.hardware.camera.wxdemo.act.CameraWxDemoAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
-
+            android:screenOrientation="portrait" />
         <!--  end hareware camera -->
 
         <!-- classic -->
         <activity
             android:name=".abp.classic.hongyang.act.HongyangMainAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".abp.classic.weiganloopview.act.WeiganMainAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".abp.classic.weiganloopview.act.DialogActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".abp.classic.weiganloopview.act.ScrollViewActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".abp.classic.toast.act.BToastMainAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:screenOrientation="portrait" />
                 <!-- pie -->
         <activity
             android:name=".abp.classic.pie.act.PieAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".abp.classic.pie.act.CircleMenuAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:screenOrientation="portrait" />
 
 
         <!-- end classic -->

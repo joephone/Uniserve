@@ -7,8 +7,6 @@ import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AnticipateInterpolator;
@@ -18,12 +16,13 @@ import android.widget.Toast;
 
 import com.ogaclejapan.arclayout.ArcLayout;
 import com.transcendence.universe.R;
+import com.transcendence.universe.abp.main.act.TitleBarActivity;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DemoLikePathActivity extends ActionBarActivity implements View.OnClickListener {
+public class DemoLikePathActivity extends TitleBarActivity implements View.OnClickListener {
 
     private static final String KEY_DEMO = "demo";
     Toast toast = null;
@@ -48,9 +47,9 @@ public class DemoLikePathActivity extends ActionBarActivity implements View.OnCl
 
         Demo demo = getDemo(getIntent());
 
-        ActionBar bar = getSupportActionBar();
-        bar.setTitle(demo.titleResId);
-        bar.setDisplayHomeAsUpEnabled(true);
+//        ActionBar bar = getSupportActionBar();
+//        bar.setTitle(demo.titleResId);
+//        bar.setDisplayHomeAsUpEnabled(true);
 
         fab = findViewById(R.id.fab);
         menuLayout = findViewById(R.id.menu_layout);

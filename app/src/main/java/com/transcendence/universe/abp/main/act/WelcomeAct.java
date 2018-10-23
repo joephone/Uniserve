@@ -6,7 +6,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 import com.transcendence.universe.R;
-import com.transcendence.universe.abp.main.advancedpagerslidingtabstrip.WeiboTabActivity;
+import com.transcendence.universe.abp.index.act.IndexAct;
 import com.transcendence.universe.utils.Global;
 import com.umeng.analytics.MobclickAgent;
 
@@ -19,7 +19,7 @@ public class WelcomeAct extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(WelcomeAct.this,WeiboTabActivity.class);
+                Intent intent = new Intent(WelcomeAct.this,IndexAct.class);
                 startActivity(intent);
                 finish();
             }

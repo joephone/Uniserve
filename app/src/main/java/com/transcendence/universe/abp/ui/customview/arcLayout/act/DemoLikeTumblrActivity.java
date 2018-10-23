@@ -8,8 +8,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewAnimationUtils;
@@ -20,13 +18,14 @@ import android.widget.Toast;
 
 import com.ogaclejapan.arclayout.ArcLayout;
 import com.transcendence.universe.R;
+import com.transcendence.universe.abp.main.act.TitleBarActivity;
 import com.transcendence.universe.abp.ui.customview.arcLayout.view.ClipRevealFrame;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DemoLikeTumblrActivity extends ActionBarActivity implements View.OnClickListener {
+public class DemoLikeTumblrActivity extends TitleBarActivity implements View.OnClickListener {
 
     private static final String KEY_DEMO = "demo";
     Toast toast = null;
@@ -52,9 +51,9 @@ public class DemoLikeTumblrActivity extends ActionBarActivity implements View.On
 
         Demo demo = getDemo(getIntent());
 
-        ActionBar bar = getSupportActionBar();
-        bar.setTitle(demo.titleResId);
-        bar.setDisplayHomeAsUpEnabled(true);
+//        ActionBar bar = getSupportActionBar();
+//        bar.setTitle(demo.titleResId);
+//        bar.setDisplayHomeAsUpEnabled(true);
 
         rootLayout = findViewById(R.id.root_layout);
         menuLayout = (ClipRevealFrame) findViewById(R.id.menu_layout);

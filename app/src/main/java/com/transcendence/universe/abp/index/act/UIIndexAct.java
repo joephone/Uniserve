@@ -68,7 +68,6 @@ public class UIIndexAct extends TitleBarActivity implements IndexAdapter.IndexEv
                 intent = new Intent(mActivity,CustomIndexAct.class);
                 break;
             case 3:
-                intent = new Intent(mActivity,FragmentIndexAct.class);
                 break;
             case 4:
                 break;

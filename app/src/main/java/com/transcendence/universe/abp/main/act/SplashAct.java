@@ -18,7 +18,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.transcendence.universe.R;
-import com.transcendence.universe.abp.main.advancedpagerslidingtabstrip.WeiboTabActivity;
+import com.transcendence.universe.abp.index.act.IndexAct;
 import com.umeng.analytics.MobclickAgent;
 
 import butterknife.Bind;
@@ -171,7 +171,7 @@ public class SplashAct extends BaseActivity {
      */
     private void startMainActivity() {
         if (!isGoMain) {
-            Intent intent = new Intent(this, WeiboTabActivity.class);
+            Intent intent = new Intent(this, IndexAct.class);
             startActivity(intent);
             isGoMain = true;
             finish();

@@ -1,11 +1,11 @@
 package com.transcendence.universe.abp.classic.pie.act;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.widget.Toast;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.classic.pie.view.PieView;
+import com.transcendence.universe.abp.main.act.TitleBarActivity;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 
-public class PieAct extends ActionBarActivity {
+public class PieAct extends TitleBarActivity {
 
 
     @Bind(R.id.pv)

@@ -3,8 +3,6 @@ package com.transcendence.universe.abp.ui.customview.arcLayout.act;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.text.Html;
 import android.view.Gravity;
 import android.view.Menu;
@@ -17,9 +15,10 @@ import android.widget.Toast;
 
 import com.ogaclejapan.arclayout.ArcLayout;
 import com.transcendence.universe.R;
+import com.transcendence.universe.abp.main.act.TitleBarActivity;
 import com.umeng.analytics.MobclickAgent;
 
-public class DemoActivity extends ActionBarActivity implements View.OnClickListener {
+public class DemoActivity extends TitleBarActivity implements View.OnClickListener {
 
     private static final String KEY_DEMO = "demo";
     Toast toast = null;
@@ -67,9 +66,9 @@ public class DemoActivity extends ActionBarActivity implements View.OnClickListe
                 lp.gravity = Gravity.TOP;
         }
 
-        ActionBar bar = getSupportActionBar();
-        bar.setTitle(demo.titleResId);
-        bar.setDisplayHomeAsUpEnabled(true);
+//        ActionBar bar = getSupportActionBar();
+//        bar.setTitle(demo.titleResId);
+//        bar.setDisplayHomeAsUpEnabled(true);
 
     }
 

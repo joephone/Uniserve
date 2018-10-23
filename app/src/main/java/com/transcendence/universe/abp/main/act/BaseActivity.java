@@ -22,7 +22,7 @@ import butterknife.ButterKnife;
  * E-Mail Address：joephonechen@gmail.com
  */
 
-public class BaseActivity extends Activity {
+public class BaseActivity extends AppCompatActivity {
 
 
     @Override

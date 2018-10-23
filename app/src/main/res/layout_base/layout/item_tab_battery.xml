@@ -14,4 +14,5 @@
         android:drawableTop="@drawable/battery_manager"
         android:text="电池监控" />
 
+
 </LinearLayout>
