@@ -7,7 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
-import com.transcendence.universe.abp.classic.toast.act.BToastMainAct;
+import com.transcendence.universe.abp.main.act.TitleBarActivity;
 import com.transcendence.universe.abp.ui.anim.adapter.AnimAdapter;
 import com.transcendence.universe.utils.Loger;
 import com.umeng.analytics.MobclickAgent;
@@ -21,7 +21,7 @@ import butterknife.ButterKnife;
 /**
  * Created by joephone on 2017/6/16.
  */
-public class AnimSimpleIndexAct extends Activity implements AnimAdapter.AnimEvent {
+public class AnimSimpleIndexAct extends TitleBarActivity implements AnimAdapter.AnimEvent {
 
     @Bind(R.id.mRecyclerView)
     RecyclerView mRecyclerView;
@@ -38,7 +38,7 @@ public class AnimSimpleIndexAct extends Activity implements AnimAdapter.AnimEven
         setContentView(R.layout.index);
         ButterKnife.bind(this);
 
-        sourceList.add("alpha");
+//        sourceList.add("alpha");
 
         mActivity = this;
 
@@ -57,7 +57,6 @@ public class AnimSimpleIndexAct extends Activity implements AnimAdapter.AnimEven
         Intent intent = new Intent();
         switch (position){
             case 0:
-                intent = new Intent(mActivity,BToastMainAct.class);
                 break;
             case 1:
                 break;

@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.hardware.camera.permiss.act.CameraPermissAct;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
+import com.transcendence.universe.abp.main.act.TitleBarActivity;
 import com.transcendence.universe.utils.Loger;
 import com.umeng.analytics.MobclickAgent;
 
@@ -21,7 +22,7 @@ import butterknife.ButterKnife;
 /**
  * Created by joephone on 2017/5/12.
  */
-public class CameraIndexAct extends Activity implements IndexAdapter.IndexEvent {
+public class CameraIndexAct extends TitleBarActivity implements IndexAdapter.IndexEvent {
 
     @Bind(R.id.mRecyclerView)
     RecyclerView mRecyclerView;

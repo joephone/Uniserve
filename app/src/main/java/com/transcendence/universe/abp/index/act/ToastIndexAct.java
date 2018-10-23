@@ -7,7 +7,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
-import com.transcendence.universe.abp.classic.toast.act.BToastMainAct;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.utils.Loger;
 import com.umeng.analytics.MobclickAgent;
@@ -57,7 +56,6 @@ public class ToastIndexAct extends Activity implements IndexAdapter.IndexEvent {
         Intent intent = new Intent();
         switch (position){
             case 0:
-                intent = new Intent(mActivity,BToastMainAct.class);
                 break;
             case 1:
                 break;

@@ -8,10 +8,9 @@ import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.classic.hongyang.act.HongyangMainAct;
-import com.transcendence.universe.abp.classic.pie.act.CircleMenuAct;
-import com.transcendence.universe.abp.classic.pie.act.PieAct;
 import com.transcendence.universe.abp.classic.weiganloopview.act.WeiganMainAct;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
+import com.transcendence.universe.abp.main.act.TitleBarActivity;
 import com.transcendence.universe.utils.Loger;
 import com.umeng.analytics.MobclickAgent;
 
@@ -24,7 +23,7 @@ import butterknife.ButterKnife;
 /**
  * Created by joephone on 2017/5/12.
  */
-public class ClassicIndexAct extends Activity implements IndexAdapter.IndexEvent {
+public class ClassicIndexAct extends TitleBarActivity implements IndexAdapter.IndexEvent {
 
     @Bind(R.id.mRecyclerView)
     RecyclerView mRecyclerView;
@@ -43,8 +42,6 @@ public class ClassicIndexAct extends Activity implements IndexAdapter.IndexEvent
         sourceList.add("鸿洋自定义View");
         sourceList.add("伟根loopView");
         sourceList.add("Toast");
-        sourceList.add("Pie View");
-        sourceList.add("CircleMenu");
         sourceList.add("幸运抽奖");
 
         mActivity = this;
@@ -73,13 +70,12 @@ public class ClassicIndexAct extends Activity implements IndexAdapter.IndexEvent
                 intent = new Intent(mActivity,ToastIndexAct.class);
                 break;
             case 3:
-                intent = new Intent(mActivity,PieAct.class);
+                intent = new Intent(mActivity,LuckyIndexAct.class);
                 break;
             case 4:
-                intent = new Intent(mActivity,CircleMenuAct.class);
+
                 break;
             case 5:
-                intent = new Intent(mActivity,LuckyIndexAct.class);
                 break;
             case 6:
                 break;

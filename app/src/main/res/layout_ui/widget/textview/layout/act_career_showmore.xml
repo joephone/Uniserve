@@ -6,7 +6,6 @@
     android:background="@color/public_bg"
     android:orientation="vertical">
 
-    <include layout="@layout/title_second" />
 
     <LinearLayout
         style="@style/career_layout">
