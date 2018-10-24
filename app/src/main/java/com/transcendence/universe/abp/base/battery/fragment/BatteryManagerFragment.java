@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.transcendence.universe.abp.base.battery.act;
+package com.transcendence.universe.abp.base.battery.fragment;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -12,14 +12,19 @@ import android.os.BatteryManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.main.act.TitleBarActivity;
+import com.transcendence.universe.abp.main.fragments.BaseFragment;
 import com.transcendence.universe.utils.SharedPreferenceUtil;
 
-public class BatteryManagerActivity extends TitleBarActivity {
+public class BatteryManagerFragment extends BaseFragment {
 	/** 图片变化延迟时间 */
 	private static final long DELAT_TIME = 1000;
 	/** 电池状况显示控件 */
@@ -42,15 +47,24 @@ public class BatteryManagerActivity extends TitleBarActivity {
 			R.drawable.bt30, R.drawable.bt50, R.drawable.bt70, R.drawable.bt80,
 			R.drawable.bt90, R.drawable.bt100 };
 
+
+	@Nullable
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_battery_manager);
-		/** 初始化方法类对象 */
-		preferencesUtil = new SharedPreferenceUtil(this);
-		/** 初始化控件 */
-		init();
+	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+		View view = inflater.inflate(R.layout.activity_battery_manager, container, false);
+		return view;
 	}
+
+	@Override
+	public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+		super.onViewCreated(view, savedInstanceState);
+
+		/** 初始化方法类对象 */
+		preferencesUtil = new SharedPreferenceUtil(getActivity());
+		/** 初始化控件 */
+		init(view);
+	}
+
 
 	/** 处理信息，控制充电时图片变化 */
 	Handler mHandler = new Handler() {
@@ -63,32 +77,32 @@ public class BatteryManagerActivity extends TitleBarActivity {
 	/**
 	 * 初始化控件
 	 */
-	public void init() {
-		mBatImg = (ImageView) findViewById(R.id.bat_img);
-		mBatCurTxt = (TextView) findViewById(R.id.bat_cur);
-		mBatStaTxt = (TextView) findViewById(R.id.bat_state);
-		mBatTemperature = (TextView) findViewById(R.id.bat_temperature);
-		mBatVolTxt = (TextView) findViewById(R.id.bat_v);
-		mBatUseTxt = (TextView) findViewById(R.id.bat_use_state);
+	public void init(View view) {
+		mBatImg = (ImageView) view.findViewById(R.id.bat_img);
+		mBatCurTxt = (TextView) view.findViewById(R.id.bat_cur);
+		mBatStaTxt = (TextView) view.findViewById(R.id.bat_state);
+		mBatTemperature = (TextView) view.findViewById(R.id.bat_temperature);
+		mBatVolTxt = (TextView) view.findViewById(R.id.bat_v);
+		mBatUseTxt = (TextView) view.findViewById(R.id.bat_use_state);
 	}
 
 	/**
 	 * 注册广播接收器
 	 */
 	@Override
-	protected void onResume() {
+	public void onResume() {
 		super.onResume();
 		receiver = new BatReceiver();
 		IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-		registerReceiver(receiver, filter);
+		getActivity().registerReceiver(receiver, filter);
 	}
 
 	/**
 	 * 注销广播接收器
 	 */
 	@Override
-	protected void onDestroy() {
-		unregisterReceiver(receiver);
+	public void onDestroy() {
+		getActivity().unregisterReceiver(receiver);
 		super.onDestroy();
 	}
 

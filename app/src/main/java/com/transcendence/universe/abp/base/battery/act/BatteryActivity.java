@@ -4,13 +4,14 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 
 
 import com.transcendence.universe.R;
+import com.transcendence.universe.abp.base.battery.fragment.BatteryFixFragment;
+import com.transcendence.universe.abp.base.battery.fragment.BatteryManagerFragment;
 import com.transcendence.universe.abp.main.act.TitleBarActivity;
-import com.transcendence.universe.adapter.PageAdapter;
+import com.transcendence.universe.adapter.MyPageAdapter;
 import com.transcendence.universe.utils.AppUtils;
 
 import java.util.ArrayList;
@@ -24,54 +25,48 @@ import java.util.List;
 
 public class BatteryActivity extends TitleBarActivity {
 
-	TabLayout tabLayout;
-	ViewPager vp;
-	private PagerAdapter mPageAdapter;
+    TabLayout tabLayout;
+    ViewPager vp;
+    private MyPageAdapter mPageAdapter;
 
 
-	@Override
-	protected void onCreate(@Nullable Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_battery_main);
-		setTitle("电话咨询");
-		init();
-	}
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_battery_main);
+        setTitle("电话咨询");
+        init();
+    }
 
-	private void init() {
-		tabLayout = (TabLayout)findViewById(R.id.tab);
-		vp = (ViewPager)findViewById(R.id.viewPager);
-		mPageAdapter = new PageAdapter(getSupportFragmentManager());
-		List<String> titles=new ArrayList<>();
-		List<Fragment> fragments=new ArrayList<>();
-		titles.add("待回复");
-		titles.add("已完成");
-		titles.add("已失效");
-//		PhoneAppointmentFragment phoneAppointmentFragment = new PhoneAppointmentFragment();
-//		phoneAppointmentFragment.setListener(PhoneAppointmentActivity.this);
-//		FinishPhoneAppointmentFragment finishPhoneAppointmentFragment = new FinishPhoneAppointmentFragment();
-//		Bundle bundle = new Bundle();
-////		bundle.putBoolean(ConfigModel.ISGOTOPHONEZIXUN,true);
-//		phoneAppointmentFragment.setArguments(bundle);
-//		finishPhoneAppointmentFragment.setArguments(bundle);
-//
-//		fragments.add(phoneAppointmentFragment);
-//		fragments.add(finishPhoneAppointmentFragment);
-//
-//		mPageAdapter.setTitles(titles);
-//		mPageAdapter.setFragments(fragments);
-//		vp.setOffscreenPageLimit(0);
-//		vp.setAdapter(mPageAdapter);
-//		tabLayout.setupWithViewPager(vp);
-//		tabLayout.setTabsFromPagerAdapter(mPageAdapter);
-//		tabLayout.post(new Runnable() {
-//			@Override
-//			public void run() {
-//				AppUtils.setIndicator(tabLayout, 40, 40);
-//			}
-//		});
+    private void init() {
+        tabLayout = (TabLayout) findViewById(R.id.tab);
+        vp = (ViewPager) findViewById(R.id.viewPager);
+        mPageAdapter = new MyPageAdapter(getSupportFragmentManager());
+        List<String> titles = new ArrayList<>();
+        List<Fragment> fragments = new ArrayList<>();
+        titles.add("待回复");
+        titles.add("已完成");
+        titles.add("已失效");
+        BatteryManagerFragment managerFragment = new BatteryManagerFragment();
+        BatteryFixFragment fixFragment = new BatteryFixFragment();
+        fragments.add(managerFragment);
+        fragments.add(fixFragment);
+
+        mPageAdapter.setTitles(titles);
+        mPageAdapter.setFragments(fragments);
+        vp.setOffscreenPageLimit(0);
+        vp.setAdapter(mPageAdapter);
+        tabLayout.setupWithViewPager(vp);
+        tabLayout.setTabsFromPagerAdapter(mPageAdapter);
+        tabLayout.post(new Runnable() {
+            @Override
+            public void run() {
+                AppUtils.setIndicator(tabLayout, 40, 40);
+            }
+        });
 
 
-	}
+    }
 
 //	TextView txtTextView;
 //	TabHost tabHost;

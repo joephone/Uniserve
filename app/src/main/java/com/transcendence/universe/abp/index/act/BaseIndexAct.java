@@ -7,7 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
-import com.transcendence.universe.abp.base.act.LifeCycleAct;
+import com.transcendence.universe.abp.base.act.LifeCycleActivity;
 import com.transcendence.universe.abp.base.battery.act.BatteryActivity;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.abp.main.act.TitleBarActivity;
@@ -60,7 +60,7 @@ public class BaseIndexAct extends TitleBarActivity implements IndexAdapter.Index
         Intent intent = new Intent();
         switch (position){
             case 0:
-                intent = new Intent(mActivity,LifeCycleAct.class);
+                intent = new Intent(mActivity,LifeCycleActivity.class);
                 break;
             case 1:
                 intent = new Intent(mActivity,BatteryActivity.class);

@@ -14,12 +14,12 @@ import java.util.List;
  * E-Mail Address：joephonechen@gmail.com
  */
 
-public class PageAdapter extends FragmentPagerAdapter {
+public class MyPageAdapter extends FragmentPagerAdapter {
     private SparseArray<String> mFragmentTags = new SparseArray<>();
     private List<String> titles = new ArrayList<>();
     private List<Fragment> list = new ArrayList<>();
 
-    public PageAdapter(FragmentManager fm) {
+    public MyPageAdapter(FragmentManager fm) {
         super(fm);
     }
     public void setFragments(List<Fragment> list) {

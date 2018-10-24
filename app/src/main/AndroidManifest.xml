@@ -113,16 +113,10 @@
 
         <!-- base  -->
         <activity
-            android:name=".abp.base.act.LifeCycleAct"
+            android:name=".abp.base.act.LifeCycleActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".abp.base.battery.act.BatteryActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".abp.base.battery.act.BatteryManagerActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".abp.base.battery.act.BatteryFixActivity"
             android:screenOrientation="portrait" />
         <!-- end base -->
 
@@ -145,12 +139,10 @@
         <!-- end Text -->
 
         <!-- Edit -->
-
         <activity
             android:name=".abp.ui.widget.edittext.act.InputEditAct"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan"/>
-
         <!-- end Edit -->
 
         <!-- List -->
@@ -223,19 +215,6 @@
         <activity
             android:name=".abp.classic.weiganloopview.act.ScrollViewActivity"
             android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".abp.classic.toast.act.BToastMainAct"
-            android:screenOrientation="portrait" />
-                <!-- pie -->
-        <activity
-            android:name=".abp.classic.pie.act.PieAct"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".abp.classic.pie.act.CircleMenuAct"
-            android:screenOrientation="portrait" />
-
-
         <!-- end classic -->
 
 

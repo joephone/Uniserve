@@ -1,50 +1,63 @@
 /**
  * 
  */
-package com.transcendence.universe.abp.base.battery.act;
+package com.transcendence.universe.abp.base.battery.fragment;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.transcendence.universe.R;
-import com.transcendence.universe.abp.main.act.TitleBarActivity;
+import com.transcendence.universe.abp.main.fragments.BaseFragment;
 import com.transcendence.universe.utils.SharedPreferenceUtil;
 
 
-public class BatteryFixActivity extends TitleBarActivity {
-	private BatteryManagerActivity mMgrBatActivity;
+public class BatteryFixFragment extends BaseFragment {
+//	private BatteryManagerActivity mMgrBatActivity;
 	private SharedPreferenceUtil preferencesUtil;
 	private TextView mTxtHealth, mTxtStatus, mTxtLevel, mTxtQuick, mTxtRec,
 			mTxtSlow;
 	private ImageView mImgLevel, mImgQuick, mImgRec, mImgSlow;
 
+
+	@Nullable
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_battery_fix);
-		init();
+	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+		View view = inflater.inflate(R.layout.activity_battery_fix, container, false);
+		return view;
+	}
+
+	@Override
+	public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+		super.onViewCreated(view, savedInstanceState);
+
+		init(view);
 		getInfo();
 	}
+
 
 	/**
 	 * 初始化控件
 	 */
-	public void init() {
-		mMgrBatActivity = new BatteryManagerActivity();
-		preferencesUtil = new SharedPreferenceUtil(this);
+	public void init(View view) {
+//		mMgrBatActivity = new BatteryManagerActivity();
+		preferencesUtil = new SharedPreferenceUtil(getActivity());
 
-		mTxtHealth = (TextView) findViewById(R.id.bat_health);
-		mTxtStatus = (TextView) findViewById(R.id.bat_level_sta);
-		mTxtLevel = (TextView) findViewById(R.id.bat_level);
-		mTxtQuick = (TextView) findViewById(R.id.txt_quick_charge);
-		mTxtRec = (TextView) findViewById(R.id.txt_recycle_charge);
-		mTxtSlow = (TextView) findViewById(R.id.txt_keep_charge);
-		mImgLevel = (ImageView) findViewById(R.id.bat_sta_img);
-		mImgQuick = (ImageView) findViewById(R.id.img_quick_charge);
-		mImgRec = (ImageView) findViewById(R.id.img_recycle_charge);
-		mImgSlow = (ImageView) findViewById(R.id.img_keep_charge);
+		mTxtHealth = (TextView) view.findViewById(R.id.bat_health);
+		mTxtStatus = (TextView) view.findViewById(R.id.bat_level_sta);
+		mTxtLevel = (TextView) view.findViewById(R.id.bat_level);
+		mTxtQuick = (TextView) view.findViewById(R.id.txt_quick_charge);
+		mTxtRec = (TextView) view.findViewById(R.id.txt_recycle_charge);
+		mTxtSlow = (TextView) view.findViewById(R.id.txt_keep_charge);
+		mImgLevel = (ImageView) view.findViewById(R.id.bat_sta_img);
+		mImgQuick = (ImageView) view.findViewById(R.id.img_quick_charge);
+		mImgRec = (ImageView) view.findViewById(R.id.img_recycle_charge);
+		mImgSlow = (ImageView) view.findViewById(R.id.img_keep_charge);
 	}
 
 	/**
@@ -102,7 +115,7 @@ public class BatteryFixActivity extends TitleBarActivity {
 				mTxtRec.setTextColor(Color.WHITE);
 			}
 		} else {
-			mMgrBatActivity.setImg(mImgLevel, curLevel);
+//			mMgrBatActivity.setImg(mImgLevel, curLevel);
 			mImgSlow.setImageResource(R.drawable.battery_bulb_deactive);
 			mTxtSlow.setText(getResources()
 					.getString(R.string.keep_charge_wait));
