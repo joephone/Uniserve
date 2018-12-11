@@ -7,11 +7,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
+import com.transcendence.universe.abp.base.act.AndroidInfoActivity;
 import com.transcendence.universe.abp.base.act.LifeCycleActivity;
+import com.transcendence.universe.abp.base.act.TelInfoActivity;
 import com.transcendence.universe.abp.base.battery.act.BatteryActivity;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.abp.main.act.TitleBarActivity;
-import com.transcendence.universe.utils.Loger;
+import com.transcendence.universe.utils.Logs;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
@@ -40,8 +42,16 @@ public class BaseIndexAct extends TitleBarActivity implements IndexAdapter.Index
         setContentView(R.layout.index);
         ButterKnife.bind(this);
 
+        init();
+    }
+
+    @Override
+    protected void init() {
         sourceList.add("生命周期");
         sourceList.add("电池");
+        sourceList.add("手机品牌、商家、版本号等信息");
+        sourceList.add("电话工具类，手机号、运营商、IMEI、IMSI等信息");
+
 
         mActivity = this;
 
@@ -56,7 +66,6 @@ public class BaseIndexAct extends TitleBarActivity implements IndexAdapter.Index
 
     @Override
     public void onItemClick(int position) {
-        Loger.i(tag,"onItemClick");
         Intent intent = new Intent();
         switch (position){
             case 0:
@@ -66,10 +75,10 @@ public class BaseIndexAct extends TitleBarActivity implements IndexAdapter.Index
                 intent = new Intent(mActivity,BatteryActivity.class);
                 break;
             case 2:
-                intent = new Intent(mActivity,UIIndexAct.class);
+                intent = new Intent(mActivity,AndroidInfoActivity.class);
                 break;
             case 3:
-                intent = new Intent(mActivity,UIIndexAct.class);
+                intent = new Intent(mActivity,TelInfoActivity.class);
                 break;
             case 4:
                 intent = new Intent(mActivity,UIIndexAct.class);

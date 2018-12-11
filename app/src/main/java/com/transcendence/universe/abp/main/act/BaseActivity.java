@@ -2,11 +2,14 @@ package com.transcendence.universe.abp.main.act;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -33,6 +36,8 @@ public class BaseActivity extends AppCompatActivity {
         //设置6.0以后沉浸状体栏的问题
         setBar();
         StatusBarUtil.setTransparentForWindow(this);
+
+        init();
     }
 
     /**
@@ -108,7 +113,12 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
+    protected void init() {
+    }
 
 
+    public boolean checkPermission(@NonNull String permission) {
+        return ActivityCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_GRANTED;
+    }
 
 }

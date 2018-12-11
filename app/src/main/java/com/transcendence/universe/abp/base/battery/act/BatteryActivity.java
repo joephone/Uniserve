@@ -34,19 +34,18 @@ public class BatteryActivity extends TitleBarActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_battery_main);
-        setTitle("电话咨询");
+        setTitle("电池");
         init();
     }
 
-    private void init() {
+    protected void init() {
         tabLayout = (TabLayout) findViewById(R.id.tab);
         vp = (ViewPager) findViewById(R.id.viewPager);
         mPageAdapter = new MyPageAdapter(getSupportFragmentManager());
         List<String> titles = new ArrayList<>();
         List<Fragment> fragments = new ArrayList<>();
-        titles.add("待回复");
-        titles.add("已完成");
-        titles.add("已失效");
+        titles.add("电池监控");
+        titles.add("电池维护");
         BatteryManagerFragment managerFragment = new BatteryManagerFragment();
         BatteryFixFragment fixFragment = new BatteryFixFragment();
         fragments.add(managerFragment);

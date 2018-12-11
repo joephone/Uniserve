@@ -153,7 +153,7 @@ public class SearchBarLayout extends RelativeLayout {
 		cancelTextView.setText("取消");
 		float size=mTextView.getTextSize()/(getContext().getResources().getDisplayMetrics().density);
 		cancelTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP,size);
-		cancelTextView.setTextColor(getContext().getResources().getColor(R.color.themeColor));
+		cancelTextView.setTextColor(getContext().getResources().getColor(R.color.themecolor));
 		if(!isInEditMode()){
 			addClickEffect(cancelTextView).setOnClickListener(new OnClickListener() {
 			@Override

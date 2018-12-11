@@ -22,8 +22,8 @@ import com.facebook.imagepipeline.request.BasePostprocessor;
 import com.facebook.imagepipeline.request.ImageRequest;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
 import com.transcendence.universe.R;
-import com.transcendence.universe.service.MyApplicaton;
-import com.transcendence.universe.utils.Loger;
+import com.transcendence.universe.service.MyApplication;
+import com.transcendence.universe.utils.Logs;
 import com.transcendence.universe.utils.StringUtils;
 import com.transcendence.universe.utils.Utility;
 
@@ -43,7 +43,7 @@ public class DisplayImage {
          */
     public static DisplayImage getInstance() {
         if (null == instance) {
-            context = MyApplicaton.getInstance().getContext();
+            context = MyApplication.getInstance();
             instance = new DisplayImage();
         }
         return instance;
@@ -215,19 +215,19 @@ public class DisplayImage {
 
     public void showWeatherTide(SimpleDraweeView imageView, String name) {
         String url = "asset:///weather_image_tide/" + name + ".png";
-        Loger.i(tag, "--url:" + url);
+        Logs.logI("--url:" + url);
         displayNetworkImage(imageView, url);
     }
 
     public void showWeatherNewsLeftTide(SimpleDraweeView imageView, String name) {
         String url = "asset:///weather_image_news_left/" + name + ".png";
-        Loger.i(tag, "--url:" + url);
+        Logs.logI("--url:" + url);
         displayNetworkImage(imageView, url);
     }
 
     public void showWeatherNewsRightTide(SimpleDraweeView imageView, String name) {
         String url = "asset:///weather_image_news_right/" + name + ".png";
-        Loger.i(tag, "--url:" + url);
+        Logs.logI("--url:" + url);
         displayNetworkImage(imageView, url);
     }
 
@@ -239,7 +239,7 @@ public class DisplayImage {
      */
     public void showWeatherCatches(SimpleDraweeView imageView, String name) {
         String url = "asset:///weather_image_catches/" + name + ".png";
-        Loger.i(tag, "--url:" + url);
+        Logs.logI("--url:" + url);
         displayNetworkImage(imageView, url);
     }
 

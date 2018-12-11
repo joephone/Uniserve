@@ -10,7 +10,7 @@ import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 import com.transcendence.universe.R;
-import com.transcendence.universe.utils.Loger;
+import com.transcendence.universe.utils.Logs;
 import com.transcendence.universe.utils.StringUtils;
 
 
@@ -87,7 +87,7 @@ public class ImageOption {
                  }
                 hasc = hasc.toUpperCase();
                 String url = "assets://countryFlag/" + hasc + ".png";
-                Loger.i("ImageOption", url);
+                Logs.logI(url);
                 ImageLoader.getInstance().displayImage(url,
                         imageView);
             }

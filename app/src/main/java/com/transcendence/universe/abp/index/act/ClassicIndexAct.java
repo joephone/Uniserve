@@ -7,11 +7,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
+import com.transcendence.universe.abp.classic.fringerprint.act.FingerprintMainActivity;
 import com.transcendence.universe.abp.classic.hongyang.act.HongyangMainAct;
 import com.transcendence.universe.abp.classic.weiganloopview.act.WeiganMainAct;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.abp.main.act.TitleBarActivity;
-import com.transcendence.universe.utils.Loger;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
@@ -41,8 +41,8 @@ public class ClassicIndexAct extends TitleBarActivity implements IndexAdapter.In
 
         sourceList.add("鸿洋自定义View");
         sourceList.add("伟根loopView");
-        sourceList.add("Toast");
         sourceList.add("幸运抽奖");
+        sourceList.add("指纹");
 
         mActivity = this;
 
@@ -57,7 +57,6 @@ public class ClassicIndexAct extends TitleBarActivity implements IndexAdapter.In
 
     @Override
     public void onItemClick(int position) {
-        Loger.i(tag,"onItemClick");
         Intent intent = new Intent();
         switch (position){
             case 0:
@@ -67,10 +66,10 @@ public class ClassicIndexAct extends TitleBarActivity implements IndexAdapter.In
                 intent = new Intent(mActivity,WeiganMainAct.class);
                 break;
             case 2:
-                intent = new Intent(mActivity,ToastIndexAct.class);
+                intent = new Intent(mActivity,LuckyIndexAct.class);
                 break;
             case 3:
-                intent = new Intent(mActivity,LuckyIndexAct.class);
+                intent = new Intent(mActivity,FingerprintMainActivity.class);
                 break;
             case 4:
 

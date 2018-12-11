@@ -9,7 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.abp.main.act.TitleBarActivity;
-import com.transcendence.universe.utils.Loger;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
@@ -40,7 +39,6 @@ public class UIIndexAct extends TitleBarActivity implements IndexAdapter.IndexEv
         sourceList.add("Widgets");
         sourceList.add("Layout");
         sourceList.add("Custom View");
-        sourceList.add("Fragment");
 
         mActivity = this;
 
@@ -55,7 +53,6 @@ public class UIIndexAct extends TitleBarActivity implements IndexAdapter.IndexEv
 
     @Override
     public void onItemClick(int position) {
-        Loger.i(tag,"onItemClick");
         Intent intent = new Intent();
         switch (position){
             case 0:

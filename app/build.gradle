@@ -28,6 +28,7 @@ android {
                             'src/main/res/layout_main',
                             'src/main/res/layout_base',
                             'src/main/res/layout_thirdparty',
+                            'src/main/res/layout_publicmodule',
                             'src/main/res/layout_ui',
                             'src/main/res/layout_ui/layout',
                             'src/main/res/layout_ui/widget',
@@ -47,7 +48,7 @@ android {
                             'src/main/res/layout_classic/weiganloopview',
                             'src/main/res/layout_classic/wheelview',
                             'src/main/res/layout_classic/sinaprogress',
-                            'src/main/res/layout_classic/pie',
+                            'src/main/res/layout_classic/fingerprint',
                     ]
         }
     }
@@ -78,9 +79,7 @@ dependencies {
     //第三方recyclerview
     compile 'com.android.support:recyclerview-v7:26.1.0'
 
-
     compile 'jp.wasabeef:recyclerview-animators:1.2.0@aar'
-
     //fragment
     compile 'homhomlin.lib:frescoimageview:1.2.0'
     compile 'com.facebook.fresco:fresco:0.9.0'

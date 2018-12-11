@@ -9,7 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.abp.main.act.TitleBarActivity;
-import com.transcendence.universe.utils.Loger;
+import com.transcendence.universe.utils.Logs;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
@@ -53,7 +53,6 @@ public class AnimIndexAct extends TitleBarActivity implements IndexAdapter.Index
 
     @Override
     public void onItemClick(int position) {
-        Loger.i(tag,"onItemClick");
         Intent intent = new Intent();
         switch (position){
             case 0:

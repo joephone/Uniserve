@@ -10,7 +10,6 @@ import com.transcendence.universe.R;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.abp.main.act.TitleBarActivity;
 import com.transcendence.universe.abp.ui.widget.edittext.act.InputEditAct;
-import com.transcendence.universe.utils.Loger;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
@@ -52,7 +51,6 @@ public class EditIndexAct extends TitleBarActivity implements IndexAdapter.Index
 
     @Override
     public void onItemClick(int position) {
-        Loger.i(tag,"onItemClick");
         Intent intent = new Intent();
         switch (position){
             case 0:

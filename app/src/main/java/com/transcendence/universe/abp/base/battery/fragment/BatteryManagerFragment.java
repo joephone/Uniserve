@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.transcendence.universe.abp.base.battery.fragment;
 
 import android.content.BroadcastReceiver;
@@ -58,7 +55,6 @@ public class BatteryManagerFragment extends BaseFragment {
 	@Override
 	public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
-
 		/** 初始化方法类对象 */
 		preferencesUtil = new SharedPreferenceUtil(getActivity());
 		/** 初始化控件 */

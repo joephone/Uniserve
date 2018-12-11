@@ -13,7 +13,7 @@
         android:background="@color/white"
         />
 
-    <!--<include layout="@layout/include_full" />-->
+    <include layout="@layout/include_full" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"

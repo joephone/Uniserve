@@ -3,6 +3,8 @@
   android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/public_bg"
+	android:paddingLeft="@dimen/all_width_height"
+	android:paddingRight="@dimen/all_width_height"
     android:orientation="vertical" >
     
 	<LinearLayout
@@ -25,7 +27,7 @@
 	        <TextView
 	            android:layout_width="match_parent"
     			android:layout_height="wrap_content"
-    			android:textSize="@dimen/battery_txt"
+    			android:textSize="@dimen/standard_text"
     			android:text="@string/bat_current"/>
 	        <TextView
 	            android:id="@+id/bat_cur" 
@@ -34,7 +36,7 @@
     			android:layout_margin="10dp"
     			android:textColor="#00ff00"
     			android:layout_gravity="center_vertical"
-    			android:textSize="@dimen/battery_show_txt"
+    			android:textSize="@dimen/standard_text_bigger"
     			android:text="当前电量"/>
 	    </LinearLayout>
 	</LinearLayout>
@@ -48,7 +50,7 @@
 	    <TextView 
 	        android:layout_width="wrap_content"
     		android:layout_height="match_parent"
-    		android:textSize="@dimen/battery_txt"
+    		android:textSize="@dimen/standard_text"
     		android:gravity="center_vertical"
     		android:text="@string/bat_state"/>
 	    <TextView
@@ -57,7 +59,7 @@
     		android:layout_height="match_parent"
     		android:layout_weight="1"
     		android:textColor="#00ff00"
-    		android:textSize="@dimen/battery_item_txt"
+    		android:textSize="@dimen/standard_text_bigger"
     		android:gravity="center_vertical"
     		android:text="充电状态"/>
 	</LinearLayout>
@@ -71,7 +73,7 @@
 	    <TextView 
 	        android:layout_width="wrap_content"
     		android:layout_height="match_parent"
-    		android:textSize="@dimen/battery_txt"
+    		android:textSize="@dimen/standard_text"
     		android:gravity="center_vertical"
     		android:text="@string/bat_temp"/>
 	    <TextView
@@ -79,7 +81,7 @@
 	        android:layout_width="wrap_content"
     		android:layout_height="match_parent"
     		android:layout_weight="1"
-    		android:textSize="@dimen/battery_item_txt"
+    		android:textSize="@dimen/standard_text_bigger"
     		android:textColor="#ff0000"
     		android:gravity="center_vertical"
     		android:text="电池温度"/>
@@ -94,7 +96,7 @@
 	    <TextView 
 	        android:layout_width="wrap_content"
     		android:layout_height="match_parent"
-    		android:textSize="@dimen/battery_txt"
+    		android:textSize="@dimen/standard_text"
     		android:gravity="center_vertical"
     		android:text="@string/bat_v"/>
 	    <TextView
@@ -103,7 +105,7 @@
     		android:layout_height="match_parent"
     		android:layout_weight="1"
     		android:textColor="#00ff00"
-    		android:textSize="@dimen/battery_item_txt"
+    		android:textSize="@dimen/standard_text_bigger"
     		android:gravity="center_vertical"
     		android:text="电池电压"/>
 	</LinearLayout>
@@ -117,7 +119,7 @@
 	    <TextView 
 	        android:layout_width="wrap_content"
     		android:layout_height="match_parent"
-    		android:textSize="@dimen/battery_txt"
+    		android:textSize="@dimen/standard_text"
     		android:gravity="center_vertical"
     		android:text="@string/bat_use_state"/>
 	    <TextView
@@ -127,7 +129,7 @@
     		android:layout_weight="1"
     		android:textColor="#00ff00"
     		android:gravity="center_vertical"
-    		android:textSize="@dimen/battery_item_txt"
+    		android:textSize="@dimen/standard_text_bigger"
     		android:text="电池使用状况"/>
 	</LinearLayout>
 

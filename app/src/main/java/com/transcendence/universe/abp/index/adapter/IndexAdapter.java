@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.transcendence.universe.R;
-import com.transcendence.universe.utils.Loger;
 import com.transcendence.universe.utils.StringUtils;
 
 import java.util.ArrayList;
@@ -33,7 +32,6 @@ public class IndexAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         this.mContext = context;
         this.sourceList = sourceList;
         mLayoutInflater = LayoutInflater.from(context);
-        Loger.i(tag,"size---"+sourceList.size());
     }
 
     public void setEvent(IndexEvent event) {

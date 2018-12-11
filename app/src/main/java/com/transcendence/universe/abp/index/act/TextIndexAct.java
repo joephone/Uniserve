@@ -11,7 +11,6 @@ import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.abp.ui.widget.textview.act.CareerShowMoreAct;
 import com.transcendence.universe.abp.ui.widget.textview.act.RippleEffectAct;
 import com.transcendence.universe.abp.ui.widget.textview.httptextview.act.HttpTextAct;
-import com.transcendence.universe.utils.Loger;
 import com.transcendence.universe.utils.StringUtils;
 import com.umeng.analytics.MobclickAgent;
 
@@ -56,7 +55,6 @@ public class TextIndexAct extends Activity implements IndexAdapter.IndexEvent {
 
     @Override
     public void onItemClick(int position) {
-        Loger.i(tag,"onItemClick");
         Intent intent = new Intent();
         switch (position){
             case 0:

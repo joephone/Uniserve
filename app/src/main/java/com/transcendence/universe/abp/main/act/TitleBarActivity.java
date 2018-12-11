@@ -19,6 +19,8 @@ import com.transcendence.universe.utils.StatusBarUtil;
 
 public class TitleBarActivity extends BaseActivity {
     private View titleBar;
+    private ImageView back;
+    private TextView title;
     protected View statusView;
 
     @Override
@@ -80,19 +82,20 @@ public class TitleBarActivity extends BaseActivity {
 
     protected void initTitle() {
         if (titleBar != null) {
-//            imageViewBack = (Button) findViewById(R.id.imageViewBack);
+            back = (ImageView) findViewById(R.id.back);
             statusView = (View) findViewById(R.id.title_view);
+            title = (TextView) findViewById(R.id.title);
 //            textViewRight = (TextView) findViewById(R.id.textViewRight);
 //            textViewTitle = (TextView) findViewById(R.id.textViewTitle);
 //            rightImageview = (ImageView) findViewById(R.id.title_right_image);
-//            initStateHeigt();
+            initStateHeigt();
 //            imageViewBack.setVisibility(View.INVISIBLE);
-//            imageViewBack.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    onBackButtonClicked();
-//                }
-//            });
+            back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    onBackButtonClicked();
+                }
+            });
 //
 //            textViewRight.setVisibility(View.INVISIBLE);
 //            textViewRight.setOnClickListener(new View.OnClickListener() {
@@ -102,6 +105,44 @@ public class TitleBarActivity extends BaseActivity {
 //                }
 //            });
         }
+    }
+
+    protected void setTitle(String title) {
+        setTitle(true, title, null);
+    }
+
+    protected void setTitle(boolean showBackButton, String titleText, String rightText) {
+        if (back != null) {
+            back.setVisibility(showBackButton ? View.VISIBLE : View.INVISIBLE);
+        }
+
+        if (title != null) {
+            title.setText(titleText);
+        }
+
+//        if (textViewRight != null) {
+//            textViewRight.setVisibility(rightText == null ? View.INVISIBLE : View.VISIBLE);
+//            textViewRight.setText(rightText);
+//        }
+    }
+
+    protected void setTitle(boolean showBackButton, String titleText, int imageSource) {
+        if (back != null) {
+            back.setVisibility(showBackButton ? View.VISIBLE : View.INVISIBLE);
+        }
+
+        if (title != null) {
+            title.setText(titleText);
+        }
+
+//        if (imageSource >0 ) {
+//            rightImageview.setVisibility(imageSource >0 ? View.VISIBLE : View.INVISIBLE);
+//            rightImageview.setBackgroundResource(imageSource);
+//        }
+    }
+
+    protected void onBackButtonClicked() {
+        finish();
     }
 
     private void initStateHeigt() {

@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.transcendence.universe.R;
+import com.transcendence.universe.abp.main.act.TitleBarActivity;
 import com.transcendence.universe.abp.ui.layout.relative.view.SearchBarLayout;
 
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ import java.util.Locale;
 /**
  * Created by Porster on 16/6/8.
  */
-public class SearchBarAct extends Activity {
+public class SearchBarAct extends TitleBarActivity {
     private List<String> mListData;
     private List<String> mOriginData;
 
@@ -36,7 +37,6 @@ public class SearchBarAct extends Activity {
 
     private void initUI() {
         SearchBarLayout mSearchBar= (SearchBarLayout) findViewById(R.id.searchBarlayout);
-
         ListView mListView= (ListView) findViewById(R.id.listview);
 
 

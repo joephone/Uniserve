@@ -41,4 +41,17 @@ public class Logs {
         Log.d(Global.TAG, content);
 //        }
     }
+
+
+    public static void i(String content) {
+//        if (Global.isTest) {
+        Log.i(Global.TAG, content);
+//        }
+    }
+
+    public static void e(String content) {
+//        if (Global.isTest) {
+        Log.e(Global.TAG, content);
+//        }
+    }
 }

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.transcendence.universe.service.MyApplicaton;
+import com.transcendence.universe.service.MyApplication;
 
 
 public class ToastHelper {
@@ -24,7 +24,7 @@ public class ToastHelper {
 	public static ToastHelper getInstance() {
 		if (null == instance) {
 			instance = new ToastHelper();
-			Context context = MyApplicaton.getInstance().getContext();
+			Context context = MyApplication.getInstance();
 			if (context!=null) {
 				top = DensityUtils.dip2px(context, 60);
 			}else {
@@ -54,7 +54,7 @@ public class ToastHelper {
 	 *            1 代表长时间 , 0 代表短时间
 	 */
 	public void showToast(int info, int time) {
-		Context context = MyApplicaton.getInstance().getContext();
+		Context context = MyApplication.getInstance();
 		String infoStr="";
 		if (context!=null) {
 			 infoStr = context.getString(info);	
@@ -79,7 +79,7 @@ public class ToastHelper {
 	}
 	
 	public void showToast(String infoStr, int time) {
-		Context context = MyApplicaton.getInstance().getContext();
+		Context context = MyApplication.getInstance();
 		if (mToast == null && context != null) {
 			mToast = Toast.makeText(context, infoStr, time);
 		} else {
@@ -97,12 +97,11 @@ public class ToastHelper {
 	 *            显示的位置
 	 */
 	public void ToastMessage(String msg, int loction) {
-		Context cont = MyApplicaton.getInstance().getContext();
+		Context cont = MyApplication.getInstance();
 		if (loction == Gravity.TOP) {// 上方
 			Toast toast = Toast.makeText(cont, msg, Toast.LENGTH_SHORT);
 			toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.TOP, 0, top);
 			toast.show();
-
 		} else if (loction == Gravity.CENTER) {// 中间
 			Toast toast = Toast.makeText(cont, msg, Toast.LENGTH_SHORT);
 			toast.setGravity(Gravity.CENTER, 0, 0);

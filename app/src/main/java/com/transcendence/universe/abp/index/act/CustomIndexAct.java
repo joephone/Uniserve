@@ -10,7 +10,7 @@ import com.transcendence.universe.R;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.abp.main.act.TitleBarActivity;
 import com.transcendence.universe.abp.ui.customview.arcLayout.act.ArcLayoutMainAct;
-import com.transcendence.universe.utils.Loger;
+import com.transcendence.universe.abp.ui.customview.flowlayout.act.SubTagActivity;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
@@ -40,6 +40,7 @@ public class CustomIndexAct extends TitleBarActivity implements IndexAdapter.Ind
         ButterKnife.bind(this);
 
         sourceList.add("Arc Layout");
+        sourceList.add("Subject Tag");
 
         mActivity = this;
 
@@ -54,13 +55,13 @@ public class CustomIndexAct extends TitleBarActivity implements IndexAdapter.Ind
 
     @Override
     public void onItemClick(int position) {
-        Loger.i(tag,"onItemClick");
         Intent intent = new Intent();
         switch (position){
             case 0:
                 intent = new Intent(mActivity,ArcLayoutMainAct.class);
                 break;
             case 1:
+                intent = new Intent(mActivity,SubTagActivity.class);
                 break;
         }
         startActivity(intent);

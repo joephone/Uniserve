@@ -29,11 +29,11 @@
 
 
     <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
-        <item name="tabIndicatorColor">@color/themeColor</item>
+        <item name="tabIndicatorColor">@color/themecolor</item>
         <item name="tabIndicatorHeight">2dp</item>
         <item name="tabBackground">?attr/selectableItemBackground</item>
         <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
-        <item name="tabSelectedTextColor">@color/themeColor</item>
+        <item name="tabSelectedTextColor">@color/themecolor</item>
     </style>
 
     <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">

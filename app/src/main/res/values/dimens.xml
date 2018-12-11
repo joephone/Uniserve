@@ -11,6 +11,34 @@
     <dimen name="weibo_tab_size">30dp</dimen>
     <dimen name="button_drawable_padding">360dip</dimen>
     <dimen name="home_bar_icon_margins">15dp</dimen>
+
+
+    <!-- 标题栏的文字大小 -->
+    <dimen name="title_size">18sp</dimen>
+    <!-- 标题栏右边的文字大小-->
+    <dimen name="title_size_right">18sp</dimen>
+    <!-- 边界距离 -->
+    <dimen name="all_width_height">15dp</dimen>
+    <!--  线宽或高 -->
+    <dimen name="view_width">1dp</dimen>
+    <!-- 编辑文字 -->
+    <dimen name="edit_text">14dp</dimen>
+    <!-- 编辑文本框高度 -->
+    <dimen name="edit_text_height">40dp</dimen>
+    <!-- 按钮文字大小 -->
+    <dimen name="button_text">16sp</dimen>
+    <!-- view高 -->
+    <dimen name="divider_height">0.5dp</dimen>
+    <!-- 标准文字大小 -->
+    <dimen name="standard_text">14dp</dimen>
+
+    <dimen name="standard_text_bigger">15dp</dimen>
+    <!-- 大文字 -->
+    <dimen name="big_text">16dp</dimen>
+    <!-- 12 标准文字大小 -->
+    <dimen name="small_text">12dp</dimen>
+
+
     <!-- 通用 -->
     <dimen name="size_8">8sp</dimen>
     <dimen name="size_10">10sp</dimen>

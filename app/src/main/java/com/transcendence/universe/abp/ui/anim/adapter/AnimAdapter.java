@@ -9,7 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.transcendence.universe.R;
-import com.transcendence.universe.utils.Loger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +33,6 @@ public class AnimAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         this.mContext = context;
         this.sourceList = sourceList;
         mLayoutInflater = LayoutInflater.from(context);
-        Loger.i(tag, "size---" + sourceList.size());
     }
 
     public void setEvent(AnimEvent event) {

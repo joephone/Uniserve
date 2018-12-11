@@ -15,13 +15,16 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 指纹权限 -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
 
     <application
-        android:name=".abp.main.act.MyApplication"
+        android:name=".service.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/universe_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:screenOrientation="portrait"
         android:theme="@style/AppTheme">
         <activity
             android:name=".abp.main.act.SplashAct">
@@ -36,185 +39,158 @@
             android:name=".abp.main.act.WelcomeAct"
             android:hardwareAccelerated="true"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
+             />
         <activity
             android:name=".abp.main.act.StartAct"
             android:hardwareAccelerated="true"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
+            android:launchMode="singleTask"/>
         <!-- 主页 暂未使用的 -->
         <activity
             android:name=".abp.main.act.MainAct"
             android:hardwareAccelerated="true"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
+            android:launchMode="singleTask"/>
         <activity
             android:name=".abp.index.act.IndexAct"
             android:hardwareAccelerated="true"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
+            android:launchMode="singleTask"/>
 
         <!-- index -->
         <activity
-            android:name=".abp.index.act.AnimIndexAct"
-            android:screenOrientation="portrait" />
+            android:name=".abp.index.act.AnimIndexAct" />
         <activity
-            android:name=".abp.index.act.AnimSimpleIndexAct"
-            android:screenOrientation="portrait" />
+            android:name=".abp.index.act.AnimSimpleIndexAct"/>
         <activity
-            android:name=".abp.index.act.BaseIndexAct"
-            android:screenOrientation="portrait" />
+            android:name=".abp.index.act.BaseIndexAct" />
 
         <activity
-            android:name=".abp.index.act.ClassicIndexAct"
-            android:screenOrientation="portrait"/>
+            android:name=".abp.index.act.ClassicIndexAct"/>
         <activity
-            android:name=".abp.index.act.EditIndexAct"
-            android:screenOrientation="portrait" />
+            android:name=".abp.index.act.EditIndexAct" />
         <activity
-            android:name=".abp.index.act.UIIndexAct"
-            android:screenOrientation="portrait"/>
+            android:name=".abp.index.act.UIIndexAct"/>
         <activity
-            android:name=".abp.index.act.HardWareIndexAct"
-            android:screenOrientation="portrait"/>
+            android:name=".abp.index.act.HardWareIndexAct"/>
         <activity
-            android:name=".abp.index.act.WidgetIndexAct"
-            android:screenOrientation="portrait" />
+            android:name=".abp.index.act.WidgetIndexAct"/>
         <activity
-            android:name=".abp.index.act.TextIndexAct"
-            android:screenOrientation="portrait"/>
+            android:name=".abp.index.act.TextIndexAct"/>
         <activity
-            android:name=".abp.index.act.ListIndexAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:name=".abp.index.act.ListIndexAct"/>
         <activity
-            android:name=".abp.index.act.LayoutIndexAct"
-            android:screenOrientation="portrait" />
+            android:name=".abp.index.act.LayoutIndexAct" />
         <activity
-            android:name=".abp.index.act.RelativeLayoutIndexAct"
-            android:screenOrientation="portrait"/>
+            android:name=".abp.index.act.RelativeLayoutIndexAct"/>
         <activity
-            android:name=".abp.index.act.ToastIndexAct"
-            android:screenOrientation="portrait" />
+            android:name=".abp.index.act.RecyclerIndexAct"/>
         <activity
-            android:name=".abp.index.act.RecyclerIndexAct"
-            android:screenOrientation="portrait" />
+            android:name=".abp.index.act.CustomIndexAct"/>
         <activity
-            android:name=".abp.index.act.CustomIndexAct"
-            android:screenOrientation="portrait" />
+            android:name=".abp.index.act.CameraIndexAct"/>
         <activity
-            android:name=".abp.index.act.CameraIndexAct"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".abp.index.act.LuckyIndexAct"
-            android:screenOrientation="portrait" />
+            android:name=".abp.index.act.LuckyIndexAct"/>
 
         <!-- end index -->
 
         <!-- base  -->
         <activity
             android:name=".abp.base.act.LifeCycleActivity"
-            android:screenOrientation="portrait" />
+            />
+                <!-- Android信息 -->
+        <activity
+            android:name=".abp.base.act.AndroidInfoActivity"
+             />
+                <!-- 电话工具信息 -->
+        <activity
+            android:name=".abp.base.act.TelInfoActivity"
+            />
+
         <activity
             android:name=".abp.base.battery.act.BatteryActivity"
-            android:screenOrientation="portrait" />
+             />
         <!-- end base -->
 
 
 
         <!-- Textview -->
         <activity
-            android:name=".abp.ui.widget.textview.act.RippleEffectAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:name=".abp.ui.widget.textview.act.RippleEffectAct" />
         <activity
-            android:name=".abp.ui.widget.textview.httptextview.act.HttpTextAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:name=".abp.ui.widget.textview.httptextview.act.HttpTextAct" />
         <activity
-            android:name=".abp.ui.widget.textview.act.CareerShowMoreAct"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoTitle" />
+            android:name=".abp.ui.widget.textview.act.CareerShowMoreAct" />
 
         <!-- end Text -->
 
         <!-- Edit -->
         <activity
             android:name=".abp.ui.widget.edittext.act.InputEditAct"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan"/>
         <!-- end Edit -->
 
         <!-- List -->
         <activity
             android:name=".abp.ui.widget.listview.act.MulListMainAct"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".abp.ui.widget.listview.act.MultAct"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan"/>
         <!-- end List -->
 
         <!-- relative -->
         <activity
-            android:name=".abp.ui.layout.relative.act.SearchBarAct"
-            android:screenOrientation="portrait" />
+            android:name=".abp.ui.layout.relative.act.SearchBarAct"/>
         <activity
-            android:name=".abp.ui.layout.relative.act.LuckyPanActivity"
-            android:screenOrientation="portrait" />
+            android:name=".abp.ui.layout.relative.act.LuckyPanActivity"/>
         <!-- end relative -->
 
         <!--  recycler -->
         <activity
-            android:name=".abp.ui.widget.recycler.act.FlyRefreshMainAct"
-            android:screenOrientation="portrait"/>
+            android:name=".abp.ui.widget.recycler.act.FlyRefreshMainAct"/>
         <!-- end recycler -->
 
 
         <!--  custom view -->
-
         <activity
             android:name=".abp.ui.customview.arcLayout.act.ArcLayoutMainAct"
-            android:screenOrientation="portrait"
             />
         <activity
             android:name=".abp.ui.customview.arcLayout.act.DemoActivity"
-            android:screenOrientation="portrait"
             />
         <activity
             android:name=".abp.ui.customview.arcLayout.act.DemoFreeAngleActivity"
-            android:screenOrientation="portrait"
             />
         <activity
             android:name=".abp.ui.customview.arcLayout.act.DemoLikeTumblrActivity"
-            android:screenOrientation="portrait"
             />
         <activity
             android:name=".abp.ui.customview.arcLayout.act.DemoLikePathActivity"
-            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".abp.ui.customview.flowlayout.act.SubTagActivity"
             />
         <!-- end custom view -->
 
         <!--  hareware camera -->
         <activity
             android:name=".abp.hardware.camera.permiss.act.CameraPermissAct"
-            android:screenOrientation="portrait" />
+            />
         <!--  end hareware camera -->
 
         <!-- classic -->
         <activity
             android:name=".abp.classic.hongyang.act.HongyangMainAct"
-            android:screenOrientation="portrait"/>
+            />
         <activity
             android:name=".abp.classic.weiganloopview.act.WeiganMainAct"
-            android:screenOrientation="portrait"/>
+           />
         <activity
             android:name=".abp.classic.weiganloopview.act.DialogActivity"
-            android:screenOrientation="portrait" />
+             />
         <activity
             android:name=".abp.classic.weiganloopview.act.ScrollViewActivity"
-            android:screenOrientation="portrait" />
+             />
+        <activity
+            android:name=".abp.classic.fringerprint.act.FingerprintMainActivity" />
         <!-- end classic -->
 
 

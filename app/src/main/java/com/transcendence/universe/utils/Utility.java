@@ -101,7 +101,7 @@ public class Utility {
      * @param url  原始url
      */
     public static void showVip(ImageView view, String url) {
-        Loger.i(tag, "显示隐藏VIP标志---:" + url);
+        Logs.logI("显示隐藏VIP标志---:" + url);
         if (view == null) {
             return;
         }
@@ -124,7 +124,7 @@ public class Utility {
             if (array == null) {
                 array = url.split("_2_");
             }
-            Loger.i(tag, "显示隐藏VIP标志---array:" + array.length);
+            Logs.logI("显示隐藏VIP标志---array:" + array.length);
             long time = System.currentTimeMillis();
             if (array.length >= 2 && StringUtils.toLong(array[1]) >= time) {
                 return true;
@@ -436,7 +436,7 @@ public class Utility {
     public static int setEditLimitMax(TextView str, int max, EditText edit) {
         String temp = str.getText().toString();
         temp = StringUtils.replaceBlank(temp);
-        Loger.i(tag, "temp:" + temp);
+        Logs.logI("temp:" + temp);
         temp = StringUtils.replaceEnterAndTab(temp);
         int leng = StringUtils.getStringLength(temp);
         int remain = max - leng;

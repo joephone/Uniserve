@@ -26,7 +26,7 @@
             android:layout_height="fill_parent" >
 
             <ImageView
-                android:id="@+id/finderback"
+                android:id="@+id/back"
                 android:layout_width="46dip"
                 android:layout_height="50dip"
                 android:layout_gravity="center_vertical"
@@ -58,7 +58,7 @@
                     android:layout_gravity="center"
                     android:text="标题"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/title_size" />
             </FrameLayout>
         </RelativeLayout>
     </RelativeLayout>
