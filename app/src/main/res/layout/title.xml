@@ -61,6 +61,26 @@
                     android:textSize="@dimen/title_size" />
             </FrameLayout>
         </RelativeLayout>
+
+
+        <FrameLayout
+            android:layout_width="50dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true">
+
+
+            <ImageView
+                android:id="@+id/imageViewRight"
+                android:visibility="invisible"
+                android:layout_gravity="center_vertical|center"
+                android:src="@mipmap/icon_share"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+
+
+        </FrameLayout>
+
+
     </RelativeLayout>
 
 </LinearLayout>

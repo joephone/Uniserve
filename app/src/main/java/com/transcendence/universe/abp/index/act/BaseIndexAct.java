@@ -8,7 +8,10 @@ import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.base.act.AndroidInfoActivity;
+import com.transcendence.universe.abp.base.act.IDInfoActivity;
 import com.transcendence.universe.abp.base.act.LifeCycleActivity;
+import com.transcendence.universe.abp.base.act.ScreenKeyDownActivity;
+import com.transcendence.universe.abp.base.act.SoundPlayActivity;
 import com.transcendence.universe.abp.base.act.TelInfoActivity;
 import com.transcendence.universe.abp.base.battery.act.BatteryActivity;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
@@ -51,8 +54,9 @@ public class BaseIndexAct extends TitleBarActivity implements IndexAdapter.Index
         sourceList.add("电池");
         sourceList.add("手机品牌、商家、版本号等信息");
         sourceList.add("电话工具类，手机号、运营商、IMEI、IMSI等信息");
-
-
+        sourceList.add("Android 回退键监听");
+        sourceList.add("beeb播放");
+        sourceList.add("UUID");
         mActivity = this;
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -81,13 +85,13 @@ public class BaseIndexAct extends TitleBarActivity implements IndexAdapter.Index
                 intent = new Intent(mActivity,TelInfoActivity.class);
                 break;
             case 4:
-                intent = new Intent(mActivity,UIIndexAct.class);
+                intent = new Intent(mActivity,ScreenKeyDownActivity.class);
                 break;
             case 5:
-                intent = new Intent(mActivity,UIIndexAct.class);
+                intent = new Intent(mActivity,SoundPlayActivity.class);
                 break;
             case 6:
-                intent = new Intent(mActivity,ClassicIndexAct.class);
+                intent = new Intent(mActivity,IDInfoActivity.class);
                 break;
         }
         startActivity(intent);

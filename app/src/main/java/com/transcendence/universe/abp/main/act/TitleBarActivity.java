@@ -20,6 +20,7 @@ import com.transcendence.universe.utils.StatusBarUtil;
 public class TitleBarActivity extends BaseActivity {
     private View titleBar;
     private ImageView back;
+    private ImageView imageViewRight;
     private TextView title;
     protected View statusView;
 
@@ -87,7 +88,7 @@ public class TitleBarActivity extends BaseActivity {
             title = (TextView) findViewById(R.id.title);
 //            textViewRight = (TextView) findViewById(R.id.textViewRight);
 //            textViewTitle = (TextView) findViewById(R.id.textViewTitle);
-//            rightImageview = (ImageView) findViewById(R.id.title_right_image);
+            imageViewRight = (ImageView) findViewById(R.id.imageViewRight);
             initStateHeigt();
 //            imageViewBack.setVisibility(View.INVISIBLE);
             back.setOnClickListener(new View.OnClickListener() {
@@ -139,6 +140,18 @@ public class TitleBarActivity extends BaseActivity {
 //            rightImageview.setVisibility(imageSource >0 ? View.VISIBLE : View.INVISIBLE);
 //            rightImageview.setBackgroundResource(imageSource);
 //        }
+    }
+
+
+    protected void setTitle(String titleText, int imageSource) {
+        if (title != null) {
+            title.setText(titleText);
+        }
+
+        if (imageSource >0 ) {
+            imageViewRight.setVisibility(imageSource >0 ? View.VISIBLE : View.INVISIBLE);
+            imageViewRight.setBackgroundResource(imageSource);
+        }
     }
 
     protected void onBackButtonClicked() {

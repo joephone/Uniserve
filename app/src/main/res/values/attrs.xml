@@ -109,4 +109,17 @@
         <attr name="icons"  format="reference"/>
     </declare-styleable>
     <!--   end  rotatepan-->
+
+
+
+    <!-- 跑马灯抽奖 -->
+    <declare-styleable name="LuckyMonkeyPanelView">
+        <attr name="prizeImg" format="reference"/>
+        <attr name="prizeName" format="string|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="NightGridView2">
+        <attr name="line_space" format="dimension" />
+        <attr name="column_space" format="dimension" />
+    </declare-styleable>
 </resources>

@@ -94,19 +94,31 @@
         <!-- base  -->
         <activity
             android:name=".abp.base.act.LifeCycleActivity"
-            />
+            android:screenOrientation="portrait"/>
                 <!-- Android信息 -->
         <activity
             android:name=".abp.base.act.AndroidInfoActivity"
-             />
+            android:screenOrientation="portrait"/>
+                <!-- Android 回退键监听 -->
+        <activity
+            android:name=".abp.base.act.ScreenKeyDownActivity"
+            android:screenOrientation="portrait"/>
                 <!-- 电话工具信息 -->
         <activity
             android:name=".abp.base.act.TelInfoActivity"
-            />
-
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".abp.base.act.IDInfoActivity"
+            android:screenOrientation="portrait"/>
+                <!-- 电池信息  -->
+        <activity
+            android:name=".abp.base.act.SoundPlayActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".abp.base.battery.act.BatteryActivity"
-             />
+            android:screenOrientation="portrait"/>
+
+
         <!-- end base -->
 
 
@@ -184,13 +196,28 @@
             android:name=".abp.classic.weiganloopview.act.WeiganMainAct"
            />
         <activity
-            android:name=".abp.classic.weiganloopview.act.DialogActivity"
-             />
+            android:name=".abp.classic.weiganloopview.act.DialogActivity" />
         <activity
-            android:name=".abp.classic.weiganloopview.act.ScrollViewActivity"
-             />
+            android:name=".abp.classic.weiganloopview.act.ScrollViewActivity"/>
         <activity
             android:name=".abp.classic.fringerprint.act.FingerprintMainActivity" />
+                    <!--  跑马灯抽奖 方案一 -->
+        <activity
+            android:name=".abp.classic.luckyturntable.act.MarqueeLightOneActivity"
+            android:screenOrientation="portrait"/>
+                    <!--  跑马灯抽奖 方案二 -->
+        <activity
+            android:name=".abp.classic.luckyturntable.act.MarqueeLightTwoActivity"
+            android:screenOrientation="portrait"/>
+                    <!--  跑马灯抽奖 方案三 -->
+        <activity
+            android:name=".abp.classic.luckyturntable.act.MarqueeLightThreeActivity"
+            android:screenOrientation="portrait"/>
+                    <!--  跑马灯抽奖 精典方案 -->
+        <activity
+            android:name=".abp.classic.luckyturntable.act.MarqueeLightActivity"
+            android:screenOrientation="portrait"/>
+
         <!-- end classic -->
 
 

@@ -39,6 +39,11 @@
     <string name="note_advanced_path">Try pressing the button</string>
 
 
+    <string name="lucky_monkey_title">Wheel of Fortune</string>
+    <string name="lucky_monkey_times_left">times left</string>
+    <string name="lucky_monkey_fortune_list">Check out your fortune list</string>
+
+
 
     <string name="battery_tabWidget_catch">电池监控</string>
     <string name="battery_tabWidget_fix">电池维护</string>

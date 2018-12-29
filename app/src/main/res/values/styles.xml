@@ -86,6 +86,13 @@
         <item name="android:layout_marginTop">@dimen/dp_10</item>
     </style>
 
+
+    <style name="Nine_Grid_Item_ImageView">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">90dp</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
     <style name="Item_Small">
         <item name="android:layout_width">@dimen/item_circle_size_small</item>
         <item name="android:layout_height">@dimen/item_circle_size_small</item>

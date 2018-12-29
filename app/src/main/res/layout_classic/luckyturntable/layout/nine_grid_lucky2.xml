@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/bg_lucky"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.transcendence.universe.abp.classic.luckyturntable.view.NineGridViewTwo
+        android:id="@+id/lotteryView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="43dp"
+        android:layout_height="400dp"
+        android:background="@mipmap/bg_nine_grid_lottery"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:paddingTop="60dp"
+        app:column_space="5dp"
+        app:line_space="5dp">
+
+
+        <ImageView
+            android:id="@+id/ivPrize1"
+            style="@style/Nine_Grid_Item_ImageView"
+            android:src="@mipmap/lucky_prize1" />
+
+        <ImageView
+            android:id="@+id/ivPrize2"
+            style="@style/Nine_Grid_Item_ImageView"
+            android:src="@mipmap/lucky_prize2" />
+
+        <ImageView
+            android:id="@+id/ivPrize3"
+            style="@style/Nine_Grid_Item_ImageView"
+            android:src="@mipmap/lucky_prize3" />
+
+        <ImageView
+            android:id="@+id/ivPrize4"
+            style="@style/Nine_Grid_Item_ImageView"
+            android:src="@mipmap/lucky_prize4" />
+
+        <ImageView
+            android:id="@+id/ivPrize5"
+            style="@style/Nine_Grid_Item_ImageView"
+            android:src="@mipmap/lucky_prize1" />
+
+        <ImageView
+            android:id="@+id/ivPrize6"
+            style="@style/Nine_Grid_Item_ImageView"
+            android:src="@mipmap/lucky_prize2" />
+
+        <ImageView
+            android:id="@+id/ivPrize7"
+            style="@style/Nine_Grid_Item_ImageView"
+            android:src="@mipmap/lucky_prize3" />
+
+        <ImageView
+            android:id="@+id/ivPrize8"
+            style="@style/Nine_Grid_Item_ImageView"
+            android:src="@mipmap/lucky_prize4" />
+
+        <ImageView
+            android:id="@+id/ivPrize9"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_lucky_draw_btn_selector" />
+    </com.transcendence.universe.abp.classic.luckyturntable.view.NineGridViewTwo>
+
+</LinearLayout>
