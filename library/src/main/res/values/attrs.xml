@@ -71,5 +71,9 @@
         </attr>
     </declare-styleable>
 
-
+    <declare-styleable name="LuckyDrawView">
+        <attr name="startSrc" format="reference"/>
+        <attr name="startBackgroud" format="color|reference" />
+        <attr name="prizeBackgroud" format="color|reference" />
+    </declare-styleable>
 </resources>

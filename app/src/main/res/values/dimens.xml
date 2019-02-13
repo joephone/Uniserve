@@ -157,4 +157,9 @@
     <dimen name="battery_txt">20sp</dimen>
     <dimen name="battery_show_txt">30sp</dimen>
     <dimen name="battery_item_txt">30sp</dimen>
+
+    <!-- quick -->
+    <dimen name="cardview_compat_inset_shadow">1dp</dimen>
+    <dimen name="cardview_default_elevation">2dp</dimen>
+    <dimen name="cardview_default_radius">2dp</dimen>
 </resources>

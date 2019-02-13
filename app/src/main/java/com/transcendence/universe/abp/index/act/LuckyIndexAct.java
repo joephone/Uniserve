@@ -8,9 +8,12 @@ import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.classic.luckyturntable.act.MarqueeLightActivity;
+import com.transcendence.universe.abp.classic.luckyturntable.act.MarqueeLightFive;
+import com.transcendence.universe.abp.classic.luckyturntable.act.MarqueeLightFourActivity;
 import com.transcendence.universe.abp.classic.luckyturntable.act.MarqueeLightOneActivity;
 import com.transcendence.universe.abp.classic.luckyturntable.act.MarqueeLightThreeActivity;
 import com.transcendence.universe.abp.classic.luckyturntable.act.MarqueeLightTwoActivity;
+import com.transcendence.universe.abp.classic.luckyturntable.act.TigerMachineActivity;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.abp.main.act.TitleBarActivity;
 import com.transcendence.universe.abp.ui.layout.relative.act.LuckyPanActivity;
@@ -49,6 +52,9 @@ public class LuckyIndexAct extends TitleBarActivity implements IndexAdapter.Inde
         sourceList.add("跑马灯抽奖方案二");
         sourceList.add("跑马灯抽奖方案三");
         sourceList.add("跑马灯抽奖方案经典版");
+        sourceList.add("跑马灯抽奖方案4");
+        sourceList.add("跑马灯抽奖方案5");
+        sourceList.add("老虎机");
         mActivity = this;
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -78,6 +84,15 @@ public class LuckyIndexAct extends TitleBarActivity implements IndexAdapter.Inde
                 break;
             case 4:
                 intent = new Intent(mActivity,MarqueeLightActivity.class);
+                break;
+            case 5:
+                intent = new Intent(mActivity,MarqueeLightFourActivity.class);
+                break;
+            case 6:
+                intent = new Intent(mActivity,MarqueeLightFive.class);
+                break;
+            case 7:
+                intent = new Intent(mActivity,TigerMachineActivity.class);
                 break;
         }
         startActivity(intent);

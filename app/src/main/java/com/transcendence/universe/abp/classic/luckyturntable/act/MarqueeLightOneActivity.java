@@ -8,6 +8,7 @@ import android.widget.Toast;
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.classic.luckyturntable.bean.Prize;
 import com.transcendence.universe.abp.classic.luckyturntable.view.NineGridViewOne;
+import com.transcendence.universe.abp.main.act.TitleBarActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.List;
  * E-Mail Address：joephonechen@gmail.com
  */
 
-public class MarqueeLightOneActivity extends AppCompatActivity {
+public class MarqueeLightOneActivity extends TitleBarActivity {
     NineGridViewOne nl;
 
     @Override

@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.abp.ui.widget.recycler.act.FlyRefreshMainAct;
+import com.transcendence.universe.abp.ui.widget.recycler.basequickadapter.act.BaseQuickActivity;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
@@ -38,6 +39,7 @@ public class RecyclerIndexAct extends Activity implements IndexAdapter.IndexEven
         ButterKnife.bind(this);
 
         sourceList.add("FlyRefresh");
+        sourceList.add("豆瓣TOP250");
 
         mActivity = this;
 
@@ -58,6 +60,7 @@ public class RecyclerIndexAct extends Activity implements IndexAdapter.IndexEven
                 intent = new Intent(mActivity,FlyRefreshMainAct.class);
                 break;
             case 1:
+                intent = new Intent(mActivity,BaseQuickActivity.class);
                 break;
         }
         startActivity(intent);

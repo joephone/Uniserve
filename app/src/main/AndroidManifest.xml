@@ -88,7 +88,6 @@
             android:name=".abp.index.act.CameraIndexAct"/>
         <activity
             android:name=".abp.index.act.LuckyIndexAct"/>
-
         <!-- end index -->
 
         <!-- base  -->
@@ -158,6 +157,8 @@
         <!--  recycler -->
         <activity
             android:name=".abp.ui.widget.recycler.act.FlyRefreshMainAct"/>
+        <activity
+            android:name=".abp.ui.widget.recycler.basequickadapter.act.BaseQuickActivity"/>
         <!-- end recycler -->
 
 
@@ -217,6 +218,23 @@
         <activity
             android:name=".abp.classic.luckyturntable.act.MarqueeLightActivity"
             android:screenOrientation="portrait"/>
+                    <!--  跑马灯抽奖 方案4 -->
+        <activity
+            android:name=".abp.classic.luckyturntable.act.MarqueeLightFourActivity"
+            android:screenOrientation="portrait"/>
+                    <!--  跑马灯抽奖 方案5 -->
+        <activity
+            android:name=".abp.classic.luckyturntable.act.MarqueeLightFive"
+            android:screenOrientation="portrait"/>
+                    <!--  马虎机 方案5 -->
+        <activity
+            android:name=".abp.classic.luckyturntable.act.TigerMachineActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".abp.classic.luckyturntable.act.MarqueeLightSixActivity"
+            android:screenOrientation="portrait"/>
+
+
 
         <!-- end classic -->
 
