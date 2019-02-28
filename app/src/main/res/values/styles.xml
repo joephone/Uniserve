@@ -205,4 +205,17 @@
         <item name="android:textSize">@dimen/size_16</item>
     </style>
 
+
+    <style name="menuButton">
+        <item name="android:textSize">11sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@drawable/selector_text_color_tab</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
 </resources>

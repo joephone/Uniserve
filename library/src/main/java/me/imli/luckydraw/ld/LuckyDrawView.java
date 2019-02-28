@@ -13,9 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
-import com.trancedence.universe.library.R;
+import com.transcendence.universe.library.R;
 
 public class LuckyDrawView extends RelativeLayout {
 	

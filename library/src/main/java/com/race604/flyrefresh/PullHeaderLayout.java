@@ -31,7 +31,7 @@ import android.widget.ImageView;
 import com.race604.flyrefresh.internal.ElasticOutInterpolator;
 import com.race604.flyrefresh.internal.SimpleAnimatorListener;
 import com.race604.utils.UIUtils;
-import com.trancedence.universe.library.R;
+import com.transcendence.universe.library.R;
 
 /**
  * Created by Jing on 15/5/18.

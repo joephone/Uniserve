@@ -6,7 +6,6 @@ package com.transcendence.universe.utils;
 
 
 public class Global {
-
     public static final String TAG = "universe";
 
     public static final boolean isPrint = true;

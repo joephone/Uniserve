@@ -30,7 +30,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.trancedence.universe.library.R;
+import com.transcendence.universe.library.R;
 
 import java.util.Locale;
 

@@ -27,7 +27,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ogaclejapan.utils.Utils;
-import com.trancedence.universe.library.R;
+import com.transcendence.universe.library.R;
 
 import java.util.WeakHashMap;
 

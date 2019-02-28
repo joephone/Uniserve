@@ -16,6 +16,8 @@ import butterknife.ButterKnife;
 
 public class BaseFragment extends Fragment {
 
+    private static final String ARG_SHOW_TEXT = "text";
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -27,4 +29,7 @@ public class BaseFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
     }
+
+
+
 }

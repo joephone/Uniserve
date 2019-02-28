@@ -9,7 +9,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
-import com.trancedence.universe.library.R;
+import com.transcendence.universe.library.R;
 
 import java.util.HashSet;
 import java.util.Iterator;

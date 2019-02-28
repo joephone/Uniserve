@@ -171,7 +171,7 @@ public class SplashAct extends BaseActivity {
      */
     private void startMainActivity() {
         if (!isGoMain) {
-            Intent intent = new Intent(this, IndexAct.class);
+            Intent intent = new Intent(this, MainAct.class);  //IndexAct
             startActivity(intent);
             isGoMain = true;
             finish();

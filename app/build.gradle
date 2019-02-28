@@ -41,6 +41,7 @@ android {
                             'src/main/res/layout_ase',
                             'src/main/res/layout_thirdparty',
                             'src/main/res/layout_publicmodule',
+                            'src/main/res/layout_publicmodule/popup',
                             'src/main/res/layout_ui',
                             'src/main/res/layout_ui/layout',
                             'src/main/res/layout_ui/widget',

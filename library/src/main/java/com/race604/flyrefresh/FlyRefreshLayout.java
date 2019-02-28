@@ -14,7 +14,7 @@ import android.view.animation.DecelerateInterpolator;
 import com.race604.flyrefresh.internal.MountanScenceView;
 import com.race604.flyrefresh.internal.SimpleAnimatorListener;
 import com.race604.utils.UIUtils;
-import com.trancedence.universe.library.R;
+import com.transcendence.universe.library.R;
 
 /**
  * Created by jing on 15-5-27.

@@ -19,7 +19,7 @@ import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 
-import com.trancedence.universe.library.R;
+import com.transcendence.universe.library.R;
 
 import java.util.Locale;
 
