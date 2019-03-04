@@ -1,10 +1,8 @@
 package com.transcendence.universe.abp.main.act;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.KeyEvent;
@@ -15,7 +13,9 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 
 import com.transcendence.universe.R;
+import com.transcendence.universe.abp.lofter.label.fragment.LabelFragment;
 import com.transcendence.universe.abp.main.adapter.MyFragmentPagerAdapter;
+import com.transcendence.universe.abp.main.fragments.AccountFragment;
 import com.transcendence.universe.abp.main.fragments.BlankFragment;
 import com.transcendence.universe.abp.main.fragments.HomeFragment;
 import com.transcendence.universe.abp.main.util.PopupMenuUtil;
@@ -72,11 +72,12 @@ public class MainAct extends TitleBarActivity {
         mTabRadioGroup = findViewById(R.id.tabs);
 //        mTabRadioGroup.removeViewAt(2);
         // init fragment
+
         mFragments = new ArrayList<>();
         mFragments.add(HomeFragment.newInstance(StringUtils.getString(R.string.tab_one)));
-        mFragments.add(BlankFragment.newInstance(StringUtils.getString(R.string.tab_two)));
+        mFragments.add(LabelFragment.newInstance(StringUtils.getString(R.string.tab_two)));
         mFragments.add(BlankFragment.newInstance(StringUtils.getString(R.string.tab_three)));
-        mFragments.add(BlankFragment.newInstance(StringUtils.getString(R.string.tab_four)));
+        mFragments.add(new AccountFragment());
         // init view pager
         mAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), mFragments);
         mViewPager.setAdapter(mAdapter);

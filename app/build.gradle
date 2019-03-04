@@ -64,7 +64,8 @@ android {
                             'src/main/res/layout_classic/sinaprogress',
                             'src/main/res/layout_classic/fingerprint',
                             'src/main/res/layout_classic/luckyturntable',
-
+                            'src/main/res/layout_lofter',
+                            'src/main/res/layout_lofter/label',
                     ]
         }
     }

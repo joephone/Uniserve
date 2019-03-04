@@ -31,5 +31,11 @@ public class BaseFragment extends Fragment {
     }
 
 
-
+    public static BaseFragment newInstance(String param1) {
+        BaseFragment fragment = new BaseFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_SHOW_TEXT, param1);
+        fragment.setArguments(args);
+        return fragment;
+    }
 }

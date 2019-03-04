@@ -39,8 +39,7 @@
                 style="@style/menuButton"
                 android:layout_marginRight="30dp"
                 android:drawableTop="@drawable/selector_home"
-                android:text="@string/tab_two"  />
-
+                android:text="@string/tab_two" />
 
 
             <RadioButton
@@ -48,20 +47,19 @@
                 style="@style/menuButton"
                 android:layout_marginLeft="30dp"
                 android:drawableTop="@drawable/selector_home"
-                android:text="@string/tab_three"  />
+                android:text="@string/tab_three" />
 
             <RadioButton
                 android:id="@+id/tabFour"
                 style="@style/menuButton"
                 android:drawableTop="@drawable/selector_home"
-                android:text="@string/tab_four"  />
+                android:text="@string/tab_four" />
 
         </RadioGroup>
 
 
         <include layout="@layout/layout_main_add" />
     </FrameLayout>
-
 
 
 </LinearLayout>

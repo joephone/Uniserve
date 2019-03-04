@@ -39,6 +39,8 @@
     <color name="public_orange">#FF7A17</color>
     <color name="themecolor">#273535</color>
     <color name="main_color">#273535</color>
+    <color name="lofter_theme">#a3c53c</color>
+
 
     <!-- 分割线 -->
     <color name="line">#dfdfdf</color>

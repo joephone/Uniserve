@@ -22,27 +22,21 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * Created by Joephone on 2019/2/27 15:52
+ * Created by Joephone on 2019/3/1 17:52
  * E-Mail Address：joephonechen@gmail.com
  */
 
-public class HomeFragment extends BaseFragment {
+public class AccountFragment extends BaseFragment {
 
-    @Bind(R.id.viewPager)
-    ViewPager mViewPager;
-    @Bind(R.id.tagSelect)
-    ImageView tagSelect;
+
 //    @Bind(R.id.pageIndicator)
 //    TabPageIndicator pageIndicator;
 
-    private List<Fragment> mFragments;
-    private FragmentPagerAdapter mAdapter;
-    private int index = 0; //tab 索引
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Logs.logE("onCreateView");
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_account, container, false);
         ButterKnife.bind(this, view);
         init();
         return view;
@@ -50,14 +44,7 @@ public class HomeFragment extends BaseFragment {
     }
 
     private void init() {
-        mFragments = new ArrayList<>();
-        mFragments.add(BlankFragment.newInstance(StringUtils.getString(R.string.home_one)));
-        mFragments.add(BlankFragment.newInstance(StringUtils.getString(R.string.home_two)));
-        mFragments.add(BlankFragment.newInstance(StringUtils.getString(R.string.home_three)));
-        mFragments.add(BlankFragment.newInstance(StringUtils.getString(R.string.home_four)));
-        // init view pager
-        mAdapter = new MyFragmentPagerAdapter(getActivity().getSupportFragmentManager(), mFragments);
-        mViewPager.setAdapter(mAdapter);
+
     }
 
 
@@ -67,11 +54,5 @@ public class HomeFragment extends BaseFragment {
         ButterKnife.unbind(this);
     }
 
-    @OnClick({R.id.tagSelect})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.tagSelect:
-                break;
-        }
-    }
+
 }
