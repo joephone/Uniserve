@@ -42,6 +42,7 @@ android {
                             'src/main/res/layout_thirdparty',
                             'src/main/res/layout_publicmodule',
                             'src/main/res/layout_publicmodule/popup',
+                            'src/main/res/layout_publicmodule/location',
                             'src/main/res/layout_ui',
                             'src/main/res/layout_ui/layout',
                             'src/main/res/layout_ui/widget',
@@ -66,6 +67,8 @@ android {
                             'src/main/res/layout_classic/luckyturntable',
                             'src/main/res/layout_lofter',
                             'src/main/res/layout_lofter/label',
+                            'src/main/res/layout_douban',
+                            'src/main/res/layout_douban/hot',
                     ]
         }
     }

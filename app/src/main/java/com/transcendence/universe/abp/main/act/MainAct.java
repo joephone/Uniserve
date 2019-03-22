@@ -21,7 +21,6 @@ import com.transcendence.universe.abp.main.fragments.HomeFragment;
 import com.transcendence.universe.abp.main.util.PopupMenuUtil;
 import com.transcendence.universe.utils.StringUtils;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,7 +40,7 @@ public class MainAct extends TitleBarActivity {
 
     private List<Fragment> mFragments;
     private FragmentPagerAdapter mAdapter;
-    private int index = 0; //tab 索引
+    private int index = 0;      //tab 索引
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -57,7 +57,7 @@ public class LabelFragment extends BaseFragment implements View.OnClickListener,
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Logs.logE("LabelSearchFragment onCreateView");
+//        Logs.logE("LabelSearchFragment onCreateView");
         if(rootView==null){
             rootView = inflater.inflate(R.layout.fragment_label, container, false);
             init(rootView);
@@ -74,7 +74,7 @@ public class LabelFragment extends BaseFragment implements View.OnClickListener,
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Logs.logE("LabelSearchFragment onViewCreated");
+//        Logs.logE("LabelSearchFragment onViewCreated");
     }
 
     private void init(View rootView) {

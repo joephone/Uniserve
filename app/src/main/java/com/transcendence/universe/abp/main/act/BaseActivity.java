@@ -1,6 +1,8 @@
 package com.transcendence.universe.abp.main.act;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -10,13 +12,21 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+
+import com.transcendence.universe.R;
+import com.transcendence.universe.utils.Logs;
 import com.transcendence.universe.utils.StatusBarUtil;
+import com.transcendence.universe.utils.permission.PermissionPool;
 
 import butterknife.ButterKnife;
 
@@ -117,8 +127,82 @@ public class BaseActivity extends AppCompatActivity {
     }
 
 
+    private View mProgressView;
+    private View mContentView;
+
+    /**
+     * 弹出登录对话框
+     */
+    private View getDialog() {
+        mProgressView = View.inflate(this, R.layout.load_progress, null);
+        return mProgressView;
+    }
+
+    public void showDialog() {
+        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(ViewGroup
+                .LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT);
+        ((ViewGroup) mContentView).addView(getDialog(), lp);
+    }
+
+    public void dismissDialog() {
+        if (null != mProgressView) {
+            ((ViewGroup) mContentView).removeView(mProgressView);
+            mProgressView = null;
+        }
+    }
+
+
     public boolean checkPermission(@NonNull String permission) {
         return ActivityCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_GRANTED;
+    }
+
+
+
+    /**
+     * android6.0权限处理
+     * @param code             权限标记Code
+     * @param permissionName    权限名称
+     */
+    public void permissionDispose(@PermissionPool.PermissionCode int code, @PermissionPool.PermissionName String permissionName){
+//        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+//            Logs.logE("22以下");
+//            return ;
+//        }
+        if(ContextCompat.checkSelfPermission(this, permissionName)!= PackageManager.PERMISSION_GRANTED){  //现反过来
+            Logs.logE("有权限");
+            //有权限
+            onPermissionsGranted(code);
+        }else{
+            Logs.logE("没有权限,开始申请");
+            //没有权限,开始申请
+            ActivityCompat.requestPermissions(this,new String[]{permissionName},code);
+
+        }
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(grantResults[0]==PackageManager.PERMISSION_GRANTED){
+            //授权成功
+            onPermissionsGranted(requestCode);
+        }else if(grantResults[0]==PackageManager.PERMISSION_DENIED){
+            //授权失败
+            onPermissionsDenied(requestCode);
+        }
+    }
+
+    /**
+     * 有授权执行的方法(子类重写)
+     */
+    public void onPermissionsGranted(int requestCode) {
+    }
+
+    /**
+     * 没有授权执行的方法(子类重写)
+     */
+    public void onPermissionsDenied(int requestCode) {
     }
 
 }

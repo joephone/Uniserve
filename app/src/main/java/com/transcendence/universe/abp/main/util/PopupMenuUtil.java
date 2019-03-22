@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.index.act.IndexAct;
+import com.transcendence.universe.abpPublicModule.location.act.LocationActivity;
 import com.transcendence.universe.utils.AppUtils;
 
 
@@ -144,15 +145,35 @@ public class PopupMenuUtil {
 
         @Override
         public void onClick(View v) {
-            if (index == 0) {
-                //加号按钮点击之后的执行
-                rlClickAction();
-            } else {
+            switch (index){
+                case 0:
+                    //加号按钮点击之后的执行
+                    rlClickAction();
+                    break;
+                case 1:
+                    Intent intent = new Intent(context,IndexAct.class);
+                    context.startActivity(intent);
+                    break;
+                case 2:
+                    intent = new Intent(context,LocationActivity.class);
+                    context.startActivity(intent);
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    break;
+            }
+
 //                showToast(context, "index=" + index);
                 close();
-                Intent intent = new Intent(context,IndexAct.class);
-                context.startActivity(intent);
-            }
         }
     }
 

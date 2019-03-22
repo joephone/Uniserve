@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.transcendence.universe.R;
-import com.transcendence.universe.abp.lofter.label.adapter.SearchLabelVPAdapter;
+import com.transcendence.universe.adapter.TabLayoutPagerAdapter;
 import com.transcendence.universe.abp.main.fragments.BaseFragment;
 import com.transcendence.universe.utils.Logs;
 
@@ -26,7 +26,7 @@ public class LabelSearchFragment extends BaseFragment {
 
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
-    private SearchLabelVPAdapter mAdapter;
+    private TabLayoutPagerAdapter mAdapter;
     //viewpager数据    fragment列表  标题列表
     private List<Fragment> mFragmentList = new ArrayList<>();
     private List<String> mTitleList = new ArrayList<>();
@@ -58,7 +58,7 @@ public class LabelSearchFragment extends BaseFragment {
     }
 
     private void init(View rootView) {
-        mTabLayout = (TabLayout) rootView.findViewById(R.id.tlLabelSearch);
+        mTabLayout = (TabLayout) rootView.findViewById(R.id.tabLayout);
         mViewPager = (ViewPager) rootView.findViewById(R.id.viewPager);
         initList();
         initTabLayout();
@@ -69,7 +69,7 @@ public class LabelSearchFragment extends BaseFragment {
         /**
          * 注册广播
          */
-        mAdapter = new SearchLabelVPAdapter(getChildFragmentManager(), mFragmentList, mTitleList);
+        mAdapter = new TabLayoutPagerAdapter(getChildFragmentManager(), mFragmentList, mTitleList);
         mViewPager.setAdapter(mAdapter);
         mTabLayout.setTabMode(TabLayout.MODE_FIXED);//设置tab模式，当前为系统默认模式
         mTabLayout.addTab(mTabLayout.newTab().setText(mTitleList.get(0)));//添加tab选项卡

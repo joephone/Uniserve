@@ -187,6 +187,9 @@
         <activity
             android:name=".abp.hardware.camera.permiss.act.CameraPermissAct"
             />
+        <activity
+            android:name=".abp.hardware.camera.permiss.act.CameraPermissionAct"
+            />
         <!--  end hareware camera -->
 
         <!-- classic -->
@@ -233,11 +236,13 @@
         <activity
             android:name=".abp.classic.luckyturntable.act.MarqueeLightSixActivity"
             android:screenOrientation="portrait"/>
-
-
-
         <!-- end classic -->
 
+        <!-- location -->
+        <activity
+            android:name=".abpPublicModule.location.act.LocationActivity"
+            android:screenOrientation="portrait"/>
+        <!-- end classic -->
 
         <provider
             android:name="android.support.v4.content.FileProvider"

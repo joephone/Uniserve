@@ -1,4 +1,4 @@
-package com.transcendence.universe.abp.lofter.label.adapter;
+package com.transcendence.universe.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,11 +11,11 @@ import java.util.List;
  * E-Mail Address：joephonechen@gmail.com
  */
 
-public class SearchLabelVPAdapter extends FragmentPagerAdapter {
+public class TabLayoutPagerAdapter extends FragmentPagerAdapter {
     private List<Fragment> list;
     private List<String> mTitleList;
 
-    public SearchLabelVPAdapter(FragmentManager fm, List<Fragment> list, List<String> mTitleList) {
+    public TabLayoutPagerAdapter(FragmentManager fm, List<Fragment> list, List<String> mTitleList) {
         super(fm);
         this.list = list;
         this.mTitleList = mTitleList;

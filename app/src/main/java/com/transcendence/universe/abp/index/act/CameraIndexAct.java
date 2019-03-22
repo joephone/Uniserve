@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.transcendence.universe.R;
 import com.transcendence.universe.abp.hardware.camera.permiss.act.CameraPermissAct;
+import com.transcendence.universe.abp.hardware.camera.permiss.act.CameraPermissionAct;
 import com.transcendence.universe.abp.index.adapter.IndexAdapter;
 import com.transcendence.universe.abp.main.act.TitleBarActivity;
 import com.umeng.analytics.MobclickAgent;
@@ -56,7 +57,7 @@ public class CameraIndexAct extends TitleBarActivity implements IndexAdapter.Ind
         Intent intent = new Intent();
         switch (position){
             case 0:
-                intent = new Intent(mActivity,CameraPermissAct.class);
+                intent = new Intent(mActivity,CameraPermissionAct.class);
                 break;
             case 1:
 
