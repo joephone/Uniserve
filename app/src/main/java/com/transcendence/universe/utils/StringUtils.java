@@ -22,7 +22,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-import com.transcendence.universe.service.MyApplication;
+import com.transcendence.universe.service.AppAplication;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -53,7 +53,7 @@ public class StringUtils {
      */
     public static String getString(int id) {
         try {
-            return MyApplication.getInstance().getString(id);
+            return AppAplication.getInstance().getString(id);
         } catch (Exception e) {
             // TODO: handle exception
         }

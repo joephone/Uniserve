@@ -160,24 +160,23 @@ public class BaseActivity extends AppCompatActivity {
 
 
     /**
-     * android6.0权限处理
+     * android6.0权限请求
      * @param code             权限标记Code
      * @param permissionName    权限名称
      */
-    public void permissionDispose(@PermissionPool.PermissionCode int code, @PermissionPool.PermissionName String permissionName){
-//        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-//            Logs.logE("22以下");
-//            return ;
-//        }
-        if(ContextCompat.checkSelfPermission(this, permissionName)!= PackageManager.PERMISSION_GRANTED){  //现反过来
-            Logs.logE("有权限");
+    public void onPermissionRequest(@PermissionPool.PermissionCode int code, @PermissionPool.PermissionName String permissionName){
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            Logs.logI("22以下");
+            return ;
+        }
+        if(ContextCompat.checkSelfPermission(this, permissionName)== PackageManager.PERMISSION_GRANTED){
+            Logs.logI("有权限");
             //有权限
             onPermissionsGranted(code);
         }else{
-            Logs.logE("没有权限,开始申请");
+            Logs.logI("没有权限,开始申请");
             //没有权限,开始申请
             ActivityCompat.requestPermissions(this,new String[]{permissionName},code);
-
         }
 
     }
@@ -197,6 +196,7 @@ public class BaseActivity extends AppCompatActivity {
      * 有授权执行的方法(子类重写)
      */
     public void onPermissionsGranted(int requestCode) {
+
     }
 
     /**

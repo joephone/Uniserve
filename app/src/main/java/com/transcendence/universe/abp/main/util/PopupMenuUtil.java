@@ -26,6 +26,8 @@ import com.transcendence.universe.utils.AppUtils;
  */
 public class PopupMenuUtil {
 
+    int duration = 1000;
+
     public static PopupMenuUtil getInstance() {
         return MenuUtilHolder.INSTANCE;
     }
@@ -199,7 +201,7 @@ public class PopupMenuUtil {
      */
     private void openPopupWindowAction() {
         ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(ivBtn, "rotation", 0f, 135f);
-        objectAnimator.setDuration(200);
+        objectAnimator.setDuration(500);
         objectAnimator.start();
 
         startAnimation(llTest1, 500, animatorProperty);

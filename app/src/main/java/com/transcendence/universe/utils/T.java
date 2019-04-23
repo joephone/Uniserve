@@ -2,7 +2,7 @@ package com.transcendence.universe.utils;
 
 import android.widget.Toast;
 
-import com.transcendence.universe.service.MyApplication;
+import com.transcendence.universe.service.AppAplication;
 
 
 /**
@@ -10,14 +10,14 @@ import com.transcendence.universe.service.MyApplication;
  */
 public class T {
     public static void toast(String s){
-        if(MyApplication.getInstance()!=null){
-            Toast.makeText(MyApplication.getInstance(),s, Toast.LENGTH_SHORT).show();
+        if(AppAplication.getInstance()!=null){
+            Toast.makeText(AppAplication.getInstance(),s, Toast.LENGTH_SHORT).show();
         }
     }
 
     public static void toast(int string){
-        if(MyApplication.getInstance()!=null){
-            Toast.makeText(MyApplication.getInstance(),MyApplication.getInstance().getResources().getString(string), Toast.LENGTH_SHORT).show();
+        if(AppAplication.getInstance()!=null){
+            Toast.makeText(AppAplication.getInstance(), AppAplication.getInstance().getResources().getString(string), Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -86,7 +86,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="电池电压"
+                    tools:text="电池电压"
                     android:textColor="@color/themecolor"
                     android:textSize="@dimen/standard_text_bigger" />
             </LinearLayout>
@@ -110,7 +110,32 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="电池使用状况"
+                    tools:text="电池使用状况"
+                    android:textColor="@color/themecolor"
+                    android:textSize="@dimen/standard_text_bigger" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="设备信息:"
+                    android:textSize="@dimen/standard_text" />
+
+                <TextView
+                    android:id="@+id/tvDevicInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    tools:text="电池使用状况"
                     android:textColor="@color/themecolor"
                     android:textSize="@dimen/standard_text_bigger" />
             </LinearLayout>

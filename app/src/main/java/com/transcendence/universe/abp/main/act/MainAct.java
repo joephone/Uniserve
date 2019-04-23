@@ -94,7 +94,7 @@ public class MainAct extends TitleBarActivity {
             case KeyEvent.KEYCODE_BACK:
 //                Log.i(LOG_TAG, "KeyEvent.KEYCODE_BACK");
 //                break;
-                return false;//拦截事件
+                return false;//拦截返回事件
             case KeyEvent.KEYCODE_MENU:
 //                Log.i(LOG_TAG, "KeyEvent.KEYCODE_MENU");
                 break;

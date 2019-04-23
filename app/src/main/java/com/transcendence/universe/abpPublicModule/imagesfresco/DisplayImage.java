@@ -22,7 +22,7 @@ import com.facebook.imagepipeline.request.BasePostprocessor;
 import com.facebook.imagepipeline.request.ImageRequest;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
 import com.transcendence.universe.R;
-import com.transcendence.universe.service.MyApplication;
+import com.transcendence.universe.service.AppAplication;
 import com.transcendence.universe.utils.Logs;
 import com.transcendence.universe.utils.StringUtils;
 import com.transcendence.universe.utils.Utility;
@@ -43,7 +43,7 @@ public class DisplayImage {
          */
     public static DisplayImage getInstance() {
         if (null == instance) {
-            context = MyApplication.getInstance();
+            context = AppAplication.getInstance();
             instance = new DisplayImage();
         }
         return instance;

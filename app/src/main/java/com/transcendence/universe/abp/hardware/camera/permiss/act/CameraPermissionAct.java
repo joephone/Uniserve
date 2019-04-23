@@ -67,7 +67,7 @@ public class CameraPermissionAct extends TitleBarActivity implements View.OnClic
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.takePic:
-                permissionDispose(PermissionPool.CAMERA, Manifest.permission.CAMERA);
+                onPermissionRequest(PermissionPool.CAMERA, Manifest.permission.CAMERA);
                 break;
             case R.id.takeGallery:
                 autoObtainStoragePermission();
@@ -83,7 +83,6 @@ public class CameraPermissionAct extends TitleBarActivity implements View.OnClic
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED
                 || ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)) {
                 ToastUtils.showShort(this, "您已经拒绝过一次");
             }
@@ -230,11 +229,13 @@ public class CameraPermissionAct extends TitleBarActivity implements View.OnClic
 
 
 
-
+    @Override
     public void onResume() {
         super.onResume();
         MobclickAgent.onResume(this);
     }
+
+    @Override
     public void onPause() {
         super.onPause();
         MobclickAgent.onPause(this);

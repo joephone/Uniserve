@@ -5,6 +5,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
 
+
     defaultConfig {
         applicationId "com.transcendence.universe"
         minSdkVersion 20
@@ -86,9 +87,14 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile project(':library')
+    compile project(':recyclerviewHelperLib')
 
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support:design:26.1.0'
+    if (!rootProject.ext.isLofterApplication){
+        compile project(':lofter')
+    }
+
+    compile 'com.android.support:appcompat-v7:26+'
+    compile 'com.android.support:design:26+'
     compile files('libs/universal-image-loader-1.9.5.jar')
     //注解开发
     compile 'com.jakewharton:butterknife:7.0.0'

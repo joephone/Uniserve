@@ -44,12 +44,12 @@ public class BaseIndexAct extends TitleBarActivity implements IndexAdapter.Index
         super.onCreate(savedInstanceState);
         setContentView(R.layout.index);
         ButterKnife.bind(this);
-
         init();
+
     }
 
     @Override
-    protected void init() {
+    public void init() {
         sourceList.add("生命周期");
         sourceList.add("电池");
         sourceList.add("手机品牌、商家、版本号等信息");
@@ -97,10 +97,13 @@ public class BaseIndexAct extends TitleBarActivity implements IndexAdapter.Index
         startActivity(intent);
     }
 
+    @Override
     public void onResume() {
         super.onResume();
         MobclickAgent.onResume(this);
     }
+
+    @Override
     public void onPause() {
         super.onPause();
         MobclickAgent.onPause(this);

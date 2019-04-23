@@ -5,6 +5,8 @@ import android.support.annotation.Nullable;
 import android.widget.TextView;
 
 import com.transcendence.universe.R;
+import com.transcendence.universe.abp.base.util.DeviceInfoUtil;
+import com.transcendence.universe.abp.base.util.DeviceSysytemInfoUtil;
 import com.transcendence.universe.abp.main.act.TitleBarActivity;
 import com.transcendence.universe.utils.AndroidUtil;
 
@@ -26,6 +28,9 @@ public class AndroidInfoActivity extends TitleBarActivity {
     TextView tvBootTime;
     @Bind(R.id.tvSysInfo)
     TextView tvSysInfo;
+    @Bind(R.id.tvDevicInfo)
+    TextView tvDevicInfo;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,14 +38,15 @@ public class AndroidInfoActivity extends TitleBarActivity {
         setContentView(R.layout.activity_android_info);
         ButterKnife.bind(this);
         setTitle("Android信息");
-        init();
+
     }
 
-
+    @Override
     protected void init() {
         tvWifiMac.setText(AndroidUtil.getWifiMacAddress(this));
         tvAndroidId.setText(AndroidUtil.getAndroidId(this));
         tvBootTime.setText(AndroidUtil.getBootTimeString());
         tvSysInfo.setText(AndroidUtil.printSystemInfo());
+        tvDevicInfo.setText(DeviceSysytemInfoUtil.getSystemVersion()+DeviceSysytemInfoUtil.getDeviceBrand());
     }
 }

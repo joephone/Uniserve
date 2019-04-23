@@ -6,7 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 
 import com.transcendence.universe.R;
-import com.transcendence.universe.service.MyApplication;
+import com.transcendence.universe.service.AppAplication;
 
 /**
  * Created by Joephone on 2018/10/26 11:30
@@ -39,7 +39,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         new Thread() {
             @Override
             public void run() {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MyApplication.getInstance());
+                AlertDialog.Builder builder = new AlertDialog.Builder(AppAplication.getInstance());
                 builder.setIcon(R.drawable.universe_icon).setTitle(R.string.app_name)
                         .setMessage("出了点小意外")
                         .setPositiveButton("重新启动", new DialogInterface.OnClickListener() {
