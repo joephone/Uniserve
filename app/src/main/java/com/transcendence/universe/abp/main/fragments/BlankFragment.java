@@ -30,7 +30,7 @@ public class BlankFragment extends Fragment {
      * this fragment using the provided parameters.
      *
      * @param param1 Parameter 1.
-     * @return A new instance of fragment BlankFragment.
+     * @return A new instance of fragment .
      */
     public static BlankFragment newInstance(String param1) {
         BlankFragment fragment = new BlankFragment();
