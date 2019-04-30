@@ -1,4 +1,4 @@
-package com.transcendence.library.base;
+package com.transcendence.library.base.app;
 
 import android.app.Application;
 import android.content.Context;

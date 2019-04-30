@@ -1,8 +1,6 @@
 package com.transcendence.universe.abp.main.act;
 
 import android.app.Activity;
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -133,24 +131,24 @@ public class BaseActivity extends AppCompatActivity {
     /**
      * 弹出登录对话框
      */
-    private View getDialog() {
-        mProgressView = View.inflate(this, R.layout.load_progress, null);
-        return mProgressView;
-    }
-
-    public void showDialog() {
-        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(ViewGroup
-                .LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.MATCH_PARENT);
-        ((ViewGroup) mContentView).addView(getDialog(), lp);
-    }
-
-    public void dismissDialog() {
-        if (null != mProgressView) {
-            ((ViewGroup) mContentView).removeView(mProgressView);
-            mProgressView = null;
-        }
-    }
+//    private View getDialog() {
+//        mProgressView = View.inflate(this, R.layout.load_progress, null);
+//        return mProgressView;
+//    }
+//
+//    public void showDialog() {
+//        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(ViewGroup
+//                .LayoutParams.MATCH_PARENT,
+//                ViewGroup.LayoutParams.MATCH_PARENT);
+//        ((ViewGroup) mContentView).addView(getDialog(), lp);
+//    }
+//
+//    public void dismissDialog() {
+//        if (null != mProgressView) {
+//            ((ViewGroup) mContentView).removeView(mProgressView);
+//            mProgressView = null;
+//        }
+//    }
 
 
     public boolean checkPermission(@NonNull String permission) {

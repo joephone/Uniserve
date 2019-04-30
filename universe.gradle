@@ -1,3 +1,31 @@
 ext {
-    isLofterApplication = true;
+    isLofterApplication = false;
+    isDoudouApplication = true;
+
+
+    android = [
+            compileSdkVersion       : 26,
+            buildToolsVersion       : "26.0.2",
+            minSdkVersion           : 19,
+            targetSdkVersion        : 26,
+            versionCode             : 61,   //版本更新了几次，第一版应用是1，以后每更新一次加1
+            versionName             : "3.5.7"
+    ]
+
+    version = [
+            androidSupportSdkVersion: "26.1.0",  //compile 'com.github.bumptech.glide:glide:3.5.2'
+            glideSdkVersion         : "3.5.2",
+    ]
+
+
+    dependencies = [
+            //support
+            "appcompat-v7"             : "com.android.support:appcompat-v7:${version["androidSupportSdkVersion"]}",
+            "design"                   : "com.android.support:design:${version["androidSupportSdkVersion"]}",
+            "palette"                  : "com.android.support:palette-v7:${version["androidSupportSdkVersion"]}",
+            "support-v4"               : "com.android.support:support-v4:${version["androidSupportSdkVersion"]}",
+
+            //image
+            "glide"                    : "com.github.bumptech.glide:glide:${version["glideSdkVersion"]}",
+    ]
 }

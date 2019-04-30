@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.transcendence.doudou.DoudouMainActivity">
+
+    <com.transcendence.library.widget.scrollview.AutoScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="200dp"
+            android:layout_marginBottom="100dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="超验主义（transcendentalism）的核心观点是主张人能超越感觉和理性而直接认识真理，强调直觉的重要性，
+ * 其认为人类世界的一切都是宇宙的一个缩影--世界将其自身缩小成为一滴露水（爱默生语）"
+                android:textColor="@color/primary_text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="超验主义（transcendentalism）的核心观点是主张人能超越感觉和理性而直接认识真理，强调直觉的重要性，
+ * 其认为人类世界的一切都是宇宙的一个缩影--世界将其自身缩小成为一滴露水（爱默生语）"
+                android:textColor="@color/primary_text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="超验主义（transcendentalism）的核心观点是主张人能超越感觉和理性而直接认识真理，强调直觉的重要性，
+ * 其认为人类世界的一切都是宇宙的一个缩影--世界将其自身缩小成为一滴露水（爱默生语）"
+                android:textColor="@color/primary_text" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="超验主义（transcendentalism）的核心观点是主张人能超越感觉和理性而直接认识真理，强调直觉的重要性，
+ * 其认为人类世界的一切都是宇宙的一个缩影--世界将其自身缩小成为一滴露水（爱默生语）"
+                android:textColor="@color/primary_text" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="超验主义（transcendentalism）的核心观点是主张人能超越感觉和理性而直接认识真理，强调直觉的重要性，
+ * 其认为人类世界的一切都是宇宙的一个缩影--世界将其自身缩小成为一滴露水（爱默生语）"
+                android:textColor="@color/primary_text" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="超验主义（transcendentalism）的核心观点是主张人能超越感觉和理性而直接认识真理，强调直觉的重要性，
+ * 其认为人类世界的一切都是宇宙的一个缩影--世界将其自身缩小成为一滴露水（爱默生语）"
+                android:textColor="@color/primary_text" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="超验主义（transcendentalism）的核心观点是主张人能超越感觉和理性而直接认识真理，强调直觉的重要性，
+ * 其认为人类世界的一切都是宇宙的一个缩影--世界将其自身缩小成为一滴露水（爱默生语）"
+                android:textColor="@color/primary_text" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="超验主义（transcendentalism）的核心观点是主张人能超越感觉和理性而直接认识真理，强调直觉的重要性，
+ * 其认为人类世界的一切都是宇宙的一个缩影--世界将其自身缩小成为一滴露水（爱默生语）"
+                android:textColor="@color/primary_text" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="超验主义（transcendentalism）的核心观点是主张人能超越感觉和理性而直接认识真理，强调直觉的重要性，
+ * 其认为人类世界的一切都是宇宙的一个缩影--世界将其自身缩小成为一滴露水（爱默生语）"
+                android:textColor="@color/primary_text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="超验主义（transcendentalism）的核心观点是主张人能超越感觉和理性而直接认识真理，强调直觉的重要性，
+ * 其认为人类世界的一切都是宇宙的一个缩影--世界将其自身缩小成为一滴露水（爱默生语）"
+                android:textColor="@color/primary_text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="超验主义（transcendentalism）的核心观点是主张人能超越感觉和理性而直接认识真理，强调直觉的重要性，
+ * 其认为人类世界的一切都是宇宙的一个缩影--世界将其自身缩小成为一滴露水（爱默生语）"
+                android:textColor="@color/primary_text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="超验主义（transcendentalism）的核心观点是主张人能超越感觉和理性而直接认识真理，强调直觉的重要性，
+ * 其认为人类世界的一切都是宇宙的一个缩影--世界将其自身缩小成为一滴露水（爱默生语）"
+                android:textColor="@color/primary_text" />
+        </LinearLayout>
+    </com.transcendence.library.widget.scrollview.AutoScrollView>
+
+</android.support.constraint.ConstraintLayout>

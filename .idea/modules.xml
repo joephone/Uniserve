@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Universe.iml" filepath="$PROJECT_DIR$/Universe.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doudou/doudou.iml" filepath="$PROJECT_DIR$/doudou/doudou.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/lofter/lofter.iml" filepath="$PROJECT_DIR$/lofter/lofter.iml" />
       <module fileurl="file://$PROJECT_DIR$/recyclerviewHelperLib/recyclerviewHelperLib.iml" filepath="$PROJECT_DIR$/recyclerviewHelperLib/recyclerviewHelperLib.iml" />

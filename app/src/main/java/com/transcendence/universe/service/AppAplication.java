@@ -1,9 +1,7 @@
 package com.transcendence.universe.service;
 
-import android.content.Context;
-
 import com.facebook.drawee.backends.pipeline.Fresco;
-import com.transcendence.library.base.LibApplication;
+import com.transcendence.library.base.app.LibApplication;
 
 /**
  * Created by joephone on 2017/6/28.
